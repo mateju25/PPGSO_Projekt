@@ -11,12 +11,24 @@ Camera::Camera() {
 
     position = {50, 50, 50};
     rotation = {0, 0, 0};
-    offset = {0, 10, -10};
+    offset = {0, 10, 0};
 }
 
 void Camera::update() {
-    
-    viewMatrix = lookAt(position, position + offset, up);
+
+    glm::vec3 forward = { sin(rotation.z)*cos(rotation.y), cos(rotation.z)*cos(rotation.y),sin(rotation.y)};
+
+    std::cout << "X: " << forward.x << " Y: " << forward.y << " Z: " << forward.z << std::endl;
+
+    viewMatrix = lookAt(position, (position + offset) * forward, up);
+}
+
+void Camera::updateRotation(glm::vec2 mvector) {
+
+    float sensitivity = 0.001;
+
+    rotation.z += mvector.x * sensitivity;
+    rotation.y += mvector.y * sensitivity;
 }
 
 glm::vec3 Camera::cast(double u, double v) {

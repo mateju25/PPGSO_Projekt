@@ -41,6 +41,9 @@ private:
     }
 
 public:
+
+    glm::vec2 mouse_delta;
+
     /*!
      * Construct custom game window
      */
@@ -76,17 +79,14 @@ public:
             initScene();
         }
 
-        if (key == GLFW_KEY_D) {
-            scene.camera->position.x += 1;
-            scene.camera->position.y += 0;
-            scene.camera->position.z += 0;
+        if (key == GLFW_KEY_W) {
+            scene.camera->position.y += 0.5;
         }
 
-        if (key == GLFW_KEY_A) {
-            scene.camera->position.x -= 1;
-            scene.camera->position.y += 0;
-            scene.camera->position.z += 0;
+        if (key == GLFW_KEY_S) {
+            scene.camera->position.y -= 0.5;
         }
+
     }
 
     /*!
@@ -95,6 +95,10 @@ public:
      * @param cursorY Mouse vertical position in window coordinates
      */
     void onCursorPos(double cursorX, double cursorY) override {
+        mouse_delta = {scene.cursor.x - cursorX, scene.cursor.y - cursorY};
+
+        scene.camera->updateRotation(mouse_delta);
+
         scene.cursor.x = cursorX;
         scene.cursor.y = cursorY;
     }
