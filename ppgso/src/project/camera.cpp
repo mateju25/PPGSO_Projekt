@@ -1,7 +1,7 @@
 #include <glm/glm.hpp>
 
 #include "camera.h"
-
+#include <glm/gtx/euler_angles.hpp>
 
 Camera::Camera() {
 
@@ -9,13 +9,14 @@ Camera::Camera() {
 
     projectionMatrix = glm::perspective( (ppgso::PI / 180.0f) * fow, ratio, near, far);
 
-    position = {15, 15, 15};
-//    rotation = {0, 0, 0};
+    position = {50, 50, 50};
+    rotation = {0, 0, 0};
+    offset = {0, 10, -10};
 }
 
 void Camera::update() {
-
-    viewMatrix = lookAt(position, {0, 0, 0}, up);
+    
+    viewMatrix = lookAt(position, position + offset, up);
 }
 
 glm::vec3 Camera::cast(double u, double v) {

@@ -75,6 +75,18 @@ public:
         if (key == GLFW_KEY_R && action == GLFW_PRESS) {
             initScene();
         }
+
+        if (key == GLFW_KEY_D) {
+            scene.camera->position.x += 1;
+            scene.camera->position.y += 0;
+            scene.camera->position.z += 0;
+        }
+
+        if (key == GLFW_KEY_A) {
+            scene.camera->position.x -= 1;
+            scene.camera->position.y += 0;
+            scene.camera->position.z += 0;
+        }
     }
 
     /*!
@@ -136,8 +148,10 @@ public:
         // Clear depth and color buffers
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+//        scene.camera->rotation.z += dt/100;
+
         // Update and render all objects
-        scene.camera->position.x -= sin(dt);
+//        scene.camera->position.x -= sin(dt);
         scene.update(dt);
         scene.render();
     }
