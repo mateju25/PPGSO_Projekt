@@ -87,6 +87,26 @@ public:
             scene.camera->position.y -= 0.5;
         }
 
+        glm::vec2 mouse_delta = {0, 0};
+
+        if (key == GLFW_KEY_UP) {
+            mouse_delta.y = 0.1;
+        }
+
+        if (key == GLFW_KEY_DOWN) {
+            mouse_delta.y -= 0.1;
+        }
+
+        if (key == GLFW_KEY_RIGHT) {
+            mouse_delta.x = 0.1;
+        }
+
+        if (key == GLFW_KEY_LEFT) {
+            mouse_delta.x -= 0.1;
+        }
+
+        scene.camera->updateRotation(mouse_delta);
+
     }
 
     /*!
@@ -97,7 +117,7 @@ public:
     void onCursorPos(double cursorX, double cursorY) override {
         mouse_delta = {scene.cursor.x - cursorX, scene.cursor.y - cursorY};
 
-        scene.camera->updateRotation(mouse_delta);
+//        scene.camera->updateRotation(mouse_delta);
 
         scene.cursor.x = cursorX;
         scene.cursor.y = cursorY;

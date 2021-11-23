@@ -5,9 +5,9 @@
 
 Camera::Camera() {
 
-    float fow = 90.0f, ratio = 1.0f, near = 0.0001f,  far = 1000.0f;
+    float fow = 90.0f, ratio = 1.0f, near = 0.0001f, far = 1000.0f;
 
-    projectionMatrix = glm::perspective( (ppgso::PI / 180.0f) * fow, ratio, near, far);
+    projectionMatrix = glm::perspective((ppgso::PI / 180.0f) * fow, ratio, near, far);
 
     position = {50, 50, 50};
     rotation = {0, 0, 0};
@@ -16,7 +16,7 @@ Camera::Camera() {
 
 void Camera::update() {
 
-    glm::vec3 forward = { sin(rotation.z)*cos(rotation.y), cos(rotation.z)*cos(rotation.y),sin(rotation.y)};
+    glm::vec3 forward = {sin(rotation.z) * cos(rotation.y), cos(rotation.z) * cos(rotation.y), sin(rotation.y)};
 
     std::cout << "X: " << forward.x << " Y: " << forward.y << " Z: " << forward.z << std::endl;
 
@@ -25,10 +25,18 @@ void Camera::update() {
 
 void Camera::updateRotation(glm::vec2 mvector) {
 
-    float sensitivity = 0.001;
+    float sensitivity = 0.1;
 
     rotation.z += mvector.x * sensitivity;
     rotation.y += mvector.y * sensitivity;
+
+    if (rotation.y > 0.6) {
+        rotation.y = 0.6;
+    }
+    if (rotation.y < -0.6) {
+        rotation.y = -0.6;
+    }
+
 }
 
 glm::vec3 Camera::cast(double u, double v) {
