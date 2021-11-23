@@ -80,13 +80,50 @@ public:
         }
 
         if (key == GLFW_KEY_W) {
-            scene.camera->position.y += 0.5;
+            scene.camera->moveForward();
         }
-
         if (key == GLFW_KEY_S) {
-            scene.camera->position.y -= 0.5;
+            scene.camera->moveBackward();
         }
+        if (key == GLFW_KEY_A) {
+            scene.camera->strafeLeft();
+        }
+        if (key == GLFW_KEY_D) {
+            scene.camera->strafeRight();
+        }
+        if (key == GLFW_KEY_SPACE) {
+            scene.camera->moveUp();
+        }
+        if (key == GLFW_KEY_RIGHT_SHIFT) {
+            scene.camera->moveDown();
+        }
+//
 
+//
+//
+//        if (key == GLFW_KEY_S) {
+//            scene.camera->position.y -= 0.5;
+//        }
+//
+//        glm::vec2 mouse_delta = {0, 0};
+//
+//        if (key == GLFW_KEY_UP) {
+//            mouse_delta.y = 0.1;
+//        }
+//
+//        if (key == GLFW_KEY_DOWN) {
+//            mouse_delta.y -= 0.1;
+//        }
+//
+//        if (key == GLFW_KEY_RIGHT) {
+//            mouse_delta.x = 0.1;
+//        }
+//
+//        if (key == GLFW_KEY_LEFT) {
+//            mouse_delta.x -= 0.1;
+//        }
+
+        scene.camera->updateRotation(mouse_delta);
     }
 
     /*!
@@ -94,14 +131,14 @@ public:
      * @param cursorX Mouse horizontal position in window coordinates
      * @param cursorY Mouse vertical position in window coordinates
      */
-    void onCursorPos(double cursorX, double cursorY) override {
-        mouse_delta = {scene.cursor.x - cursorX, scene.cursor.y - cursorY};
-
-        scene.camera->updateRotation(mouse_delta);
-
-        scene.cursor.x = cursorX;
-        scene.cursor.y = cursorY;
-    }
+//    void onCursorPos(double cursorX, double cursorY) override {
+//        mouse_delta = {scene.cursor.x - cursorX, scene.cursor.y - cursorY};
+//
+//        scene.camera->updateRotation(mouse_delta);
+//
+//        scene.cursor.x = cursorX;
+//        scene.cursor.y = cursorY;
+//    }
 
     /*!
      * Handle cursor buttons

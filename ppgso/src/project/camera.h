@@ -12,10 +12,16 @@
  */
 class Camera {
 public:
-    glm::vec3 up{0, 0, 1};
+    glm::vec3 up{0, 1, 0};
+    glm::vec3 viewDirection{0, 0, -1};
     glm::vec3 position;
     glm::vec3 rotation;
     glm::vec3 offset;
+
+    glm::vec2 oldMousePosition;
+
+    const float MOV_SPEED = 0.1f;
+    const float ROTATIONAL_SPEED = 0.5f;
 
     glm::mat4 viewMatrix;
     glm::mat4 projectionMatrix;
@@ -33,8 +39,17 @@ public:
      * Update Camera viewMatrix based on up, position and back vectors
      */
     void update();
+    void mouseUpdate(glm::vec2& newMousePosition);
+
 
     void updateRotation(glm::vec2 mvector);
+
+    void moveForward();
+    void moveBackward();
+    void strafeLeft();
+    void strafeRight();
+    void moveUp();
+    void moveDown() ;
 
     /*!
      * Get direction vector in world coordinates through camera projection plane
