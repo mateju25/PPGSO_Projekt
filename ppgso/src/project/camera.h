@@ -12,7 +12,7 @@
  */
 class Camera {
 public:
-    glm::vec3 up{0, 0, 1};
+    glm::vec3 up{0, 1, 0};
     glm::vec3 position;
     glm::vec3 rotation;
     glm::vec3 offset;
