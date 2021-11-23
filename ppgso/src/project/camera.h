@@ -14,7 +14,8 @@ class Camera {
 public:
     glm::vec3 up{0, 0, 1};
     glm::vec3 position;
-//    glm::vec3 back{0, -1, 0};
+    glm::vec3 rotation;
+    glm::vec3 offset;
 
     glm::mat4 viewMatrix;
     glm::mat4 projectionMatrix;
@@ -32,6 +33,8 @@ public:
      * Update Camera viewMatrix based on up, position and back vectors
      */
     void update();
+
+    void updateRotation(glm::vec2 mvector);
 
     /*!
      * Get direction vector in world coordinates through camera projection plane

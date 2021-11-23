@@ -41,6 +41,9 @@ private:
     }
 
 public:
+
+    glm::vec2 mouse_delta;
+
     /*!
      * Construct custom game window
      */
@@ -75,6 +78,15 @@ public:
         if (key == GLFW_KEY_R && action == GLFW_PRESS) {
             initScene();
         }
+
+        if (key == GLFW_KEY_W) {
+            scene.camera->position.y += 0.5;
+        }
+
+        if (key == GLFW_KEY_S) {
+            scene.camera->position.y -= 0.5;
+        }
+
     }
 
     /*!
@@ -83,6 +95,10 @@ public:
      * @param cursorY Mouse vertical position in window coordinates
      */
     void onCursorPos(double cursorX, double cursorY) override {
+        mouse_delta = {scene.cursor.x - cursorX, scene.cursor.y - cursorY};
+
+        scene.camera->updateRotation(mouse_delta);
+
         scene.cursor.x = cursorX;
         scene.cursor.y = cursorY;
     }
@@ -136,8 +152,10 @@ public:
         // Clear depth and color buffers
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+//        scene.camera->rotation.z += dt/100;
+
         // Update and render all objects
-        scene.camera->position.x -= sin(dt);
+//        scene.camera->position.x -= sin(dt);
         scene.update(dt);
         scene.render();
     }
