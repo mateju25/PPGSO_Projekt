@@ -14,6 +14,7 @@
 #include "camera.h"
 #include "scene.h"
 #include "terrain.h"
+#include "submarine.h"
 
 const unsigned int SIZE = 1000;
 
@@ -38,6 +39,10 @@ private:
         // Create terrain
         auto terrain = std::make_unique<Terrain>();
         scene.objects.push_back(move(terrain));
+
+        // Create submarine
+        auto submarine = std::make_unique<Submarine>();
+        scene.objects.push_back(move(submarine));
     }
 
 public:

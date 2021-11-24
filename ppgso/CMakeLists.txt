@@ -182,7 +182,7 @@ add_executable(project_scene
         src/project/project_scene.cpp
         src/project/object.cpp
         src/project/scene.cpp
-        src/project/camera.cpp src/project/terrain.cpp)
+        src/project/camera.cpp src/project/terrain.cpp src/project/submarine.cpp)
 target_link_libraries(project_scene ppgso shaders)
 install(TARGETS project_scene DESTINATION .)
 add_custom_command(TARGET project_scene POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/data/ ${CMAKE_CURRENT_BINARY_DIR})
