@@ -12,16 +12,17 @@
  */
 class Camera {
 public:
-    glm::vec3 up{0, 1, 0};
-    glm::vec3 viewDirection{0, 0, -1};
     glm::vec3 position;
-    glm::vec3 rotation;
-    glm::vec3 offset;
+    glm::vec3 target;
+    glm::vec3 direction;
+    glm::vec3 cameraUp;
+    glm::vec3 cameraRight;
+    glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
+    float yaw;
+    float pitch;
 
-    glm::vec2 oldMousePosition;
 
-    const float MOV_SPEED = 0.1f;
-    const float ROTATIONAL_SPEED = 0.5f;
+    const float MOV_SPEED = 0.9f;
 
     glm::mat4 viewMatrix;
     glm::mat4 projectionMatrix;
@@ -39,24 +40,13 @@ public:
      * Update Camera viewMatrix based on up, position and back vectors
      */
     void update();
-    void mouseUpdate(glm::vec2& newMousePosition);
-
-
-    void updateRotation(glm::vec2 mvector);
+    void mouseUpdate(glm::vec2 mvector);
 
     void moveForward();
     void moveBackward();
     void strafeLeft();
     void strafeRight();
-    void moveUp();
-    void moveDown() ;
-
-    /*!
-     * Get direction vector in world coordinates through camera projection plane
-     * @param u - camera projection plane horizontal coordinate [-1,1]
-     * @param v - camera projection plane vertical coordinate [-1,1]
-     * @return Normalized vector from camera position to position on the camera projection plane
-     */
-    glm::vec3 cast(double u, double v);
+private:
+    void calculateCameraFront();
 };
 
