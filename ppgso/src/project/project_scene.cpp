@@ -15,6 +15,7 @@
 #include "camera.h"
 #include "scene.h"
 #include "terrain.h"
+#include "submarine.h"
 
 const unsigned int SIZE = 900;
 
@@ -39,6 +40,10 @@ private:
         // Create terrain
         auto terrain = std::make_unique<Terrain>();
         scene.objects.push_back(move(terrain));
+
+        // Create submarine
+        auto submarine = std::make_unique<Submarine>();
+        scene.objects.push_back(move(submarine));
     }
 
 public:
@@ -101,12 +106,14 @@ public:
      * @param cursorY Mouse vertical position in window coordinates
      */
     void onCursorPos(double cursorX, double cursorY) override {
+
         if (first_mouse) {
             scene.cursor.x = cursorX;
             scene.cursor.y = cursorY;
             first_mouse = false;
         }
         mouse_delta = {cursorX - scene.cursor.x, scene.cursor.y - cursorY};
+
 
         scene.cursor.x = cursorX;
         scene.cursor.y = cursorY;

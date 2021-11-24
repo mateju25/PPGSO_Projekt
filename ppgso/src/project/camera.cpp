@@ -8,7 +8,6 @@ Camera::Camera() {
 
     float fow = 90.0f, ratio = 1.0f, near = 0.0001f, far = 1000.0f;
 
-
     projectionMatrix = glm::perspective((ppgso::PI / 180.0f) * fow, ratio, near, far);
 
     position = glm::vec3(50.0f, 50.0f, 50.0f);
@@ -42,6 +41,7 @@ void Camera::mouseUpdate(glm::vec2 mvector) {
 
 //    yaw += mvector[0] * sensitivity;
     pitch +=  mvector[1] * sensitivity;
+
 
     if(pitch > 89.0f)
         pitch = 89.0f;
