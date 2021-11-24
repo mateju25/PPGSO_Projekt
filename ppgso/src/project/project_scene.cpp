@@ -25,13 +25,19 @@ const unsigned int SIZE = 900;
 class SceneWindow : public ppgso::Window {
 private:
     Scene scene;
-
+    Submarine submarineScene;
     /*!
      * Reset and initialize the game scene
      * Creating unique smart pointers to objects that are stored in the scene object list
      */
     void initScene() {
         scene.objects.clear();
+
+
+        // Create submarine
+        auto submarine = std::make_unique<Submarine>();
+        scene.objects.push_back(move(submarine));
+
 
         // Create a camera
         auto camera = std::make_unique<Camera>();
@@ -41,9 +47,6 @@ private:
         auto terrain = std::make_unique<Terrain>();
         scene.objects.push_back(move(terrain));
 
-        // Create submarine
-        auto submarine = std::make_unique<Submarine>();
-        scene.objects.push_back(move(submarine));
     }
 
 public:
@@ -86,17 +89,25 @@ public:
             initScene();
         }
 
-        if (key == GLFW_KEY_W) {
-            scene.camera->moveForward();
+//        if (key == GLFW_KEY_W) {
+//            scene.camera->moveForward();
+//        }
+//        if (key == GLFW_KEY_S) {
+//            scene.camera->moveBackward();
+//        }
+//        if (key == GLFW_KEY_A) {
+//            scene.camera->strafeLeft();
+//        }
+//        if (key == GLFW_KEY_D) {
+//            scene.camera->strafeRight();
+//        }
+
+        Submarine sub = reinterpret_cast<Submarine &&>(scene.objects.front());
+        if (key == GLFW_KEY_LEFT) {
+            sub.rotateLeft();
         }
-        if (key == GLFW_KEY_S) {
-            scene.camera->moveBackward();
-        }
-        if (key == GLFW_KEY_A) {
-            scene.camera->strafeLeft();
-        }
-        if (key == GLFW_KEY_D) {
-            scene.camera->strafeRight();
+        if (key == GLFW_KEY_RIGHT) {
+            sub.rotateRight();
         }
     }
 
@@ -118,7 +129,7 @@ public:
         scene.cursor.x = cursorX;
         scene.cursor.y = cursorY;
 
-        scene.camera->mouseUpdate(mouse_delta);
+//        scene.camera->mouseUpdate(mouse_delta);
 
     }
 

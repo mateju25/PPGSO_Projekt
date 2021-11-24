@@ -10,63 +10,19 @@ Camera::Camera() {
 
     projectionMatrix = glm::perspective((ppgso::PI / 180.0f) * fow, ratio, near, far);
 
-    position = glm::vec3(50.0f, 50.0f, 50.0f);
-    target = glm::vec3(50.0f, 40.0f, 50.0f);
-
-    yaw = -90;
-    pitch = 0;
 }
 
 void  Camera::update() {
-    direction = glm::normalize(position - target);
-
-    glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f);
-    cameraRight = glm::normalize(glm::cross(up, direction));
-    cameraUp = glm::cross(direction, cameraRight);
-
-    viewMatrix = glm::lookAt(position, position + cameraFront, cameraUp);
+    viewMatrix = glm::lookAt(getTotalPosition(), position - back, up);
 }
 
-void  Camera::calculateCameraFront() {
-    glm::vec3 front;
-    front.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
-    front.y = sin(glm::radians(pitch));
-    front.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
-    cameraFront = glm::normalize(front);
+
+glm::vec3 Camera::getTotalPosition() const {
+    return (position) + (distance * (rotation));
 }
 
-void Camera::mouseUpdate(glm::vec2 mvector) {
-
-    const float sensitivity = 0.05f;
-
-//    yaw += mvector[0] * sensitivity;
-    pitch +=  mvector[1] * sensitivity;
-
-
-    if(pitch > 89.0f)
-        pitch = 89.0f;
-    if(pitch < -89.0f)
-        pitch = -89.0f;
-
-    calculateCameraFront();
-}
-
-void Camera::moveForward() {
-    position += MOV_SPEED * cameraFront;
-}
-
-void Camera::moveBackward() {
-    position -= MOV_SPEED * cameraFront;
-}
-
-void Camera::strafeLeft() {
-    yaw -=  1;
-    calculateCameraFront();
-//    position -= glm::normalize(glm::cross(cameraFront, cameraUp)) * MOV_SPEED;
-}
-
-void Camera::strafeRight() {
-    yaw +=  1;
-    calculateCameraFront();
-//    position += glm::normalize(glm::cross(cameraFront, cameraUp)) * MOV_SPEED;
+void Camera::moveTo(const glm::vec3 &pos, const glm::vec3 &rot) {
+    positionOffset = {0, 4, -10};
+    position = pos + positionOffset;
+    rotation = {-std::sin(rot.z + offset.x), offset.y, -std::cos(rot.z + offset.z)};
 }

@@ -12,17 +12,15 @@
  */
 class Camera {
 public:
-    glm::vec3 position;
-    glm::vec3 target;
-    glm::vec3 direction;
-    glm::vec3 cameraUp;
-    glm::vec3 cameraRight;
-    glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
-    float yaw;
-    float pitch;
+    glm::vec3 position{0, 0, 0};
+    glm::vec3 positionOffset{0, 0, 0};
+    glm::vec3 offset{0, 0, 0};
+    glm::vec3 rotation{0, 0, 0};
 
+    float distance = 0;
 
-    const float MOV_SPEED = 0.9f;
+    glm::vec3 up{0, 1, 0};
+    glm::vec3 back{0, 0, -1};
 
     glm::mat4 viewMatrix;
     glm::mat4 projectionMatrix;
@@ -40,13 +38,9 @@ public:
      * Update Camera viewMatrix based on up, position and back vectors
      */
     void update();
-    void mouseUpdate(glm::vec2 mvector);
 
-    void moveForward();
-    void moveBackward();
-    void strafeLeft();
-    void strafeRight();
-private:
-    void calculateCameraFront();
+    void moveTo(const glm::vec3 &pos, const glm::vec3 &rot);
+
+    glm::vec3 getTotalPosition() const;
 };
 

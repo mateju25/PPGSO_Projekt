@@ -17,17 +17,18 @@ std::unique_ptr<ppgso::Shader> Terrain::shader;
 Terrain::Terrain() {
     // Set random scale speed and rotation
     position = {0, 0, 0};
-    rotation = {0, 0, 0};
+    rotation = {4.5, 0, 0};
     scale = {10, 10, 5};
 
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(diffuse_vert_glsl, diffuse_frag_glsl);
-//    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("lena.bmp"));
+    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/ocean.bmp"));
     if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/terrain_01.obj");
 }
 
 bool Terrain::update(Scene &scene, float dt) {
-
+//    rotation.x =  rotation.x + 0.01;
+//    std::cout << rotation.x << std::endl;
     // Generate modelMatrix from position, rotation and scale
     generateModelMatrix();
 
