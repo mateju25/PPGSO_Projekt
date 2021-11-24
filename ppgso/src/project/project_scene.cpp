@@ -64,7 +64,8 @@ public:
         // Initialize OpenGL state
         // Enable Z-buffer
         glEnable(GL_DEPTH_TEST);
-        glDepthFunc(GL_LEQUAL);\
+        glDepthFunc(GL_LEQUAL);
+
 
         // Enable polygon culling
         glEnable(GL_CULL_FACE);

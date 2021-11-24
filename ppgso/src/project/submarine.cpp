@@ -16,7 +16,7 @@ std::unique_ptr<ppgso::Shader> Submarine::shader;
 
 Submarine::Submarine() {
     // Set random scale speed and rotation
-    position = {50, 10, 10};
+    position = {0, 20, 0};
     rotation = {BASIC_ROTATION_X, 0, 0};
     scale = {3, 3, 3};
 
@@ -27,56 +27,42 @@ Submarine::Submarine() {
 }
 
 bool Submarine::update(Scene &scene, float dt) {
-    if (scene.keyboard[GLFW_KEY_LEFT]) {
+    float flag = -1;
+    float speed = 0.5f;
+    if (scene.keyboard[GLFW_KEY_RIGHT]) {
         rotation.y += 0.05;
-        if (rotation.y >= 6.25)
-            rotation.y -= 6.25;
+        if (rotation.y >= ppgso::PI*2)
+            rotation.y -=  ppgso::PI*2;
     }
-    else if (scene.keyboard[GLFW_KEY_RIGHT]) {
+    else if (scene.keyboard[GLFW_KEY_LEFT]) {
         rotation.y -= 0.05;
-        if (rotation.y <= -6.25)
-            rotation.y += 6.25;
-    }
-    else if (scene.keyboard[GLFW_KEY_DOWN]) {
-        rotation.x -= 0.05;
-        if (rotation.x <= -6.25)
-            rotation.x += 6.25;
-
+        if (rotation.y <= - ppgso::PI*2)
+            rotation.y +=  ppgso::PI*2;
     }
     else if (scene.keyboard[GLFW_KEY_UP]) {
-        rotation.x += 0.05;
-        if (rotation.x >= 6.25)
-            rotation.x -= 6.25;
+        rotation.x -= 0.05;
+        if (rotation.x - BASIC_ROTATION_X <= -0.6)
+            rotation.x = -0.6 + BASIC_ROTATION_X;
 
+    }
+    else if (scene.keyboard[GLFW_KEY_DOWN]) {
+        rotation.x += 0.05;
+        if (rotation.x - BASIC_ROTATION_X >= 0.6)
+            rotation.x = 0.6 + BASIC_ROTATION_X;
     }
     else if (scene.keyboard[GLFW_KEY_SPACE]) {
-//        position.x += 0.5f  * -(std::sin(rotation.y));
-//        if (rotation.y > 1.5)
-//            position.z += 0.5f  * -(std::sin(rotation.y));
-//        else
-//            position.z += 0.5f  * (std::sin(rotation.y));
-//        position.y += 0.5f  * -std::sin(rotation.x - BASIC_ROTATION_X);
-
-        position.y += rotation.x - BASIC_ROTATION_X;
-        position.x += rotation.y;
-        position.z += rotation.z;
-//        position.x = cos(rotation.y) * cos(rotation.x - BASIC_ROTATION_X);
-//        position.y = sin(rotation.x - BASIC_ROTATION_X);
-//        position.z = sin(rotation.y) * cos(rotation.x - BASIC_ROTATION_X);
-
-        std::cout << position.x << " " << position.y << " "<< position.z << std::endl;
-        std::cout << "ROTATION" << std::endl;
-        std::cout << rotation.x - BASIC_ROTATION_X << " " << rotation.y << " "<< rotation.z << std::endl;
-        std::cout << "" << std::endl;
-
+        speed += 0.1f;
     }
     else if (scene.keyboard[GLFW_KEY_LEFT_SHIFT]) {
-        position.x -= 0.5f  * -(std::sin(rotation.y));
-        position.y -= 0.5f  * -std::sin(rotation.x - BASIC_ROTATION_X);
-        position.z -= 0.5f;
-        std::cout << position.x << " " << position.y << " "<< position.z << std::endl;
-
+        speed -= 0.1f;
     }
+
+    if (abs(rotation.y) >= ppgso::PI/2 && abs(rotation.y) <= 3*ppgso::PI/2)
+        flag = 1;
+
+    position.z += speed * cos(rotation.y);
+    position.x += speed * -sin(rotation.y);
+    position.y += speed * flag * sin(rotation.x - BASIC_ROTATION_X);
 
     scene.setTargetPosition(position, rotation);
 
