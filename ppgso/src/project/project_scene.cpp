@@ -9,14 +9,15 @@
 #include <iostream>
 #include <map>
 #include <list>
-
+#include <chrono>
+#include <thread>
 #include <ppgso/ppgso.h>
 #include "camera.h"
 #include "scene.h"
 #include "terrain.h"
 #include "submarine.h"
 
-const unsigned int SIZE = 1000;
+const unsigned int SIZE = 900;
 
 /*!
  * Custom windows for our simple game
@@ -46,7 +47,7 @@ private:
     }
 
 public:
-
+    bool first_mouse = true;
     glm::vec2 mouse_delta;
 
     /*!
@@ -55,11 +56,12 @@ public:
     SceneWindow() : Window{"PODMORSKY SVET", SIZE, SIZE} {
         //hideCursor();
         glfwSetInputMode(window, GLFW_STICKY_KEYS, 1);
+//        glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
         // Initialize OpenGL state
         // Enable Z-buffer
         glEnable(GL_DEPTH_TEST);
-        glDepthFunc(GL_LEQUAL);
+        glDepthFunc(GL_LEQUAL);\
 
         // Enable polygon culling
         glEnable(GL_CULL_FACE);
@@ -85,33 +87,17 @@ public:
         }
 
         if (key == GLFW_KEY_W) {
-            scene.camera->position.y += 0.5;
+            scene.camera->moveForward();
         }
-
         if (key == GLFW_KEY_S) {
-            scene.camera->position.y -= 0.5;
+            scene.camera->moveBackward();
         }
-
-        glm::vec2 mouse_delta = {0, 0};
-
-        if (key == GLFW_KEY_UP) {
-            mouse_delta.y = 0.1;
+        if (key == GLFW_KEY_A) {
+            scene.camera->strafeLeft();
         }
-
-        if (key == GLFW_KEY_DOWN) {
-            mouse_delta.y -= 0.1;
+        if (key == GLFW_KEY_D) {
+            scene.camera->strafeRight();
         }
-
-        if (key == GLFW_KEY_RIGHT) {
-            mouse_delta.x = 0.1;
-        }
-
-        if (key == GLFW_KEY_LEFT) {
-            mouse_delta.x -= 0.1;
-        }
-
-        scene.camera->updateRotation(mouse_delta);
-
     }
 
     /*!
@@ -120,52 +106,28 @@ public:
      * @param cursorY Mouse vertical position in window coordinates
      */
     void onCursorPos(double cursorX, double cursorY) override {
-        mouse_delta = {scene.cursor.x - cursorX, scene.cursor.y - cursorY};
 
-//        scene.camera->updateRotation(mouse_delta);
+        if (first_mouse) {
+            scene.cursor.x = cursorX;
+            scene.cursor.y = cursorY;
+            first_mouse = false;
+        }
+        mouse_delta = {cursorX - scene.cursor.x, scene.cursor.y - cursorY};
+
 
         scene.cursor.x = cursorX;
         scene.cursor.y = cursorY;
-    }
 
-    /*!
-     * Handle cursor buttons
-     * @param button Mouse button being manipulated
-     * @param action Mouse bu
-     * @param mods
-     */
-    void onMouseButton(int button, int action, int mods) override {
-        if (button == GLFW_MOUSE_BUTTON_LEFT) {
-            scene.cursor.left = action == GLFW_PRESS;
+        scene.camera->mouseUpdate(mouse_delta);
 
-            if (scene.cursor.left) {
-                // Convert pixel coordinates to Screen coordinates
-                double u = (scene.cursor.x / width - 0.5f) * 2.0f;
-                double v = -(scene.cursor.y / height - 0.5f) * 2.0f;
-
-                // Get mouse pick vector in world coordinates
-                auto direction = scene.camera->cast(u, v);
-                auto position = scene.camera->position;
-
-                // Get all objects in scene intersected by ray
-                auto picked = scene.intersect(position, direction);
-
-                // Go through all objects that have been picked
-                for (auto &obj: picked) {
-                    // Pass on the click event
-                    obj->onClick(scene);
-                }
-            }
-        }
-        if (button == GLFW_MOUSE_BUTTON_RIGHT) {
-            scene.cursor.right = action == GLFW_PRESS;
-        }
     }
 
     /*!
      * Window update implementation that will be called automatically from pollEvents
      */
     void onIdle() override {
+//        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+
         // Track time
         static auto time = (float) glfwGetTime();
 

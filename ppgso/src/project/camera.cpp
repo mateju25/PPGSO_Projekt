@@ -1,4 +1,5 @@
 #include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 
 #include "camera.h"
 #include <glm/gtx/euler_angles.hpp>
@@ -9,49 +10,63 @@ Camera::Camera() {
 
     projectionMatrix = glm::perspective((ppgso::PI / 180.0f) * fow, ratio, near, far);
 
-    position = {50, 50, 50};
-    rotation = {0, 0, 0};
-    offset = {0, 10, 0};
+    position = glm::vec3(50.0f, 50.0f, 50.0f);
+    target = glm::vec3(50.0f, 40.0f, 50.0f);
+
+    yaw = -90;
+    pitch = 0;
 }
 
-void Camera::update() {
+void  Camera::update() {
+    direction = glm::normalize(position - target);
 
+    glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f);
+    cameraRight = glm::normalize(glm::cross(up, direction));
+    cameraUp = glm::cross(direction, cameraRight);
 
-    glm::vec3 forward = {sin(rotation.y) * cos(rotation.x), sin(rotation.x), cos(rotation.y) * cos(rotation.x)};
-
-    std::cout << "X: " << forward.x << " Y: " << forward.y << " Z: " << forward.z << std::endl;
-
-    viewMatrix = lookAt(position, (position + offset) * forward, up);
+    viewMatrix = glm::lookAt(position, position + cameraFront, cameraUp);
 }
 
-void Camera::updateRotation(glm::vec2 mvector) {
-
-    float sensitivity = 0.1;
-
-    rotation.y += mvector.x * sensitivity;
-    rotation.x += mvector.y * sensitivity;
-    if (rotation.x > 0.6) {
-        rotation.x = 0.6;
-    }
-    if (rotation.x < -0.6) {
-        rotation.x = -0.6;
-    }
-
+void  Camera::calculateCameraFront() {
+    glm::vec3 front;
+    front.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
+    front.y = sin(glm::radians(pitch));
+    front.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
+    cameraFront = glm::normalize(front);
 }
 
-glm::vec3 Camera::cast(double u, double v) {
-    // Create point in Screen coordinates
-    glm::vec4 screenPosition{u, v, 0.0f, 1.0f};
+void Camera::mouseUpdate(glm::vec2 mvector) {
 
-    // Use inverse matrices to get the point in world coordinates
-    auto invProjection = glm::inverse(projectionMatrix);
-    auto invView = glm::inverse(viewMatrix);
+    const float sensitivity = 0.05f;
 
-    // Compute position on the camera plane
-    auto planePosition = invView * invProjection * screenPosition;
-    planePosition /= planePosition.w;
+//    yaw += mvector[0] * sensitivity;
+    pitch +=  mvector[1] * sensitivity;
 
-    // Create direction vector
-    auto direction = glm::normalize(planePosition - glm::vec4{position, 1.0f});
-    return glm::vec3{direction};
+
+    if(pitch > 89.0f)
+        pitch = 89.0f;
+    if(pitch < -89.0f)
+        pitch = -89.0f;
+
+    calculateCameraFront();
+}
+
+void Camera::moveForward() {
+    position += MOV_SPEED * cameraFront;
+}
+
+void Camera::moveBackward() {
+    position -= MOV_SPEED * cameraFront;
+}
+
+void Camera::strafeLeft() {
+    yaw -=  1;
+    calculateCameraFront();
+//    position -= glm::normalize(glm::cross(cameraFront, cameraUp)) * MOV_SPEED;
+}
+
+void Camera::strafeRight() {
+    yaw +=  1;
+    calculateCameraFront();
+//    position += glm::normalize(glm::cross(cameraFront, cameraUp)) * MOV_SPEED;
 }
