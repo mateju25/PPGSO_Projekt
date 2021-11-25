@@ -17,7 +17,10 @@ public:
     glm::vec3 offset{0, 0, 0};
     glm::vec3 rotation{0, 0, 0};
 
-    float distance = 0;
+    float distanceY = 4;
+    float distanceZ = 10;
+
+    glm::vec3 submarinePos;
 
     glm::vec3 up{0, 1, 0};
     glm::vec3 back{0, 0, -1};

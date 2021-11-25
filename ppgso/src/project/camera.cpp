@@ -10,19 +10,31 @@ Camera::Camera() {
 
     projectionMatrix = glm::perspective((ppgso::PI / 180.0f) * fow, ratio, near, far);
 
+    position = positionOffset = {0, distanceY, -distanceZ};
 }
 
 void  Camera::update() {
-    viewMatrix = glm::lookAt(getTotalPosition(), position - back, up);
+    glm::vec3 lookAtOff = {0,5,0};
+    viewMatrix = glm::lookAt(position/*getTotalPosition()*/, submarinePos + lookAtOff, up);
 }
 
 
 glm::vec3 Camera::getTotalPosition() const {
-    return (position) + (distance * (rotation));
+    return (position) + (distanceY * (rotation));
 }
 
 void Camera::moveTo(const glm::vec3 &pos, const glm::vec3 &rot) {
-    positionOffset = {0, 4, -10};
-    position = pos + positionOffset;
-    rotation = {-std::sin(rot.z + offset.x), offset.y, -std::cos(rot.z + offset.z)};
+    auto deltaPos = submarinePos - pos;
+    submarinePos = pos;
+
+    glm::vec3 deltaRot;
+    deltaRot.x = (distanceZ * -sin(rotation.y * -1)) - (distanceZ * -sin(rot.y * -1));
+    deltaRot.z = (distanceZ * -cos(rotation.y * -1)) - (distanceZ * -cos(rot.y * -1));
+    deltaRot.y = (distanceY * cos(rotation.y) * sin(rotation.x) + positionOffset.y) -
+                 (distanceY * cos(rot.y) * sin(rot.x) + positionOffset.y);
+
+    rotation = rot;
+
+    position -= deltaRot;
+    position -= deltaPos;
 }

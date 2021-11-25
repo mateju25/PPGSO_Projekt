@@ -16,6 +16,7 @@
 #include "scene.h"
 #include "terrain.h"
 #include "submarine.h"
+#include "volcano.h"
 
 const unsigned int SIZE = 900;
 
@@ -47,6 +48,13 @@ private:
         auto terrain = std::make_unique<Terrain>();
         scene.objects.push_back(move(terrain));
 
+        glm::vec3 position = {0,0,0};
+        auto volcano1 = std::make_unique<Volcano>(false, position);
+        scene.objects.push_back(move(volcano1));
+
+        position = {10,0,0};
+        auto volcano2 = std::make_unique<Volcano>(true, position);
+        scene.objects.push_back(move(volcano2));
     }
 
 public:
@@ -90,26 +98,6 @@ public:
             initScene();
         }
 
-//        if (key == GLFW_KEY_W) {
-//            scene.camera->moveForward();
-//        }
-//        if (key == GLFW_KEY_S) {
-//            scene.camera->moveBackward();
-//        }
-//        if (key == GLFW_KEY_A) {
-//            scene.camera->strafeLeft();
-//        }
-//        if (key == GLFW_KEY_D) {
-//            scene.camera->strafeRight();
-//        }
-
-        Submarine sub = reinterpret_cast<Submarine &&>(scene.objects.front());
-        if (key == GLFW_KEY_LEFT) {
-            sub.rotateLeft();
-        }
-        if (key == GLFW_KEY_RIGHT) {
-            sub.rotateRight();
-        }
     }
 
     /*!
@@ -118,19 +106,6 @@ public:
      * @param cursorY Mouse vertical position in window coordinates
      */
     void onCursorPos(double cursorX, double cursorY) override {
-
-        if (first_mouse) {
-            scene.cursor.x = cursorX;
-            scene.cursor.y = cursorY;
-            first_mouse = false;
-        }
-        mouse_delta = {cursorX - scene.cursor.x, scene.cursor.y - cursorY};
-
-
-        scene.cursor.x = cursorX;
-        scene.cursor.y = cursorY;
-
-//        scene.camera->mouseUpdate(mouse_delta);
 
     }
 
@@ -151,10 +126,6 @@ public:
         // Clear depth and color buffers
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-//        scene.camera->rotation.z += dt/100;
-
-        // Update and render all objects
-//        scene.camera->position.x -= sin(dt);
         scene.update(dt);
         scene.render();
     }

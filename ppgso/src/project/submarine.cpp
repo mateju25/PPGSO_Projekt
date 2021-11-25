@@ -16,9 +16,9 @@ std::unique_ptr<ppgso::Shader> Submarine::shader;
 
 Submarine::Submarine() {
     // Set random scale speed and rotation
-    position = {0, 20, 0};
+    position = {0, 0, 0};
     rotation = {BASIC_ROTATION_X, 0, 0};
-    scale = {3, 3, 3};
+    scale = {2, 2, 2};
 
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(diffuse_vert_glsl, diffuse_frag_glsl);
@@ -27,28 +27,23 @@ Submarine::Submarine() {
 }
 
 bool Submarine::update(Scene &scene, float dt) {
-    float flag = -1;
-    float speed = 0.5f;
     if (scene.keyboard[GLFW_KEY_RIGHT]) {
-        rotation.y += 0.05;
-        if (rotation.y >= ppgso::PI*2)
-            rotation.y -=  ppgso::PI*2;
+        rotation.y += rot_speed;
     }
     else if (scene.keyboard[GLFW_KEY_LEFT]) {
-        rotation.y -= 0.05;
-        if (rotation.y <= - ppgso::PI*2)
-            rotation.y +=  ppgso::PI*2;
+        rotation.y -= rot_speed;
     }
     else if (scene.keyboard[GLFW_KEY_UP]) {
-        rotation.x -= 0.05;
-        if (rotation.x - BASIC_ROTATION_X <= -0.6)
-            rotation.x = -0.6 + BASIC_ROTATION_X;
-
+        position.y += speed  * 0.3;
+//        rotation.x -= rot_speed;
+//        if (rotation.x - BASIC_ROTATION_X <= -0.6)
+//            rotation.x = -0.6 + BASIC_ROTATION_X;
     }
     else if (scene.keyboard[GLFW_KEY_DOWN]) {
-        rotation.x += 0.05;
-        if (rotation.x - BASIC_ROTATION_X >= 0.6)
-            rotation.x = 0.6 + BASIC_ROTATION_X;
+        position.y -= speed * 0.3;
+//        rotation.x += rot_speed ;
+//        if (rotation.x - BASIC_ROTATION_X >= 0.6)
+//            rotation.x = 0.6 + BASIC_ROTATION_X;
     }
     else if (scene.keyboard[GLFW_KEY_SPACE]) {
         speed += 0.1f;
@@ -56,42 +51,21 @@ bool Submarine::update(Scene &scene, float dt) {
     else if (scene.keyboard[GLFW_KEY_LEFT_SHIFT]) {
         speed -= 0.1f;
     }
-
-    if (abs(rotation.y) >= ppgso::PI/2 && abs(rotation.y) <= 3*ppgso::PI/2)
-        flag = 1;
-
+    else if (scene.keyboard[GLFW_KEY_P]) {
+        speed = 0;
+    }
     position.z += speed * cos(rotation.y);
     position.x += speed * -sin(rotation.y);
-    position.y += speed * flag * sin(rotation.x - BASIC_ROTATION_X);
+//    position.y += speed * -cos(rotation.y) * sin(rotation.x - BASIC_ROTATION_X);
 
-    scene.setTargetPosition(position, rotation);
+    auto tmp = rotation;
+    tmp.x -= BASIC_ROTATION_X;
+    scene.setTargetPosition(position, tmp);
 
     // Generate modelMatrix from position, rotation and scale
     generateModelMatrix();
 
     return true;
-}
-
-void Submarine::rotateRight() {
-
-}
-
-void Submarine::rotateLeft() {
-}
-
-void Submarine::rotateDown() {
-
-}
-
-void Submarine::rotateUp() {
-}
-
-void Submarine::moveForward() {
-
-}
-
-void Submarine::moveBackward() {
-
 }
 
 void Submarine::render(Scene &scene) {

@@ -2,19 +2,19 @@
 // Created by Matej on 14. 11. 2021.
 //
 
-#ifndef PPGSO_SUBMARINE_H
-#define PPGSO_SUBMARINE_H
+#ifndef PPGSO_VOLCANO_H
+#define PPGSO_VOLCANO_H
 
 #include <ppgso/ppgso.h>
 #include "scene.h"
 #include "object.h"
 
-class Submarine final : public Object {
+class Volcano final : public Object {
 private:
-    float BASIC_ROTATION_X = 1.5f;
+    bool isBurst = true;
 
-    float speed = 0.3f;
-    float rot_speed = 0.04f;
+    bool isSending = true;
+
     // Static resources (Shared between instances)
     static std::unique_ptr<ppgso::Mesh> mesh;
     static std::unique_ptr<ppgso::Shader> shader;
@@ -22,7 +22,7 @@ private:
 
 
 public:
-    Submarine();
+    Volcano(bool burst, glm::vec3 position);
 
     bool update(Scene &scene, float dt) override;
 
