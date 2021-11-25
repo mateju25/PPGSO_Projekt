@@ -16,17 +16,52 @@ std::unique_ptr<ppgso::Shader> Submarine::shader;
 
 Submarine::Submarine() {
     // Set random scale speed and rotation
-    position = {10, 10, 10};
-    rotation = {0, 0, 0};
-    scale = {1, 1, 1};
+    position = {0, 0, 0};
+    rotation = {BASIC_ROTATION_X, 0, 0};
+    scale = {2, 2, 2};
 
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(diffuse_vert_glsl, diffuse_frag_glsl);
-//    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("lena.bmp"));
+    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/submarine.bmp"));
     if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/Sub.obj");
 }
 
 bool Submarine::update(Scene &scene, float dt) {
+    if (scene.keyboard[GLFW_KEY_RIGHT]) {
+        rotation.y += rot_speed;
+    }
+    else if (scene.keyboard[GLFW_KEY_LEFT]) {
+        rotation.y -= rot_speed;
+    }
+    else if (scene.keyboard[GLFW_KEY_UP]) {
+        position.y += speed  * 0.3;
+//        rotation.x -= rot_speed;
+//        if (rotation.x - BASIC_ROTATION_X <= -0.6)
+//            rotation.x = -0.6 + BASIC_ROTATION_X;
+    }
+    else if (scene.keyboard[GLFW_KEY_DOWN]) {
+        position.y -= speed * 0.3;
+//        rotation.x += rot_speed ;
+//        if (rotation.x - BASIC_ROTATION_X >= 0.6)
+//            rotation.x = 0.6 + BASIC_ROTATION_X;
+    }
+    else if (scene.keyboard[GLFW_KEY_SPACE]) {
+        speed += 0.1f;
+    }
+    else if (scene.keyboard[GLFW_KEY_LEFT_SHIFT]) {
+        speed -= 0.1f;
+    }
+    else if (scene.keyboard[GLFW_KEY_P]) {
+        speed = 0;
+    }
+//    speed = 0;
+    position.z += speed * cos(rotation.y);
+    position.x += speed * -sin(rotation.y);
+//    position.y += speed * -cos(rotation.y) * sin(rotation.x - BASIC_ROTATION_X);
+
+    auto tmp = rotation;
+    tmp.x -= BASIC_ROTATION_X;
+    scene.setTargetPosition(position, tmp);
 
     // Generate modelMatrix from position, rotation and scale
     generateModelMatrix();

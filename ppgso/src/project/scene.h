@@ -7,6 +7,7 @@
 
 #include "object.h"
 #include "camera.h"
+#include "submarine.h"
 
 /*
  * Scene is an object that will aggregate all scene related data
@@ -40,6 +41,9 @@ class Scene {
     // All objects to be rendered in scene
     std::list< std::unique_ptr<Object> > objects;
 
+    glm::vec3 targetPosition;
+    glm::vec3 targetRotation;
+
     // Keyboard state
     std::map< int, int > keyboard;
 
@@ -51,6 +55,8 @@ class Scene {
       double x, y;
       bool left, right;
     } cursor;
+
+    void setTargetPosition(const glm::vec3 &position, const glm::vec3 &rotation);
 };
 
 #endif // _PPGSO_SCENE_H

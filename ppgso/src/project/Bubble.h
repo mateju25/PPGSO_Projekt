@@ -2,19 +2,17 @@
 // Created by Matej on 14. 11. 2021.
 //
 
-#ifndef PPGSO_SUBMARINE_H
-#define PPGSO_SUBMARINE_H
+#ifndef PPGSO_Bubble_H
+#define PPGSO_Bubble_H
 
 #include <ppgso/ppgso.h>
 #include "scene.h"
 #include "object.h"
 
-class Submarine final : public Object {
+class Bubble final : public Object {
 private:
-    float BASIC_ROTATION_X = 1.5f;
+    float time;
 
-    float speed = 0.3f;
-    float rot_speed = 0.04f;
     // Static resources (Shared between instances)
     static std::unique_ptr<ppgso::Mesh> mesh;
     static std::unique_ptr<ppgso::Shader> shader;
@@ -22,13 +20,15 @@ private:
 
 
 public:
-    Submarine();
+    Bubble(glm::vec3  positionn, float timeAlive) ;
 
     bool update(Scene &scene, float dt) override;
 
     void render(Scene &scene) override;
 
 private:
+    glm::vec3 sameRandom_vec3 (float mini, float maxi);
+    glm::vec3 random_vec3 (float mini, float maxi);
 };
 
 

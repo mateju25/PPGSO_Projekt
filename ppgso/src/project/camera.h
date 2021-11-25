@@ -12,10 +12,18 @@
  */
 class Camera {
 public:
+    glm::vec3 position{0, 0, 0};
+    glm::vec3 positionOffset{0, 0, 0};
+    glm::vec3 offset{0, 0, 0};
+    glm::vec3 rotation{0, 0, 0};
+
+    float distanceY = 4;
+    float distanceZ = 10;
+
+    glm::vec3 submarinePos;
+
     glm::vec3 up{0, 1, 0};
-    glm::vec3 position;
-    glm::vec3 rotation;
-    glm::vec3 offset;
+    glm::vec3 back{0, 0, -1};
 
     glm::mat4 viewMatrix;
     glm::mat4 projectionMatrix;
@@ -34,14 +42,8 @@ public:
      */
     void update();
 
-    void updateRotation(glm::vec2 mvector);
+    void moveTo(const glm::vec3 &pos, const glm::vec3 &rot);
 
-    /*!
-     * Get direction vector in world coordinates through camera projection plane
-     * @param u - camera projection plane horizontal coordinate [-1,1]
-     * @param v - camera projection plane vertical coordinate [-1,1]
-     * @return Normalized vector from camera position to position on the camera projection plane
-     */
-    glm::vec3 cast(double u, double v);
+    glm::vec3 getTotalPosition() const;
 };
 
