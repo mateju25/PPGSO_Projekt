@@ -6,7 +6,7 @@
 
 Camera::Camera() {
 
-    float fow = 90.0f, ratio = 1.0f, near = 0.0001f, far = 1000.0f;
+    float fow = 90.0f, ratio = 1.0f, near = 0.0001f, far = 10000.0f;
 
     projectionMatrix = glm::perspective((ppgso::PI / 180.0f) * fow, ratio, near, far);
 

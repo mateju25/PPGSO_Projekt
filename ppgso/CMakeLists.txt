@@ -186,6 +186,8 @@ add_executable(project_scene
         src/project/camera.cpp
         src/project/Bubble.cpp
         src/project/terrain.cpp
+        src/project/cave.cpp
+        src/project/walls.cpp
         src/project/volcano.cpp
         src/project/submarine.cpp)
 target_link_libraries(project_scene ppgso shaders)

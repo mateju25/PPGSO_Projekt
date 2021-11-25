@@ -17,6 +17,8 @@
 #include "terrain.h"
 #include "submarine.h"
 #include "volcano.h"
+#include "walls.h"
+#include "cave.h"
 
 const unsigned int SIZE = 900;
 
@@ -45,16 +47,23 @@ private:
         scene.camera = move(camera);
 
         // Create terrain
-        auto terrain = std::make_unique<Terrain>();
-        scene.objects.push_back(move(terrain));
+        auto terrain1 = std::make_unique<Terrain>();
+        scene.objects.push_back(move(terrain1));
 
-        glm::vec3 position = {0,0,0};
-        auto volcano1 = std::make_unique<Volcano>(false, position);
-        scene.objects.push_back(move(volcano1));
+        auto terrain2 = std::make_unique<Walls>();
+        scene.objects.push_back(move(terrain2));
 
-        position = {5,0,0};
-        auto volcano2 = std::make_unique<Volcano>(true, position);
-        scene.objects.push_back(move(volcano2));
+        auto terrain3 = std::make_unique<Cave>();
+        scene.objects.push_back(move(terrain3));
+
+
+//        glm::vec3 position = {0,0,0};
+//        auto volcano1 = std::make_unique<Volcano>(false, position);
+//        scene.objects.push_back(move(volcano1));
+//
+//        position = {5,0,0};
+//        auto volcano2 = std::make_unique<Volcano>(true, position);
+//        scene.objects.push_back(move(volcano2));
     }
 
 public:
