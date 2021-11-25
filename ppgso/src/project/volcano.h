@@ -12,7 +12,7 @@
 class Volcano final : public Object {
 private:
     bool isBurst = true;
-
+    float flag = 0;
     bool isSending = true;
 
     // Static resources (Shared between instances)

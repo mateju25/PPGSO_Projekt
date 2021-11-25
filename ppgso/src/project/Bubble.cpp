@@ -22,8 +22,10 @@ Bubble::Bubble(glm::vec3  position, float timeAlive) {
     auto rndmPos = random_vec3(-0.2, 0.2);
     this->position.x += rndmPos.x;
     this->position.z += rndmPos.z;
+
     rotation = random_vec3(-0.1, 0.1);
-    scale = sameRandom_vec3(0.01, 0.3);
+    scale = sameRandom_vec3(0.1, 0.2);
+
     time = timeAlive;
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(texture_vert_glsl, texture_frag_glsl);

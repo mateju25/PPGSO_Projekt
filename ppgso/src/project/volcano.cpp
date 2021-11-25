@@ -17,43 +17,39 @@ std::unique_ptr<ppgso::Mesh> Volcano::mesh;
 std::unique_ptr<ppgso::Texture> Volcano::texture;
 std::unique_ptr<ppgso::Shader> Volcano::shader;
 
-Volcano::Volcano(bool burst, glm::vec3  position) {
+Volcano::Volcano(bool burst, glm::vec3 position) {
     // Set random scale speed and rotation
     this->position = position;
-    rotation = {0, 0, 0};
-    scale = {0.5, 0.5, 0.5};
+    rotation = {-1.5f, 0, 0};
+    scale = {9, 9, 9};
 
     isBurst = burst;
 
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(texture_vert_glsl, texture_frag_glsl);
     if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/ocean.bmp"));
-    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/volcano.obj");
+    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/Geyser.obj");
 }
 
 bool Volcano::update(Scene &scene, float dt) {
+    auto tmp = this->position;
+    tmp.z += 0.2f;
+    tmp.y += 1.7f;
     if (isBurst) {
         if (((int) dt) % 20 == 0) {
             for (int i = 0; i < 30; ++i) {
                 if (i % 5 == 0) {
-                    auto tmp = this->position;
-                    tmp.y += 3;
+
                     auto bubble = std::make_unique<Bubble>(tmp, ((float) rand() / (float) RAND_MAX) * (40 - 15) + 15);
                     scene.objects.push_back(move(bubble));
                 }
             }
         }
     } else {
-        if (((int) dt) % 2 == 0) {
-            if (!isSending) {
-                isSending = true;
-                auto tmp = this->position;
-                tmp.y += 3;
-                auto bubble = std::make_unique<Bubble>(tmp, ((float) rand() / (float) RAND_MAX) * (100 - 55) + 55);
+        if (((float) rand() / (float) RAND_MAX) < 0.05) {
+
+                auto bubble = std::make_unique<Bubble>(tmp, ((float) rand() / (float) RAND_MAX) * (120 - 85) + 85);
                 scene.objects.push_back(move(bubble));
-            }
-        } else {
-            isSending = false;
         }
     }
 

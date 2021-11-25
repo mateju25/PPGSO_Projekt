@@ -52,7 +52,7 @@ private:
         auto volcano1 = std::make_unique<Volcano>(false, position);
         scene.objects.push_back(move(volcano1));
 
-        position = {10,0,0};
+        position = {5,0,0};
         auto volcano2 = std::make_unique<Volcano>(true, position);
         scene.objects.push_back(move(volcano2));
     }

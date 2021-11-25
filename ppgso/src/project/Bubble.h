@@ -11,7 +11,7 @@
 
 class Bubble final : public Object {
 private:
-    float time = 15;
+    float time;
 
     // Static resources (Shared between instances)
     static std::unique_ptr<ppgso::Mesh> mesh;

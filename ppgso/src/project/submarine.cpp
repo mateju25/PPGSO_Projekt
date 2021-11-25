@@ -54,6 +54,7 @@ bool Submarine::update(Scene &scene, float dt) {
     else if (scene.keyboard[GLFW_KEY_P]) {
         speed = 0;
     }
+//    speed = 0;
     position.z += speed * cos(rotation.y);
     position.x += speed * -sin(rotation.y);
 //    position.y += speed * -cos(rotation.y) * sin(rotation.x - BASIC_ROTATION_X);
