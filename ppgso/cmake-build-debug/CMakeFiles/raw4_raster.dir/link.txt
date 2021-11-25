@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\raw4_raster.dir/objects.a
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ar.exe cr CMakeFiles\raw4_raster.dir/objects.a @CMakeFiles\raw4_raster.dir\objects1.rsp
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -Wl,--whole-archive CMakeFiles\raw4_raster.dir/objects.a -Wl,--no-whole-archive -o raw4_raster.exe -Wl,--out-implib,libraw4_raster.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\raw4_raster.dir\linklibs.rsp

@@ -177,7 +177,7 @@ target_link_libraries(gl9_scene ppgso shaders)
 install(TARGETS gl9_scene DESTINATION .)
 add_custom_command(TARGET gl9_scene POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/data/ ${CMAKE_CURRENT_BINARY_DIR})
 
-# gl9_scene
+# project scene TOTO JE NASE
 add_executable(project_scene
         src/project/project_scene.cpp
         src/project/object.cpp
@@ -188,8 +188,9 @@ add_executable(project_scene
         src/project/cave.cpp
         src/project/caveMask.cpp
         src/project/walls.cpp
+        src/project/fish.cpp
         src/project/volcano.cpp
-        src/project/submarine.cpp)
+        src/project/submarine.cpp src/project/fish_spawn.cpp src/project/fish_spawn.h)
 target_link_libraries(project_scene ppgso shaders)
 install(TARGETS project_scene DESTINATION .)
 add_custom_command(TARGET project_scene POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/data/ ${CMAKE_CURRENT_BINARY_DIR})
@@ -233,10 +234,10 @@ install(TARGETS task7_particles DESTINATION .)
 add_custom_command(TARGET task7_particles POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/data/ ${CMAKE_CURRENT_BINARY_DIR})
 
 # Playground target
-add_executable(playground src/playground/playground.cpp)
-target_link_libraries(playground ppgso shaders)
-install (TARGETS playground DESTINATION .)
-add_custom_command(TARGET playground POST_BUILD COMMAND  ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/data/ ${CMAKE_CURRENT_BINARY_DIR})
+#add_executable(playground src/playground/playground.cpp)
+#target_link_libraries(playground ppgso shaders)
+#install (TARGETS playground DESTINATION .)
+#add_custom_command(TARGET playground POST_BUILD COMMAND  ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/data/ ${CMAKE_CURRENT_BINARY_DIR})
 #
 # INSTALLATION
 #

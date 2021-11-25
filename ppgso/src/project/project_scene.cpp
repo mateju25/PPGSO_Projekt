@@ -20,6 +20,7 @@
 #include "walls.h"
 #include "cave.h"
 #include "caveMask.h"
+#include "fish_spawn.h"
 
 const unsigned int SIZE = 900;
 
@@ -28,6 +29,8 @@ const unsigned int SIZE = 900;
  */
 class SceneWindow : public ppgso::Window {
 private:
+    float time;
+
     Scene scene;
     Submarine submarineScene;
     /*!
@@ -50,6 +53,8 @@ private:
         scene.camera = move(camera);
 
         // Create terrain
+//        auto terrain_test = std::make_unique<Terrain>();
+//        scene.objects.push_back(move(terrain_test));
         auto terrain1 = std::make_unique<Terrain>();
         scene.objects.push_back(move(terrain1));
 
@@ -69,6 +74,19 @@ private:
 //        position = {5,0,0};
 //        auto volcano2 = std::make_unique<Volcano>(true, position);
 //        scene.objects.push_back(move(volcano2));
+
+        std::vector<glm::vec3> path_points = {
+                {0, 0, 0},
+                {0, 50, 0},
+                {0, 50, 50},
+                {50, 50, 50},
+                {50, 50, 0},
+                {150, 50, 0},
+                {150, 0, 0}
+        };
+
+        auto fishfish = std::make_unique<fish_spawn>(path_points, 1, 10);
+        scene.objects.push_back(move(fishfish));
     }
 
 public:
@@ -128,11 +146,9 @@ public:
     void onIdle() override {
 //        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 
-        // Track time
-        static auto time = (float) glfwGetTime();
-
         // Compute time delta
         float dt = (float) glfwGetTime() - time;
+        time = (float) glfwGetTime();
 
         // Set gray background
         glClearColor(.5f, .5f, .5f, 0);

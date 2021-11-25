@@ -29,31 +29,32 @@ Submarine::Submarine() {
 }
 
 bool Submarine::update(Scene &scene, float dt) {
+
     if (scene.keyboard[GLFW_KEY_RIGHT]) {
         rotation.y += rot_speed;
     }
-    else if (scene.keyboard[GLFW_KEY_LEFT]) {
+    if (scene.keyboard[GLFW_KEY_LEFT]) {
         rotation.y -= rot_speed;
     }
-    else if (scene.keyboard[GLFW_KEY_UP]) {
+    if (scene.keyboard[GLFW_KEY_UP]) {
         position.y += speed  * 0.3;
 //        rotation.x -= rot_speed;
 //        if (rotation.x - BASIC_ROTATION_X <= -0.6)
 //            rotation.x = -0.6 + BASIC_ROTATION_X;
     }
-    else if (scene.keyboard[GLFW_KEY_DOWN]) {
+    if (scene.keyboard[GLFW_KEY_DOWN]) {
         position.y -= speed * 0.3;
 //        rotation.x += rot_speed ;
 //        if (rotation.x - BASIC_ROTATION_X >= 0.6)
 //            rotation.x = 0.6 + BASIC_ROTATION_X;
     }
-    else if (scene.keyboard[GLFW_KEY_SPACE]) {
+    if (scene.keyboard[GLFW_KEY_SPACE]) {
         speed += 0.1f;
     }
-    else if (scene.keyboard[GLFW_KEY_LEFT_SHIFT]) {
+    if (scene.keyboard[GLFW_KEY_LEFT_SHIFT]) {
         speed -= 0.1f;
     }
-    else if (scene.keyboard[GLFW_KEY_P]) {
+    if (scene.keyboard[GLFW_KEY_P]) {
         speed = 0;
     }
 //    speed = 0;

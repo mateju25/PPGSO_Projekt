@@ -1,0 +1,1626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ppgso"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="shaders">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/libshaders.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 shaders"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="shaders/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/libshaders.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 shaders/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gl2_texture">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/gl2_texture.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 gl2_texture"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gl2_texture/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/gl2_texture.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 gl2_texture/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ppgso">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/libppgso.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 ppgso"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ppgso/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/libppgso.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 ppgso/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gl4_transform">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/gl4_transform.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 gl4_transform"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gl4_transform/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/gl4_transform.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 gl4_transform/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="raw4_raster">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/raw4_raster.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 raw4_raster"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="raw4_raster/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/raw4_raster.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 raw4_raster/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task7_particles">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/task7_particles.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 task7_particles"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task7_particles/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/task7_particles.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 task7_particles/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="raw2_raycast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/raw2_raycast.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 raw2_raycast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="raw2_raycast/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/raw2_raycast.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 raw2_raycast/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="raw1_gradient">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/raw1_gradient.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 raw1_gradient"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="raw1_gradient/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/raw1_gradient.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 raw1_gradient/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="raw3_raytrace">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/raw3_raytrace.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 raw3_raytrace"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="raw3_raytrace/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/raw3_raytrace.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 raw3_raytrace/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gl1_gradient">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/gl1_gradient.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 gl1_gradient"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gl1_gradient/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/gl1_gradient.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 gl1_gradient/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gl3_animate">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/gl3_animate.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 gl3_animate"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gl3_animate/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/gl3_animate.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 gl3_animate/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gl5_projection">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/gl5_projection.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 gl5_projection"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gl5_projection/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/gl5_projection.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 gl5_projection/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gl6_mesh">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/gl6_mesh.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 gl6_mesh"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gl6_mesh/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/gl6_mesh.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 gl6_mesh/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gl7_diffuse">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/gl7_diffuse.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 gl7_diffuse"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gl7_diffuse/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/gl7_diffuse.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 gl7_diffuse/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gl8_framebuffer">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/gl8_framebuffer.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 gl8_framebuffer"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gl8_framebuffer/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/gl8_framebuffer.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 gl8_framebuffer/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gl9_scene">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/gl9_scene.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 gl9_scene"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gl9_scene/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/gl9_scene.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 gl9_scene/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="project_scene">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/project_scene.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 project_scene"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="project_scene/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/project_scene.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 project_scene/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task2_bresenham">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/task2_bresenham.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 task2_bresenham"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task2_bresenham/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/task2_bresenham.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 task2_bresenham/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task1_filter">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/task1_filter.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 task1_filter"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task1_filter/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/task1_filter.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 task1_filter/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task3_bezier">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/task3_bezier.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 task3_bezier"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task3_bezier/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/task3_bezier.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 task3_bezier/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task4_2dshapes">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/task4_2dshapes.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 task4_2dshapes"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task4_2dshapes/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/task4_2dshapes.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 task4_2dshapes/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task5_3d_origin">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/task5_3d_origin.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 task5_3d_origin"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task5_3d_origin/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/task5_3d_origin.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 task5_3d_origin/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task6_bezier_surface">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/task6_bezier_surface.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 task6_bezier_surface"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task6_bezier_surface/fast">
+				<Option output="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/task6_bezier_surface.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLM_FORCE_RADIANS"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/dependencies/include"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso"/>
+					<Add directory="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 task6_bezier_surface/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/color_frag_glsl.cpp">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/color_frag_glsl.cpp.rule">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/color_frag_glsl.h">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/color_vert_glsl.cpp">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/color_vert_glsl.cpp.rule">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/color_vert_glsl.h">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/convolution_frag_glsl.cpp">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/convolution_frag_glsl.cpp.rule">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/convolution_frag_glsl.h">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/convolution_vert_glsl.cpp">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/convolution_vert_glsl.cpp.rule">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/convolution_vert_glsl.h">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/diffuse_frag_glsl.cpp">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/diffuse_frag_glsl.cpp.rule">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/diffuse_frag_glsl.h">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/diffuse_vert_glsl.cpp">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/diffuse_vert_glsl.cpp.rule">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/diffuse_vert_glsl.h">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/texture_frag_glsl.cpp">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/texture_frag_glsl.cpp.rule">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/texture_frag_glsl.h">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/texture_vert_glsl.cpp">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/texture_vert_glsl.cpp.rule">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/shaders/texture_vert_glsl.h">
+			<Option target="shaders"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/image.cpp">
+			<Option target="ppgso"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/image.h">
+			<Option target="ppgso"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/image_bmp.cpp">
+			<Option target="ppgso"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/image_bmp.h">
+			<Option target="ppgso"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/image_raw.cpp">
+			<Option target="ppgso"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/image_raw.h">
+			<Option target="ppgso"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/mesh.cpp">
+			<Option target="ppgso"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/mesh.h">
+			<Option target="ppgso"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/shader.cpp">
+			<Option target="ppgso"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/shader.h">
+			<Option target="ppgso"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/texture.cpp">
+			<Option target="ppgso"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/texture.h">
+			<Option target="ppgso"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/tiny_obj_loader.cpp">
+			<Option target="ppgso"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/tiny_obj_loader.h">
+			<Option target="ppgso"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/window.cpp">
+			<Option target="ppgso"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/window.h">
+			<Option target="ppgso"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl1_gradient/gl1_gradient.cpp">
+			<Option target="gl1_gradient"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl2_texture/gl2_texture.cpp">
+			<Option target="gl2_texture"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl3_animate/gl3_animate.cpp">
+			<Option target="gl3_animate"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl4_transform/gl4_transform.cpp">
+			<Option target="gl4_transform"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl5_projection/gl5_projection.cpp">
+			<Option target="gl5_projection"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl6_mesh/gl6_mesh.cpp">
+			<Option target="gl6_mesh"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl7_diffuse/gl7_diffuse.cpp">
+			<Option target="gl7_diffuse"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl8_framebuffer/gl8_framebuffer.cpp">
+			<Option target="gl8_framebuffer"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl9_scene/asteroid.cpp">
+			<Option target="gl9_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl9_scene/asteroid.h">
+			<Option target="gl9_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl9_scene/camera.cpp">
+			<Option target="gl9_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl9_scene/camera.h">
+			<Option target="gl9_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl9_scene/explosion.cpp">
+			<Option target="gl9_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl9_scene/explosion.h">
+			<Option target="gl9_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl9_scene/generator.cpp">
+			<Option target="gl9_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl9_scene/generator.h">
+			<Option target="gl9_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl9_scene/gl9_scene.cpp">
+			<Option target="gl9_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl9_scene/object.cpp">
+			<Option target="gl9_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl9_scene/object.h">
+			<Option target="gl9_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl9_scene/player.cpp">
+			<Option target="gl9_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl9_scene/player.h">
+			<Option target="gl9_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl9_scene/projectile.cpp">
+			<Option target="gl9_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl9_scene/projectile.h">
+			<Option target="gl9_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl9_scene/scene.cpp">
+			<Option target="gl9_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl9_scene/scene.h">
+			<Option target="gl9_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl9_scene/space.cpp">
+			<Option target="gl9_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl9_scene/space.h">
+			<Option target="gl9_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/Bubble.cpp">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/Bubble.h">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/camera.cpp">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/camera.h">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/cave.cpp">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/cave.h">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/caveMask.cpp">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/caveMask.h">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/fish.cpp">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/fish.h">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/fish_spawn.cpp">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/fish_spawn.h">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/object.cpp">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/object.h">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/project_scene.cpp">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/scene.cpp">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/scene.h">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/submarine.cpp">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/submarine.h">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/terrain.cpp">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/terrain.h">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/volcano.cpp">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/volcano.h">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/walls.cpp">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/walls.h">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/raw1_gradient/raw1_gradient.cpp">
+			<Option target="raw1_gradient"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/raw2_raycast/raw2_raycast.cpp">
+			<Option target="raw2_raycast"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/raw3_raytrace/raw3_raytrace.cpp">
+			<Option target="raw3_raytrace"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/raw4_raster/raw4_raster.cpp">
+			<Option target="raw4_raster"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/task1_filter/task1_filter.cpp">
+			<Option target="task1_filter"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/task2_bresenham/task2_bresenham.cpp">
+			<Option target="task2_bresenham"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/task3_bezier/task3_bezier.cpp">
+			<Option target="task3_bezier"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/task4_2dshapes/task4_2dshapes.cpp">
+			<Option target="task4_2dshapes"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/task5_3d_origin/task5_3d_origin.cpp">
+			<Option target="task5_3d_origin"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/task6_bezier_surface/task6_bezier_surface.cpp">
+			<Option target="task6_bezier_surface"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/task7_particles/task7_particles.cpp">
+			<Option target="task7_particles"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake/FindGLEW.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake/FindGLFW3.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake/FindGLM.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake/add_resources.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
