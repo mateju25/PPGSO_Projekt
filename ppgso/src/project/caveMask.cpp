@@ -2,7 +2,7 @@
 // Created by Matej on 14. 11. 2021.
 //
 
-#include "cave.h"
+#include "caveMask.h"
 #include <glm/gtc/random.hpp>
 
 #include <shaders/texture_vert_glsl.h>
@@ -11,11 +11,11 @@
 #include <shaders/diffuse_vert_glsl.h>
 #include <shaders/diffuse_frag_glsl.h>
 // Static resources
-std::unique_ptr<ppgso::Mesh> Cave::mesh;
-std::unique_ptr<ppgso::Texture> Cave::texture;
-std::unique_ptr<ppgso::Shader> Cave::shader;
+std::unique_ptr<ppgso::Mesh> CaveMask::mesh;
+std::unique_ptr<ppgso::Texture> CaveMask::texture;
+std::unique_ptr<ppgso::Shader> CaveMask::shader;
 
-Cave::Cave() {
+CaveMask::CaveMask() {
     // Set random scale speed and rotation
     position = {0, 0, 0};
     rotation = {3*ppgso::PI/2, 0, 0};
@@ -24,10 +24,10 @@ Cave::Cave() {
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(diffuse_vert_glsl, diffuse_frag_glsl);
     if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/ocean.bmp"));
-    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/cave.obj");
+    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/cave_mask.obj");
 }
 
-bool Cave::update(Scene &scene, float dt) {
+bool CaveMask::update(Scene &scene, float dt) {
 
     // Generate modelMatrix from position, rotation and scale
     generateModelMatrix();
@@ -35,7 +35,7 @@ bool Cave::update(Scene &scene, float dt) {
     return true;
 }
 
-void Cave::render(Scene &scene) {
+void CaveMask::render(Scene &scene) {
     shader->use();
 
     // Set up light

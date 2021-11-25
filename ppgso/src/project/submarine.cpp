@@ -5,6 +5,8 @@
 #include "submarine.h"
 #include <glm/gtc/random.hpp>
 
+#include <shaders/texture_vert_glsl.h>
+#include <shaders/texture_frag_glsl.h>
 #include <shaders/diffuse_vert_glsl.h>
 #include <shaders/diffuse_frag_glsl.h>
 
@@ -21,7 +23,7 @@ Submarine::Submarine() {
     scale = {2, 2, 2};
 
     // Initialize static resources if needed
-    if (!shader) shader = std::make_unique<ppgso::Shader>(diffuse_vert_glsl, diffuse_frag_glsl);
+    if (!shader) shader = std::make_unique<ppgso::Shader>(texture_vert_glsl, texture_frag_glsl);
     if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/submarine.bmp"));
     if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/Sub.obj");
 }

@@ -66,7 +66,6 @@ set(PPGSO_SHADER_SRC
         shader/color_vert.glsl shader/color_frag.glsl
         shader/convolution_vert.glsl shader/convolution_frag.glsl
         shader/diffuse_vert.glsl shader/diffuse_frag.glsl
-        shader/terrain_diffuse_vert.glsl shader/terrain_diffuse_frag.glsl
         shader/texture_vert.glsl shader/texture_frag.glsl
         )
 add_resources(shaders ${PPGSO_SHADER_SRC})
@@ -187,6 +186,7 @@ add_executable(project_scene
         src/project/Bubble.cpp
         src/project/terrain.cpp
         src/project/cave.cpp
+        src/project/caveMask.cpp
         src/project/walls.cpp
         src/project/volcano.cpp
         src/project/submarine.cpp)

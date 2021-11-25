@@ -19,6 +19,7 @@
 #include "volcano.h"
 #include "walls.h"
 #include "cave.h"
+#include "caveMask.h"
 
 const unsigned int SIZE = 900;
 
@@ -35,6 +36,8 @@ private:
      */
     void initScene() {
         scene.objects.clear();
+
+        scene.lightDirection = {0.1 , 1, 0.1};
 
 
         // Create submarine
@@ -56,6 +59,8 @@ private:
         auto terrain3 = std::make_unique<Cave>();
         scene.objects.push_back(move(terrain3));
 
+//        auto terrain4 = std::make_unique<CaveMask>();
+//        scene.objects.push_back(move(terrain4));
 
 //        glm::vec3 position = {0,0,0};
 //        auto volcano1 = std::make_unique<Volcano>(false, position);
@@ -68,7 +73,6 @@ private:
 
 public:
     bool first_mouse = true;
-    glm::vec2 mouse_delta;
 
     /*!
      * Construct custom game window
