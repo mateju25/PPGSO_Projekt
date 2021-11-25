@@ -2,7 +2,7 @@
 // Created by Matej on 14. 11. 2021.
 //
 
-#include "terrain.h"
+#include "walls.h"
 #include <glm/gtc/random.hpp>
 
 #include <shaders/texture_vert_glsl.h>
@@ -10,11 +10,11 @@
 
 
 // Static resources
-std::unique_ptr<ppgso::Mesh> Terrain::mesh;
-std::unique_ptr<ppgso::Texture> Terrain::texture;
-std::unique_ptr<ppgso::Shader> Terrain::shader;
+std::unique_ptr<ppgso::Mesh> Walls::mesh;
+std::unique_ptr<ppgso::Texture> Walls::texture;
+std::unique_ptr<ppgso::Shader> Walls::shader;
 
-Terrain::Terrain() {
+Walls::Walls() {
     // Set random scale speed and rotation
     position = {0, 0, 0};
     rotation = {3*ppgso::PI/2, 0, 0};
@@ -23,10 +23,10 @@ Terrain::Terrain() {
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(texture_vert_glsl, texture_frag_glsl);
     if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/ocean.bmp"));
-    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/terrain_01.obj");
+    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/walls.obj");
 }
 
-bool Terrain::update(Scene &scene, float dt) {
+bool Walls::update(Scene &scene, float dt) {
 
     // Generate modelMatrix from position, rotation and scale
     generateModelMatrix();
@@ -34,7 +34,7 @@ bool Terrain::update(Scene &scene, float dt) {
     return true;
 }
 
-void Terrain::render(Scene &scene) {
+void Walls::render(Scene &scene) {
     shader->use();
 
     // Set up light
