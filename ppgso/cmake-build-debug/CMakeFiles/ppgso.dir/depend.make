@@ -14,6 +14,10 @@ CMakeFiles/ppgso.dir/ppgso/image_raw.cpp.obj: \
 CMakeFiles/ppgso.dir/ppgso/mesh.cpp.obj: \
  ../dependencies/include/GL/glew.h \
  ../dependencies/include/glm/common.hpp \
+ ../dependencies/include/glm/detail/_fixes.hpp \
+ ../dependencies/include/glm/detail/_swizzle.hpp \
+ ../dependencies/include/glm/detail/_swizzle_func.hpp \
+ ../dependencies/include/glm/detail/_vectorize.hpp \
  ../dependencies/include/glm/detail/func_common.hpp \
  ../dependencies/include/glm/detail/func_common.inl \
  ../dependencies/include/glm/detail/func_common_simd.inl \
@@ -119,6 +123,10 @@ CMakeFiles/ppgso.dir/ppgso/mesh.cpp.obj: \
 CMakeFiles/ppgso.dir/ppgso/shader.cpp.obj: \
  ../dependencies/include/GL/glew.h \
  ../dependencies/include/glm/common.hpp \
+ ../dependencies/include/glm/detail/_fixes.hpp \
+ ../dependencies/include/glm/detail/_swizzle.hpp \
+ ../dependencies/include/glm/detail/_swizzle_func.hpp \
+ ../dependencies/include/glm/detail/_vectorize.hpp \
  ../dependencies/include/glm/detail/func_common.hpp \
  ../dependencies/include/glm/detail/func_common.inl \
  ../dependencies/include/glm/detail/func_common_simd.inl \

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/task1_filter/task1_filter.cpp" "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/CMakeFiles/task1_filter.dir/src/task1_filter/task1_filter.cpp.obj"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/task1_filter/task1_filter.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/task1_filter.dir/src/task1_filter/task1_filter.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

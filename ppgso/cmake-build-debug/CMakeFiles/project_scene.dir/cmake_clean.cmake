@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/project_scene.dir/src/project/cave.cpp.obj"
   "CMakeFiles/project_scene.dir/src/project/caveMask.cpp.obj"
   "CMakeFiles/project_scene.dir/src/project/fish.cpp.obj"
+  "CMakeFiles/project_scene.dir/src/project/fishTail.cpp.obj"
   "CMakeFiles/project_scene.dir/src/project/fish_spawn.cpp.obj"
   "CMakeFiles/project_scene.dir/src/project/object.cpp.obj"
   "CMakeFiles/project_scene.dir/src/project/project_scene.cpp.obj"

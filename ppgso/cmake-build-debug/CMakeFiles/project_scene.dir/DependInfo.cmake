@@ -8,19 +8,20 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/Bubble.cpp" "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/Bubble.cpp.obj"
-  "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/camera.cpp" "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/camera.cpp.obj"
-  "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/cave.cpp" "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/cave.cpp.obj"
-  "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/caveMask.cpp" "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/caveMask.cpp.obj"
-  "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/fish.cpp" "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/fish.cpp.obj"
-  "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/fish_spawn.cpp" "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/fish_spawn.cpp.obj"
-  "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/object.cpp" "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/object.cpp.obj"
-  "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/project_scene.cpp" "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/project_scene.cpp.obj"
-  "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/scene.cpp" "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/scene.cpp.obj"
-  "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/submarine.cpp" "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/submarine.cpp.obj"
-  "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/terrain.cpp" "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/terrain.cpp.obj"
-  "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/volcano.cpp" "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/volcano.cpp.obj"
-  "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/project/walls.cpp" "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/walls.cpp.obj"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/Bubble.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/Bubble.cpp.obj"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/camera.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/camera.cpp.obj"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/cave.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/cave.cpp.obj"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/caveMask.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/caveMask.cpp.obj"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/fish.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/fish.cpp.obj"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/fishTail.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/fishTail.cpp.obj"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/fish_spawn.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/fish_spawn.cpp.obj"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/object.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/object.cpp.obj"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/project_scene.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/project_scene.cpp.obj"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/scene.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/scene.cpp.obj"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/submarine.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/submarine.cpp.obj"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/terrain.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/terrain.cpp.obj"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/volcano.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/volcano.cpp.obj"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/walls.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/walls.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -44,8 +45,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/CMakeFiles/ppgso.dir/DependInfo.cmake"
-  "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/CMakeFiles/shaders.dir/DependInfo.cmake"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/ppgso.dir/DependInfo.cmake"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/shaders.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -18,20 +18,25 @@ private:
     static std::unique_ptr<ppgso::Texture> texture;
 
     std::vector<glm::vec3> path_points;
+    glm::vec3 offset;
     float total_time_interval;
     float current_time_interval;
+
 
     glm::vec3 bezierRec(std::vector<glm::vec3> points, float t);
     glm::vec3 getPoint(glm::vec3 p1, glm::vec3 p2, float t);
 
 public:
-    Fish(std::vector<glm::vec3> path_points, float total_time_interval);
+    bool isAlive = true;
+
+    Fish(Scene &scene, std::vector<glm::vec3> path_points, float total_time_interval);
 
     bool update(Scene &scene, float dt) override;
 
     void render(Scene &scene) override;
 
 private:
+    glm::vec3 random_vec3 (float mini, float maxi);
 };
 
 

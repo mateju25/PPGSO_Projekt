@@ -3,6 +3,7 @@
 //
 
 #include "fish.h"
+#include "fishTail.h"
 #include <glm/gtc/random.hpp>
 
 #include <shaders/texture_vert_glsl.h>
@@ -15,21 +16,33 @@ std::unique_ptr<ppgso::Mesh> Fish::mesh;
 std::unique_ptr<ppgso::Texture> Fish::texture;
 std::unique_ptr<ppgso::Shader> Fish::shader;
 
-Fish::Fish(std::vector<glm::vec3> path_points, float total_time_interval) {
+Fish::Fish(Scene &scene, std::vector<glm::vec3> path_points, float total_time_interval) {
     // Set random scale speed and rotation
     this->position = path_points.at(0);
     this->path_points = path_points;
     this->total_time_interval = total_time_interval;
 
+
+    offset = random_vec3(-3, 3);
+
     current_time_interval = 0;
 
-    rotation = {0, 0, 0};
-    scale = {5, 5, 5};
+    rotation = {3*ppgso::PI/2, 0,0};
+    scale = {4, 4, 4};
+
+    auto wheel = std::make_unique<FishTail>(scene, *this);
+    scene.objects.push_back(move(wheel));
 
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(diffuse_vert_glsl, diffuse_frag_glsl);
     if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/ocean.bmp"));
-    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("missile.obj");
+    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/fich_body.obj");
+}
+
+glm::vec3 Fish::random_vec3(float mini, float maxi) {
+    return {((float) rand() / (float) RAND_MAX) * (maxi - mini) + mini,
+            ((float) rand() / (float) RAND_MAX) * (maxi - mini) + mini,
+            ((float) rand() / (float) RAND_MAX) * (maxi - mini) + mini};
 }
 
 bool Fish::update(Scene &scene, float dt) {
@@ -38,15 +51,20 @@ bool Fish::update(Scene &scene, float dt) {
 
     glm::vec3 new_position = bezierRec(path_points, current_time_interval / total_time_interval);
 
-    position = new_position;
+    auto deltaPos = glm::normalize(position - (new_position + offset));
+    position = new_position + offset;
+
+    rotation.y = atan2(deltaPos.x, deltaPos.z);
 
     // Generate modelMatrix from position, rotation and scale
     generateModelMatrix();
 
     if (current_time_interval >= total_time_interval) {
+        isAlive = false;
         return false;
     }
 
+    isAlive = true;
     return true;
 }
 

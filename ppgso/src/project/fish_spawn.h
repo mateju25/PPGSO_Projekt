@@ -14,7 +14,7 @@ class fish_spawn : public Object {
 private:
 
     std::vector<glm::vec3> path_points;
-
+    bool isFish;
     double interval;
     double time_interval;
 

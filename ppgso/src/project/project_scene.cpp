@@ -21,6 +21,7 @@
 #include "cave.h"
 #include "caveMask.h"
 #include "fish_spawn.h"
+#include "fish.h"
 
 const unsigned int SIZE = 900;
 
@@ -53,16 +54,16 @@ private:
         scene.camera = move(camera);
 
         // Create terrain
-//        auto terrain_test = std::make_unique<Terrain>();
-//        scene.objects.push_back(move(terrain_test));
-        auto terrain1 = std::make_unique<Terrain>();
-        scene.objects.push_back(move(terrain1));
-
-        auto terrain2 = std::make_unique<Walls>();
-        scene.objects.push_back(move(terrain2));
-
-        auto terrain3 = std::make_unique<Cave>();
-        scene.objects.push_back(move(terrain3));
+        auto terrain_test = std::make_unique<Terrain>();
+        scene.objects.push_back(move(terrain_test));
+//        auto terrain1 = std::make_unique<Terrain>();
+//        scene.objects.push_back(move(terrain1));
+//
+//        auto terrain2 = std::make_unique<Walls>();
+//        scene.objects.push_back(move(terrain2));
+//
+//        auto terrain3 = std::make_unique<Cave>();
+//        scene.objects.push_back(move(terrain3));
 
 //        auto terrain4 = std::make_unique<CaveMask>();
 //        scene.objects.push_back(move(terrain4));
@@ -74,19 +75,24 @@ private:
 //        position = {5,0,0};
 //        auto volcano2 = std::make_unique<Volcano>(true, position);
 //        scene.objects.push_back(move(volcano2));
-
+//
         std::vector<glm::vec3> path_points = {
                 {0, 0, 0},
-                {0, 50, 0},
-                {0, 50, 50},
+                {50, 0, 0},
+                {50, 0, -50},
                 {50, 50, 50},
                 {50, 50, 0},
                 {150, 50, 0},
                 {150, 0, 0}
         };
+//
+//        auto fish = std::make_unique<Fish>(scene, path_points, 20);
+//        scene.objects.push_back(move(fish));
 
-        auto fishfish = std::make_unique<fish_spawn>(path_points, 1, 10);
+        auto fishfish = std::make_unique<fish_spawn>(path_points, 10, 20);
         scene.objects.push_back(move(fishfish));
+//
+
     }
 
 public:

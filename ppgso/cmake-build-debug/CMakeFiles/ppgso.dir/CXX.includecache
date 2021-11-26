@@ -66,6 +66,24 @@ GL/glu.h
 detail/func_common.hpp
 ../dependencies/include/glm/detail/func_common.hpp
 
+../dependencies/include/glm/detail/_fixes.hpp
+cmath
+-
+
+../dependencies/include/glm/detail/_swizzle.hpp
+
+../dependencies/include/glm/detail/_swizzle_func.hpp
+
+../dependencies/include/glm/detail/_vectorize.hpp
+type_vec1.hpp
+../dependencies/include/glm/detail/type_vec1.hpp
+type_vec2.hpp
+../dependencies/include/glm/detail/type_vec2.hpp
+type_vec3.hpp
+../dependencies/include/glm/detail/type_vec3.hpp
+type_vec4.hpp
+../dependencies/include/glm/detail/type_vec4.hpp
+
 ../dependencies/include/glm/detail/func_common.hpp
 setup.hpp
 ../dependencies/include/glm/detail/setup.hpp
@@ -842,13 +860,13 @@ detail/type_vec4.hpp
 detail/func_vector_relational.hpp
 ../dependencies/include/glm/detail/func_vector_relational.hpp
 
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/image.cpp
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/image.cpp
 algorithm
 -
 image.h
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/image.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/image.h
 
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/image.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/image.h
 string
 -
 vector
@@ -858,7 +876,7 @@ memory
 fstream
 -
 
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/image_bmp.cpp
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/image_bmp.cpp
 iostream
 -
 fstream
@@ -866,29 +884,29 @@ fstream
 sstream
 -
 image_bmp.h
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/image_bmp.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/image_bmp.h
 
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/image_bmp.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/image_bmp.h
 image.h
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/image.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/image.h
 
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/image_raw.cpp
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/image_raw.cpp
 fstream
 -
 sstream
 -
 image.h
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/image.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/image.h
 
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/mesh.cpp
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/mesh.cpp
 glm/glm.hpp
 -
 sstream
 -
 mesh.h
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/mesh.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/mesh.h
 
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/mesh.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/mesh.h
 iostream
 -
 vector
@@ -906,13 +924,13 @@ glm/gtc/matrix_transform.hpp
 glm/gtc/type_ptr.hpp
 -
 shader.h
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/shader.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/shader.h
 texture.h
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/texture.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/texture.h
 tiny_obj_loader.h
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/tiny_obj_loader.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/tiny_obj_loader.h
 
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/shader.cpp
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/shader.cpp
 iostream
 -
 sstream
@@ -924,11 +942,11 @@ glm/glm.hpp
 glm/gtc/type_ptr.hpp
 -
 texture.h
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/texture.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/texture.h
 shader.h
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/shader.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/shader.h
 
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/shader.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/shader.h
 string
 -
 memory
@@ -938,15 +956,15 @@ GL/glew.h
 glm/glm.hpp
 -
 texture.h
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/texture.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/texture.h
 
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/texture.cpp
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/texture.cpp
 iostream
 -
 texture.h
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/texture.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/texture.h
 
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/texture.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/texture.h
 string
 -
 vector
@@ -958,9 +976,9 @@ fstream
 GL/glew.h
 -
 image.h
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/image.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/image.h
 
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/tiny_obj_loader.cpp
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/tiny_obj_loader.cpp
 cstdlib
 -
 cstring
@@ -984,9 +1002,9 @@ fstream
 sstream
 -
 tiny_obj_loader.h
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/tiny_obj_loader.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/tiny_obj_loader.h
 
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/tiny_obj_loader.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/tiny_obj_loader.h
 string
 -
 vector
@@ -994,7 +1012,7 @@ vector
 map
 -
 
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/window.cpp
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/window.cpp
 cstdlib
 -
 iostream
@@ -1006,9 +1024,9 @@ GL/glew.h
 GLFW/glfw3.h
 -
 window.h
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/window.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/window.h
 
-C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/ppgso/window.h
+D:/Skola/5_semester/PPGSO/Projekt/ppgso/ppgso/window.h
 string
 -
 map

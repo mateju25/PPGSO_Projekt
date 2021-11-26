@@ -10,6 +10,8 @@ fish_spawn::fish_spawn(std::vector<glm::vec3> path_points, double interval, doub
     this->path_points = path_points;
     this->interval = interval;
     this->time_interval = time_interval;
+    this->elapsed_time = -interval;
+    this->isFish = false;
 }
 
 bool fish_spawn::update(Scene &scene, float dt) {
@@ -19,8 +21,11 @@ bool fish_spawn::update(Scene &scene, float dt) {
     if (elapsed_time > interval) {
         elapsed_time -= interval;
 
-        auto fish = std::make_unique<Fish>(path_points, time_interval);
-        scene.objects.push_back(move(fish));
+        for (int i = 0; i < 10; ++i) {
+                auto fish = std::make_unique<Fish>(scene, path_points, time_interval);
+                scene.objects.push_back(move(fish));
+        }
+
     }
 
     return true;

@@ -11,9 +11,11 @@
 
 class Submarine final : public Object {
 private:
-    float BASIC_ROTATION_X = 1.5f;
+    float BASIC_ROTATION_X = 3*ppgso::PI/2;
+    float BASIC_ROTATION_Y = ppgso::PI;
+    float BASIC_ROTATION_Z = 0;
 
-    float speed = 0.3f;
+    float speed = 0.0f;
     float rot_speed = 0.04f;
     // Static resources (Shared between instances)
     static std::unique_ptr<ppgso::Mesh> mesh;

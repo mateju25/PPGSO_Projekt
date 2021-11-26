@@ -24,7 +24,7 @@ Terrain::Terrain() {
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(diffuse_vert_glsl, diffuse_frag_glsl);
     if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/ocean.bmp"));
-    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/terrain_01.obj");
+    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/terrain_test.obj");
 }
 
 bool Terrain::update(Scene &scene, float dt) {

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/src/gl8_framebuffer/gl8_framebuffer.cpp" "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/CMakeFiles/gl8_framebuffer.dir/src/gl8_framebuffer/gl8_framebuffer.cpp.obj"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/gl8_framebuffer/gl8_framebuffer.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/gl8_framebuffer.dir/src/gl8_framebuffer/gl8_framebuffer.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -32,8 +32,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/CMakeFiles/ppgso.dir/DependInfo.cmake"
-  "C:/Users/samue/OneDrive/School/PPGSO/projekt/ppgso/cmake-build-debug/CMakeFiles/shaders.dir/DependInfo.cmake"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/ppgso.dir/DependInfo.cmake"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/shaders.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

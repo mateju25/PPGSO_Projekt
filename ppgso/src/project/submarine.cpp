@@ -19,7 +19,7 @@ std::unique_ptr<ppgso::Shader> Submarine::shader;
 Submarine::Submarine() {
     // Set random scale speed and rotation
     position = {0, 0, 0};
-    rotation = {BASIC_ROTATION_X, 0, 0};
+    rotation = {BASIC_ROTATION_X, BASIC_ROTATION_Y, BASIC_ROTATION_Z};
     scale = {2, 2, 2};
 
     // Initialize static resources if needed
@@ -31,39 +31,41 @@ Submarine::Submarine() {
 bool Submarine::update(Scene &scene, float dt) {
 
     if (scene.keyboard[GLFW_KEY_RIGHT]) {
-        rotation.y += rot_speed;
-    }
-    if (scene.keyboard[GLFW_KEY_LEFT]) {
         rotation.y -= rot_speed;
     }
+    if (scene.keyboard[GLFW_KEY_LEFT]) {
+        rotation.y += rot_speed;
+    }
     if (scene.keyboard[GLFW_KEY_UP]) {
-        position.y += speed  * 0.3;
+        position.y += 0.5;
 //        rotation.x -= rot_speed;
 //        if (rotation.x - BASIC_ROTATION_X <= -0.6)
 //            rotation.x = -0.6 + BASIC_ROTATION_X;
     }
     if (scene.keyboard[GLFW_KEY_DOWN]) {
-        position.y -= speed * 0.3;
+        position.y -= 0.5;
 //        rotation.x += rot_speed ;
 //        if (rotation.x - BASIC_ROTATION_X >= 0.6)
 //            rotation.x = 0.6 + BASIC_ROTATION_X;
     }
     if (scene.keyboard[GLFW_KEY_SPACE]) {
-        speed += 0.1f;
+        speed += 0.01f;
     }
     if (scene.keyboard[GLFW_KEY_LEFT_SHIFT]) {
-        speed -= 0.1f;
+        speed -= 0.01f;
     }
     if (scene.keyboard[GLFW_KEY_P]) {
         speed = 0;
     }
 //    speed = 0;
-    position.z += speed * cos(rotation.y);
-    position.x += speed * -sin(rotation.y);
+    position.z += speed * cos(rotation.y - BASIC_ROTATION_Y) ;
+    position.x += speed * -sin(rotation.y - BASIC_ROTATION_Y) *-1;
 //    position.y += speed * -cos(rotation.y) * sin(rotation.x - BASIC_ROTATION_X);
 
     auto tmp = rotation;
     tmp.x -= BASIC_ROTATION_X;
+    tmp.y -= BASIC_ROTATION_Y;
+    tmp.z -= BASIC_ROTATION_Z;
     scene.setTargetPosition(position, tmp);
 
     // Generate modelMatrix from position, rotation and scale

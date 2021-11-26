@@ -189,6 +189,7 @@ add_executable(project_scene
         src/project/caveMask.cpp
         src/project/walls.cpp
         src/project/fish.cpp
+        src/project/fishTail.cpp
         src/project/volcano.cpp
         src/project/submarine.cpp src/project/fish_spawn.cpp src/project/fish_spawn.h)
 target_link_libraries(project_scene ppgso shaders)
