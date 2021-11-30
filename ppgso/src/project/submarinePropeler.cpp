@@ -47,7 +47,7 @@ void SubmarinePropeler::updateModel(Scene &scene, glm::vec3 pos, glm::vec3 rot, 
     }
 
     update(scene, 0);
-    render(scene);
+//    render(scene);
 }
 
 bool SubmarinePropeler::update(Scene &scene, float dt) {

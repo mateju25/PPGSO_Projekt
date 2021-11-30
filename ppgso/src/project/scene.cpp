@@ -1,8 +1,6 @@
 #include "scene.h"
 
 void Scene::update(float time) {
-  camera->update();
-
   // Use iterator to update all objects so we can remove while iterating
   auto i = std::begin(objects);
 
@@ -14,6 +12,8 @@ void Scene::update(float time) {
     else
       ++i;
   }
+
+    camera->update();
 }
 
 void Scene::render() {

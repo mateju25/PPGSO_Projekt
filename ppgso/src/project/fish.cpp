@@ -19,7 +19,17 @@ std::unique_ptr<ppgso::Shader> Fish::shader;
 Fish::Fish(Scene &scene, std::vector<glm::vec3> path_points, float total_time_interval) {
     // Set random scale speed and rotation
     this->position = path_points.at(0);
-    this->path_points = path_points;
+
+    std::vector<glm::vec3> newPoints;
+    newPoints.emplace_back(path_points.at(0));
+    newPoints.emplace_back(path_points.at(1));
+    for (int i = 2; i < path_points.size() - 1; ++i) {
+        auto tmp = path_points.at(i) + random_vec3(-10, 10);
+        newPoints.emplace_back(tmp);
+    }
+    newPoints.emplace_back(path_points.at(path_points.size()-1));
+    this->path_points = newPoints;
+
     this->total_time_interval = total_time_interval;
 
     offset = random_vec3(-3, 3);
@@ -72,6 +82,11 @@ bool Fish::update(Scene &scene, float dt) {
 }
 
 void Fish::render(Scene &scene) {
+    for ( auto& obj : parts ) {
+        auto part = dynamic_cast<FishTail*>(obj.get());
+        part->render(scene);
+    }
+
     shader->use();
 
     // Set up light

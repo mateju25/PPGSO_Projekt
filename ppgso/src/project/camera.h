@@ -44,6 +44,5 @@ public:
 
     void moveTo(const glm::vec3 &pos, const glm::vec3 &rot);
 
-    glm::vec3 getTotalPosition() const;
 };
 

@@ -15,7 +15,7 @@ class FishTail final : public Object {
 private:
     glm::vec3 offset;
     float rotationZ = -0.01;
-    float rotSpeed = .01f;
+    float rotSpeed = .02f;
     bool isAlive = true;
 
     float distanceX = 0;

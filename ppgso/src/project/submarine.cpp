@@ -35,28 +35,28 @@ Submarine::Submarine(Scene &scene) {
 }
 
 bool Submarine::update(Scene &scene, float dt) {
+//    std::cout << 1/dt << std::endl;
     if (scene.keyboard[GLFW_KEY_RIGHT]) {
-        rotation.y -= rot_speed;
+        rotation.y -= rot_speed * dt * 30;
     }
     if (scene.keyboard[GLFW_KEY_LEFT]) {
-        rotation.y += rot_speed;
+        rotation.y += rot_speed * dt * 30;
     }
     if (scene.keyboard[GLFW_KEY_UP]) {
-        position.y += 0.5;
+        position.y += 0.5 * dt * 30;
     }
     if (scene.keyboard[GLFW_KEY_DOWN]) {
-        position.y -= 0.5;
+        position.y -= 0.5 * dt * 30;
     }
     if (scene.keyboard[GLFW_KEY_SPACE]) {
-        speed += 0.01f;
+        speed += 0.01f * dt * 30;
     }
     if (scene.keyboard[GLFW_KEY_LEFT_SHIFT]) {
-        speed -= 0.01f;
+        speed -= 0.01f * dt * 30;
     }
     if (scene.keyboard[GLFW_KEY_P]) {
         speed = 0;
     }
-
     if (scene.keyboard[GLFW_KEY_ENTER]) {
         std::cout << position.x << " " << position.y << " "<< position.z << " " << std::endl;
     }
@@ -65,6 +65,8 @@ bool Submarine::update(Scene &scene, float dt) {
 
     position.z += speed * cos(rotation.y - BASIC_ROTATION_Y);
     position.x += speed * -sin(rotation.y - BASIC_ROTATION_Y) * -1;
+    if (position.y > 225)
+        position.y = 225;
 
     if (checkCollisions(scene, dt))
         position = oldPos;
@@ -73,12 +75,14 @@ bool Submarine::update(Scene &scene, float dt) {
     tmp.x -= BASIC_ROTATION_X;
     tmp.y -= BASIC_ROTATION_Y;
     tmp.z -= BASIC_ROTATION_Z;
-    scene.setTargetPosition(position, tmp);
+
 
     for (auto &obj: parts) {
         auto propeler = dynamic_cast<SubmarinePropeler *>(obj.get());
         propeler->updateModel(scene, position, rotation, scale, speed);
     }
+
+    scene.setTargetPosition(position, tmp);
 
     // Generate modelMatrix from position, rotation and scale
     generateModelMatrix();
@@ -95,12 +99,15 @@ bool Submarine::checkCollisions(Scene &scene, float dt) {
             auto distance = (this->position - piller->position);
 
             float size = 0.3f;
+
             if (distance.y > 38)
                 return false;
+
             if (distance.y > 32)
                 size = 0.4f;
             if (distance.y < 4)
                 size = 0.4f;
+
             if ( (abs(distance.x) < piller->scale.x * size) &&
                     (abs(distance.z) < piller->scale.z * size)) {
                 return true;
@@ -111,6 +118,12 @@ bool Submarine::checkCollisions(Scene &scene, float dt) {
 }
 
 void Submarine::render(Scene &scene) {
+    for (auto &obj: parts) {
+        auto propeler = dynamic_cast<SubmarinePropeler *>(obj.get());
+        propeler->render(scene);
+    }
+
+
     shader->use();
 
     // Set up light

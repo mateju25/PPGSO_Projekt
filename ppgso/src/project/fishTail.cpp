@@ -31,10 +31,10 @@ void FishTail::updateModel(Scene &scene, glm::vec3 pos, glm::vec3 rot, glm::vec3
     rotation = rot;
 
 
-    if (rotationZ <= -0.2) {
+    if (rotationZ <= -0.3) {
         rotSpeed = rotSpeed*-1;
     }
-    if (rotationZ >= 0.18) {
+    if (rotationZ >= 0.28) {
         rotSpeed = rotSpeed*-1;
     }
     rotationZ += rotSpeed;
@@ -43,7 +43,7 @@ void FishTail::updateModel(Scene &scene, glm::vec3 pos, glm::vec3 rot, glm::vec3
     this->isAlive = isAlive;
 
     update(scene, 0);
-    render(scene);
+//    render(scene);
 }
 
 bool FishTail::update(Scene &scene, float dt) {

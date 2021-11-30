@@ -120,7 +120,7 @@ private:
                 {150, 0, 0}
         };
 
-        auto fishfish = std::make_unique<fish_spawn>(path_points, 10, 20);
+        auto fishfish = std::make_unique<fish_spawn>(path_points, 7, 40);
         scene.objects.push_back(move(fishfish));
 //
 

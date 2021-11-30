@@ -15,15 +15,11 @@ Camera::Camera() {
 
 void  Camera::update() {
     glm::vec3 lookAtOff = {0,5,0};
-    viewMatrix = glm::lookAt(position/*getTotalPosition()*/, submarinePos + lookAtOff, up);
-}
-
-
-glm::vec3 Camera::getTotalPosition() const {
-    return (position) + (distanceY * (rotation));
+    viewMatrix = glm::lookAt(position, submarinePos + lookAtOff, up);
 }
 
 void Camera::moveTo(const glm::vec3 &pos, const glm::vec3 &rot) {
+
     auto deltaPos = submarinePos - pos;
     submarinePos = pos;
 
