@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\task1_filter.dir/objects.a
+C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\ar.exe cr CMakeFiles\task1_filter.dir/objects.a @CMakeFiles\task1_filter.dir\objects1.rsp
+C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -Wl,--whole-archive CMakeFiles\task1_filter.dir/objects.a -Wl,--no-whole-archive -o task1_filter.exe -Wl,--out-implib,libtask1_filter.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\task1_filter.dir\linklibs.rsp

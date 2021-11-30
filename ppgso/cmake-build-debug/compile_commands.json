@@ -1,0 +1,147 @@
+[
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe  @CMakeFiles/shaders.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\shaders.dir\\shaders\\color_vert_glsl.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\cmake-build-debug\\shaders\\color_vert_glsl.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug/shaders/color_vert_glsl.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe  @CMakeFiles/shaders.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\shaders.dir\\shaders\\color_frag_glsl.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\cmake-build-debug\\shaders\\color_frag_glsl.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug/shaders/color_frag_glsl.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe  @CMakeFiles/shaders.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\shaders.dir\\shaders\\convolution_vert_glsl.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\cmake-build-debug\\shaders\\convolution_vert_glsl.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug/shaders/convolution_vert_glsl.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe  @CMakeFiles/shaders.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\shaders.dir\\shaders\\convolution_frag_glsl.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\cmake-build-debug\\shaders\\convolution_frag_glsl.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug/shaders/convolution_frag_glsl.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe  @CMakeFiles/shaders.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\shaders.dir\\shaders\\diffuse_vert_glsl.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\cmake-build-debug\\shaders\\diffuse_vert_glsl.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug/shaders/diffuse_vert_glsl.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe  @CMakeFiles/shaders.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\shaders.dir\\shaders\\diffuse_frag_glsl.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\cmake-build-debug\\shaders\\diffuse_frag_glsl.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug/shaders/diffuse_frag_glsl.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe  @CMakeFiles/shaders.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\shaders.dir\\shaders\\texture_vert_glsl.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\cmake-build-debug\\shaders\\texture_vert_glsl.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug/shaders/texture_vert_glsl.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe  @CMakeFiles/shaders.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\shaders.dir\\shaders\\texture_frag_glsl.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\cmake-build-debug\\shaders\\texture_frag_glsl.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug/shaders/texture_frag_glsl.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/ppgso.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\ppgso.dir\\ppgso\\mesh.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\ppgso\\mesh.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/ppgso/mesh.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/ppgso.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\ppgso.dir\\ppgso\\tiny_obj_loader.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\ppgso\\tiny_obj_loader.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/ppgso/tiny_obj_loader.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/ppgso.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\ppgso.dir\\ppgso\\shader.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\ppgso\\shader.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/ppgso/shader.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/ppgso.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\ppgso.dir\\ppgso\\image.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\ppgso\\image.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/ppgso/image.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/ppgso.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\ppgso.dir\\ppgso\\image_bmp.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\ppgso\\image_bmp.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/ppgso/image_bmp.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/ppgso.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\ppgso.dir\\ppgso\\image_raw.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\ppgso\\image_raw.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/ppgso/image_raw.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/ppgso.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\ppgso.dir\\ppgso\\texture.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\ppgso\\texture.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/ppgso/texture.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/ppgso.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\ppgso.dir\\ppgso\\window.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\ppgso\\window.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/ppgso/window.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/project_scene.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\project_scene.dir\\src\\project\\project_scene.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\src\\project\\project_scene.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/src/project/project_scene.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/project_scene.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\project_scene.dir\\src\\project\\object.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\src\\project\\object.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/src/project/object.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/project_scene.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\project_scene.dir\\src\\project\\scene.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\src\\project\\scene.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/src/project/scene.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/project_scene.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\project_scene.dir\\src\\project\\camera.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\src\\project\\camera.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/src/project/camera.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/project_scene.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\project_scene.dir\\src\\project\\Bubble.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\src\\project\\Bubble.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/src/project/Bubble.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/project_scene.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\project_scene.dir\\src\\project\\terrain.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\src\\project\\terrain.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/src/project/terrain.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/project_scene.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\project_scene.dir\\src\\project\\fish.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\src\\project\\fish.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/src/project/fish.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/project_scene.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\project_scene.dir\\src\\project\\submarinePropeler.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\src\\project\\submarinePropeler.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/src/project/submarinePropeler.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/project_scene.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\project_scene.dir\\src\\project\\fishTail.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\src\\project\\fishTail.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/src/project/fishTail.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/project_scene.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\project_scene.dir\\src\\project\\volcano.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\src\\project\\volcano.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/src/project/volcano.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/project_scene.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\project_scene.dir\\src\\project\\decorationPiller.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\src\\project\\decorationPiller.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/src/project/decorationPiller.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/project_scene.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\project_scene.dir\\src\\project\\submarine.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\src\\project\\submarine.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/src/project/submarine.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/project_scene.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\project_scene.dir\\src\\project\\fish_spawn.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\MojProjekt\\ppgso\\src\\project\\fish_spawn.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/MojProjekt/ppgso/src/project/fish_spawn.cpp"
+}
+]

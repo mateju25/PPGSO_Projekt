@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\task3_bezier.dir/objects.a
+C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\ar.exe cr CMakeFiles\task3_bezier.dir/objects.a @CMakeFiles\task3_bezier.dir\objects1.rsp
+C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -Wl,--whole-archive CMakeFiles\task3_bezier.dir/objects.a -Wl,--no-whole-archive -o task3_bezier.exe -Wl,--out-implib,libtask3_bezier.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\task3_bezier.dir\linklibs.rsp
