@@ -32,7 +32,11 @@ public:
 
     void render(Scene &scene) override;
 
+
 private:
+
+
+    bool checkCollisions(Scene &scene, float dt);
 };
 
 
