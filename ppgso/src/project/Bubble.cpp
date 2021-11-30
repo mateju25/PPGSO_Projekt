@@ -32,7 +32,7 @@ Bubble:: Bubble(glm::vec3  position, float timeAlive, float minSc, float maxSc) 
     time = timeAlive;
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(color_vert_glsl, color_frag_glsl);
-    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("sphere.obj");
+    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/sphere.obj");
 }
 
 glm::vec3 Bubble::random_vec3 (float mini, float maxi) {
