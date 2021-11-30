@@ -17,11 +17,9 @@
 #include "terrain.h"
 #include "submarine.h"
 #include "volcano.h"
-#include "walls.h"
-#include "cave.h"
-#include "caveMask.h"
 #include "fish_spawn.h"
 #include "fish.h"
+#include "decorationPiller.h"
 
 const unsigned int SIZE = 900;
 
@@ -33,7 +31,6 @@ private:
     float time;
 
     Scene scene;
-    Submarine submarineScene;
     /*!
      * Reset and initialize the game scene
      * Creating unique smart pointers to objects that are stored in the scene object list
@@ -45,7 +42,7 @@ private:
 
 
         // Create submarine
-        auto submarine = std::make_unique<Submarine>();
+        auto submarine = std::make_unique<Submarine>(scene);
         scene.objects.push_back(move(submarine));
 
 
@@ -54,40 +51,74 @@ private:
         scene.camera = move(camera);
 
         // Create terrain
-        auto terrain_test = std::make_unique<Terrain>();
-        scene.objects.push_back(move(terrain_test));
-//        auto terrain1 = std::make_unique<Terrain>();
-//        scene.objects.push_back(move(terrain1));
-//
-//        auto terrain2 = std::make_unique<Walls>();
-//        scene.objects.push_back(move(terrain2));
-//
-//        auto terrain3 = std::make_unique<Cave>();
-//        scene.objects.push_back(move(terrain3));
+        glm::vec3 position = {-322.116,-19,-148.765};
+        glm::vec3 rotation = {3*ppgso::PI/2, 4.31239, 0};
+        glm::vec3 scale = {10,10,10};
+        auto piller1 = std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
+        scene.objects.push_back(move(piller1));
 
-//        auto terrain4 = std::make_unique<CaveMask>();
-//        scene.objects.push_back(move(terrain4));
+        position = {-311.406,-19,-179.196};
+        auto piller2 = std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
+        scene.objects.push_back(move(piller2));
 
-//        glm::vec3 position = {0,0,0};
-//        auto volcano1 = std::make_unique<Volcano>(false, position);
-//        scene.objects.push_back(move(volcano1));
-//
-//        position = {5,0,0};
-//        auto volcano2 = std::make_unique<Volcano>(true, position);
-//        scene.objects.push_back(move(volcano2));
-//
+        position = {-316.716,24,-164};
+        auto piller3 = std::make_unique<DecorationPiller>("projekt/pillar_top.obj", position, rotation, scale);
+        scene.objects.push_back(move(piller3));
+
+        position = {-174.406,-17.5,-89.4885};
+        auto piller4 = std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
+        scene.objects.push_back(move(piller4));
+
+        position = {-250,-17.5,-55.865};
+        auto piller5 = std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
+        scene.objects.push_back(move(piller5));
+
+        position = {-250,-17.5,-218.865};
+        auto piller6 = std::make_unique<DecorationPiller>("projekt/pillar_broken.obj", position, rotation, scale);
+        scene.objects.push_back(move(piller6));
+
+        position = {-300,-17.5,-80.4};
+        auto piller7 = std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
+        scene.objects.push_back(move(piller7));
+
+        position = {-165,-17.5,-106.631};
+        auto piller8= std::make_unique<DecorationPiller>("projekt/pillar_broken.obj", position, rotation, scale);
+        scene.objects.push_back(move(piller8));
+
+        position = {-175,-17.5,-188};
+        auto piller9= std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
+        scene.objects.push_back(move(piller9));
+
+        auto terrain1 = std::make_unique<Terrain>("projekt/terrain_01.obj");
+        scene.objects.push_back(move(terrain1));
+
+        auto terrain2 = std::make_unique<Terrain>("projekt/cave.obj");
+        scene.objects.push_back(move(terrain2));
+
+        auto terrain3 = std::make_unique<Terrain>("projekt/cave_mask.obj");
+        scene.objects.push_back(move(terrain3));
+
+        auto terrain4 = std::make_unique<Terrain>("projekt/walls.obj");
+        scene.objects.push_back(move(terrain4));
+
+        position = {-381.366,7.5,100.969};
+        auto volcano1 = std::make_unique<Volcano>(false, position);
+        scene.objects.push_back(move(volcano1));
+
+        position = {-394.248,3.5,70.635};
+        auto volcano2 = std::make_unique<Volcano>(true, position);
+        scene.objects.push_back(move(volcano2));
+
         std::vector<glm::vec3> path_points = {
-                {0, 0, 0},
-                {50, 0, 0},
+                {-240.98, -25, -137.31},
+                {-240.98, 50, -137.31},
+                {-103.918, 37 , -65.0874},
                 {50, 0, -50},
                 {50, 50, 50},
                 {50, 50, 0},
                 {150, 50, 0},
                 {150, 0, 0}
         };
-//
-//        auto fish = std::make_unique<Fish>(scene, path_points, 20);
-//        scene.objects.push_back(move(fish));
 
         auto fishfish = std::make_unique<fish_spawn>(path_points, 10, 20);
         scene.objects.push_back(move(fishfish));

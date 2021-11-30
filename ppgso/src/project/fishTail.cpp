@@ -15,23 +15,20 @@ std::unique_ptr<ppgso::Mesh> FishTail::mesh;
 std::unique_ptr<ppgso::Texture> FishTail::texture;
 std::unique_ptr<ppgso::Shader> FishTail::shader;
 
-FishTail::FishTail(Scene &scene, Fish &fish) : fish(fish){
-
-
-    scale = fish.scale;
-    position = positionOffset = {distanceX, distanceY, distanceZ};
-
+FishTail::FishTail(){
     // Initialize static resources if needed
-    if (!shader) shader = std::make_unique<ppgso::Shader>(diffuse_vert_glsl, diffuse_frag_glsl);
-    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/ocean.bmp"));
+    if (!shader) shader = std::make_unique<ppgso::Shader>(texture_vert_glsl, texture_frag_glsl);
+    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/fish.bmp"));
     if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/tail.obj");
 }
 
-bool FishTail::update(Scene &scene, float dt) {
-    offset = {(distanceZ + distanceX) * sin(fish.rotation.y), distanceY, (distanceZ + distanceX) * cos(fish.rotation.y)};
-    position = fish.position + offset;
+void FishTail::updateModel(Scene &scene, glm::vec3 pos, glm::vec3 rot, glm::vec3 sc, bool isAlive) {
+    scale = sc;
 
-    rotation = fish.rotation;
+    offset = {(distanceZ + distanceX) * sin(rot.y), distanceY, (distanceZ + distanceX) * cos(rot.y)};
+    position = pos + offset;
+
+    rotation = rot;
 
 
     if (rotationZ <= -0.2) {
@@ -43,14 +40,17 @@ bool FishTail::update(Scene &scene, float dt) {
     rotationZ += rotSpeed;
     rotation.z = rotationZ;
 
+    this->isAlive = isAlive;
 
-    if (!fish.isAlive)
-        return false;
+    update(scene, 0);
+    render(scene);
+}
 
+bool FishTail::update(Scene &scene, float dt) {
     // Generate modelMatrix from position, rotation and scale
     generateModelMatrix();
 
-    return true;
+    return isAlive;
 }
 
 void FishTail::render(Scene &scene) {
@@ -65,6 +65,6 @@ void FishTail::render(Scene &scene) {
 
     // render mesh
     shader->setUniform("ModelMatrix", modelMatrix);
-//    shader->setUniform("Texture", *texture);
+    shader->setUniform("Texture", *texture);
     mesh->render();
 }

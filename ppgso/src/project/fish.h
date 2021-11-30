@@ -12,6 +12,8 @@
 
 class Fish final : public Object {
 private:
+    std::list< std::unique_ptr<Object> > parts;
+
     // Static resources (Shared between instances)
     static std::unique_ptr<ppgso::Mesh> mesh;
     static std::unique_ptr<ppgso::Shader> shader;

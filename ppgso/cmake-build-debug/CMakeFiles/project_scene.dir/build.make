@@ -149,52 +149,10 @@ CMakeFiles/project_scene.dir/src/project/terrain.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project_scene.dir/src/project/terrain.cpp.s"
 	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\terrain.cpp -o CMakeFiles\project_scene.dir\src\project\terrain.cpp.s
 
-CMakeFiles/project_scene.dir/src/project/cave.cpp.obj: CMakeFiles/project_scene.dir/flags.make
-CMakeFiles/project_scene.dir/src/project/cave.cpp.obj: CMakeFiles/project_scene.dir/includes_CXX.rsp
-CMakeFiles/project_scene.dir/src/project/cave.cpp.obj: ../src/project/cave.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Skola\5_semester\PPGSO\Projekt\ppgso\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/project_scene.dir/src/project/cave.cpp.obj"
-	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\project_scene.dir\src\project\cave.cpp.obj -c D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\cave.cpp
-
-CMakeFiles/project_scene.dir/src/project/cave.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project_scene.dir/src/project/cave.cpp.i"
-	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\cave.cpp > CMakeFiles\project_scene.dir\src\project\cave.cpp.i
-
-CMakeFiles/project_scene.dir/src/project/cave.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project_scene.dir/src/project/cave.cpp.s"
-	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\cave.cpp -o CMakeFiles\project_scene.dir\src\project\cave.cpp.s
-
-CMakeFiles/project_scene.dir/src/project/caveMask.cpp.obj: CMakeFiles/project_scene.dir/flags.make
-CMakeFiles/project_scene.dir/src/project/caveMask.cpp.obj: CMakeFiles/project_scene.dir/includes_CXX.rsp
-CMakeFiles/project_scene.dir/src/project/caveMask.cpp.obj: ../src/project/caveMask.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Skola\5_semester\PPGSO\Projekt\ppgso\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/project_scene.dir/src/project/caveMask.cpp.obj"
-	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\project_scene.dir\src\project\caveMask.cpp.obj -c D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\caveMask.cpp
-
-CMakeFiles/project_scene.dir/src/project/caveMask.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project_scene.dir/src/project/caveMask.cpp.i"
-	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\caveMask.cpp > CMakeFiles\project_scene.dir\src\project\caveMask.cpp.i
-
-CMakeFiles/project_scene.dir/src/project/caveMask.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project_scene.dir/src/project/caveMask.cpp.s"
-	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\caveMask.cpp -o CMakeFiles\project_scene.dir\src\project\caveMask.cpp.s
-
-CMakeFiles/project_scene.dir/src/project/walls.cpp.obj: CMakeFiles/project_scene.dir/flags.make
-CMakeFiles/project_scene.dir/src/project/walls.cpp.obj: CMakeFiles/project_scene.dir/includes_CXX.rsp
-CMakeFiles/project_scene.dir/src/project/walls.cpp.obj: ../src/project/walls.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Skola\5_semester\PPGSO\Projekt\ppgso\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/project_scene.dir/src/project/walls.cpp.obj"
-	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\project_scene.dir\src\project\walls.cpp.obj -c D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\walls.cpp
-
-CMakeFiles/project_scene.dir/src/project/walls.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project_scene.dir/src/project/walls.cpp.i"
-	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\walls.cpp > CMakeFiles\project_scene.dir\src\project\walls.cpp.i
-
-CMakeFiles/project_scene.dir/src/project/walls.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project_scene.dir/src/project/walls.cpp.s"
-	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\walls.cpp -o CMakeFiles\project_scene.dir\src\project\walls.cpp.s
-
 CMakeFiles/project_scene.dir/src/project/fish.cpp.obj: CMakeFiles/project_scene.dir/flags.make
 CMakeFiles/project_scene.dir/src/project/fish.cpp.obj: CMakeFiles/project_scene.dir/includes_CXX.rsp
 CMakeFiles/project_scene.dir/src/project/fish.cpp.obj: ../src/project/fish.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Skola\5_semester\PPGSO\Projekt\ppgso\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/project_scene.dir/src/project/fish.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Skola\5_semester\PPGSO\Projekt\ppgso\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/project_scene.dir/src/project/fish.cpp.obj"
 	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\project_scene.dir\src\project\fish.cpp.obj -c D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\fish.cpp
 
 CMakeFiles/project_scene.dir/src/project/fish.cpp.i: cmake_force
@@ -205,10 +163,24 @@ CMakeFiles/project_scene.dir/src/project/fish.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project_scene.dir/src/project/fish.cpp.s"
 	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\fish.cpp -o CMakeFiles\project_scene.dir\src\project\fish.cpp.s
 
+CMakeFiles/project_scene.dir/src/project/submarinePropeler.cpp.obj: CMakeFiles/project_scene.dir/flags.make
+CMakeFiles/project_scene.dir/src/project/submarinePropeler.cpp.obj: CMakeFiles/project_scene.dir/includes_CXX.rsp
+CMakeFiles/project_scene.dir/src/project/submarinePropeler.cpp.obj: ../src/project/submarinePropeler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Skola\5_semester\PPGSO\Projekt\ppgso\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/project_scene.dir/src/project/submarinePropeler.cpp.obj"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\project_scene.dir\src\project\submarinePropeler.cpp.obj -c D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\submarinePropeler.cpp
+
+CMakeFiles/project_scene.dir/src/project/submarinePropeler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project_scene.dir/src/project/submarinePropeler.cpp.i"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\submarinePropeler.cpp > CMakeFiles\project_scene.dir\src\project\submarinePropeler.cpp.i
+
+CMakeFiles/project_scene.dir/src/project/submarinePropeler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project_scene.dir/src/project/submarinePropeler.cpp.s"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\submarinePropeler.cpp -o CMakeFiles\project_scene.dir\src\project\submarinePropeler.cpp.s
+
 CMakeFiles/project_scene.dir/src/project/fishTail.cpp.obj: CMakeFiles/project_scene.dir/flags.make
 CMakeFiles/project_scene.dir/src/project/fishTail.cpp.obj: CMakeFiles/project_scene.dir/includes_CXX.rsp
 CMakeFiles/project_scene.dir/src/project/fishTail.cpp.obj: ../src/project/fishTail.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Skola\5_semester\PPGSO\Projekt\ppgso\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/project_scene.dir/src/project/fishTail.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Skola\5_semester\PPGSO\Projekt\ppgso\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/project_scene.dir/src/project/fishTail.cpp.obj"
 	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\project_scene.dir\src\project\fishTail.cpp.obj -c D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\fishTail.cpp
 
 CMakeFiles/project_scene.dir/src/project/fishTail.cpp.i: cmake_force
@@ -222,7 +194,7 @@ CMakeFiles/project_scene.dir/src/project/fishTail.cpp.s: cmake_force
 CMakeFiles/project_scene.dir/src/project/volcano.cpp.obj: CMakeFiles/project_scene.dir/flags.make
 CMakeFiles/project_scene.dir/src/project/volcano.cpp.obj: CMakeFiles/project_scene.dir/includes_CXX.rsp
 CMakeFiles/project_scene.dir/src/project/volcano.cpp.obj: ../src/project/volcano.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Skola\5_semester\PPGSO\Projekt\ppgso\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/project_scene.dir/src/project/volcano.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Skola\5_semester\PPGSO\Projekt\ppgso\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/project_scene.dir/src/project/volcano.cpp.obj"
 	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\project_scene.dir\src\project\volcano.cpp.obj -c D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\volcano.cpp
 
 CMakeFiles/project_scene.dir/src/project/volcano.cpp.i: cmake_force
@@ -233,10 +205,24 @@ CMakeFiles/project_scene.dir/src/project/volcano.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project_scene.dir/src/project/volcano.cpp.s"
 	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\volcano.cpp -o CMakeFiles\project_scene.dir\src\project\volcano.cpp.s
 
+CMakeFiles/project_scene.dir/src/project/decorationPiller.cpp.obj: CMakeFiles/project_scene.dir/flags.make
+CMakeFiles/project_scene.dir/src/project/decorationPiller.cpp.obj: CMakeFiles/project_scene.dir/includes_CXX.rsp
+CMakeFiles/project_scene.dir/src/project/decorationPiller.cpp.obj: ../src/project/decorationPiller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Skola\5_semester\PPGSO\Projekt\ppgso\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/project_scene.dir/src/project/decorationPiller.cpp.obj"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\project_scene.dir\src\project\decorationPiller.cpp.obj -c D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\decorationPiller.cpp
+
+CMakeFiles/project_scene.dir/src/project/decorationPiller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project_scene.dir/src/project/decorationPiller.cpp.i"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\decorationPiller.cpp > CMakeFiles\project_scene.dir\src\project\decorationPiller.cpp.i
+
+CMakeFiles/project_scene.dir/src/project/decorationPiller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project_scene.dir/src/project/decorationPiller.cpp.s"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\decorationPiller.cpp -o CMakeFiles\project_scene.dir\src\project\decorationPiller.cpp.s
+
 CMakeFiles/project_scene.dir/src/project/submarine.cpp.obj: CMakeFiles/project_scene.dir/flags.make
 CMakeFiles/project_scene.dir/src/project/submarine.cpp.obj: CMakeFiles/project_scene.dir/includes_CXX.rsp
 CMakeFiles/project_scene.dir/src/project/submarine.cpp.obj: ../src/project/submarine.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Skola\5_semester\PPGSO\Projekt\ppgso\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/project_scene.dir/src/project/submarine.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Skola\5_semester\PPGSO\Projekt\ppgso\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/project_scene.dir/src/project/submarine.cpp.obj"
 	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\project_scene.dir\src\project\submarine.cpp.obj -c D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\submarine.cpp
 
 CMakeFiles/project_scene.dir/src/project/submarine.cpp.i: cmake_force
@@ -250,7 +236,7 @@ CMakeFiles/project_scene.dir/src/project/submarine.cpp.s: cmake_force
 CMakeFiles/project_scene.dir/src/project/fish_spawn.cpp.obj: CMakeFiles/project_scene.dir/flags.make
 CMakeFiles/project_scene.dir/src/project/fish_spawn.cpp.obj: CMakeFiles/project_scene.dir/includes_CXX.rsp
 CMakeFiles/project_scene.dir/src/project/fish_spawn.cpp.obj: ../src/project/fish_spawn.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Skola\5_semester\PPGSO\Projekt\ppgso\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/project_scene.dir/src/project/fish_spawn.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Skola\5_semester\PPGSO\Projekt\ppgso\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/project_scene.dir/src/project/fish_spawn.cpp.obj"
 	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\project_scene.dir\src\project\fish_spawn.cpp.obj -c D:\Skola\5_semester\PPGSO\Projekt\ppgso\src\project\fish_spawn.cpp
 
 CMakeFiles/project_scene.dir/src/project/fish_spawn.cpp.i: cmake_force
@@ -269,12 +255,11 @@ project_scene_OBJECTS = \
 "CMakeFiles/project_scene.dir/src/project/camera.cpp.obj" \
 "CMakeFiles/project_scene.dir/src/project/Bubble.cpp.obj" \
 "CMakeFiles/project_scene.dir/src/project/terrain.cpp.obj" \
-"CMakeFiles/project_scene.dir/src/project/cave.cpp.obj" \
-"CMakeFiles/project_scene.dir/src/project/caveMask.cpp.obj" \
-"CMakeFiles/project_scene.dir/src/project/walls.cpp.obj" \
 "CMakeFiles/project_scene.dir/src/project/fish.cpp.obj" \
+"CMakeFiles/project_scene.dir/src/project/submarinePropeler.cpp.obj" \
 "CMakeFiles/project_scene.dir/src/project/fishTail.cpp.obj" \
 "CMakeFiles/project_scene.dir/src/project/volcano.cpp.obj" \
+"CMakeFiles/project_scene.dir/src/project/decorationPiller.cpp.obj" \
 "CMakeFiles/project_scene.dir/src/project/submarine.cpp.obj" \
 "CMakeFiles/project_scene.dir/src/project/fish_spawn.cpp.obj"
 
@@ -287,12 +272,11 @@ project_scene.exe: CMakeFiles/project_scene.dir/src/project/scene.cpp.obj
 project_scene.exe: CMakeFiles/project_scene.dir/src/project/camera.cpp.obj
 project_scene.exe: CMakeFiles/project_scene.dir/src/project/Bubble.cpp.obj
 project_scene.exe: CMakeFiles/project_scene.dir/src/project/terrain.cpp.obj
-project_scene.exe: CMakeFiles/project_scene.dir/src/project/cave.cpp.obj
-project_scene.exe: CMakeFiles/project_scene.dir/src/project/caveMask.cpp.obj
-project_scene.exe: CMakeFiles/project_scene.dir/src/project/walls.cpp.obj
 project_scene.exe: CMakeFiles/project_scene.dir/src/project/fish.cpp.obj
+project_scene.exe: CMakeFiles/project_scene.dir/src/project/submarinePropeler.cpp.obj
 project_scene.exe: CMakeFiles/project_scene.dir/src/project/fishTail.cpp.obj
 project_scene.exe: CMakeFiles/project_scene.dir/src/project/volcano.cpp.obj
+project_scene.exe: CMakeFiles/project_scene.dir/src/project/decorationPiller.cpp.obj
 project_scene.exe: CMakeFiles/project_scene.dir/src/project/submarine.cpp.obj
 project_scene.exe: CMakeFiles/project_scene.dir/src/project/fish_spawn.cpp.obj
 project_scene.exe: CMakeFiles/project_scene.dir/build.make
@@ -303,7 +287,7 @@ project_scene.exe: ../dependencies/lib/mingw/libglew32.a
 project_scene.exe: CMakeFiles/project_scene.dir/linklibs.rsp
 project_scene.exe: CMakeFiles/project_scene.dir/objects1.rsp
 project_scene.exe: CMakeFiles/project_scene.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Skola\5_semester\PPGSO\Projekt\ppgso\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable project_scene.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Skola\5_semester\PPGSO\Projekt\ppgso\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable project_scene.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\project_scene.dir\link.txt --verbose=$(VERBOSE)
 	"C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E copy_directory D:/Skola/5_semester/PPGSO/Projekt/ppgso/data/ D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug
 

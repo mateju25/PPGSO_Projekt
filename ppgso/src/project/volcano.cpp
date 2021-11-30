@@ -27,7 +27,7 @@ Volcano::Volcano(bool burst, glm::vec3 position) {
 
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(texture_vert_glsl, texture_frag_glsl);
-    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/ocean.bmp"));
+    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/geysir.bmp"));
     if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/Geyser.obj");
 }
 
@@ -36,19 +36,16 @@ bool Volcano::update(Scene &scene, float dt) {
     tmp.z += 0.2f;
     tmp.y += 1.7f;
     if (isBurst) {
-        if (((int) dt) % 20 == 0) {
-            for (int i = 0; i < 30; ++i) {
-                if (i % 5 == 0) {
-
-                    auto bubble = std::make_unique<Bubble>(tmp, ((float) rand() / (float) RAND_MAX) * (40 - 15) + 15);
+        if (((float) rand() / (float) RAND_MAX) < 0.005) {
+            for (int i = 0; i < 300; ++i) {
+                    auto bubble = std::make_unique<Bubble>(tmp, ((float) rand() / (float) RAND_MAX) * (1500 - 1000) + 1000, 0.1, 0.2);
                     scene.objects.push_back(move(bubble));
-                }
             }
         }
     } else {
-        if (((float) rand() / (float) RAND_MAX) < 0.05) {
+        if (((float) rand() / (float) RAND_MAX) < 0.02) {
 
-                auto bubble = std::make_unique<Bubble>(tmp, ((float) rand() / (float) RAND_MAX) * (120 - 85) + 85);
+                auto bubble = std::make_unique<Bubble>(tmp, ((float) rand() / (float) RAND_MAX) * (2000 - 1850) + 1850, 0.1, 0.2);
                 scene.objects.push_back(move(bubble));
         }
     }
@@ -71,7 +68,7 @@ void Volcano::render(Scene &scene) {
 
     // render mesh
     shader->setUniform("ModelMatrix", modelMatrix);
-//    shader->setUniform("Texture", *texture);
+    shader->setUniform("Texture", *texture);
     mesh->render();
 }
 

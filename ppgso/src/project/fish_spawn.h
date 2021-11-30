@@ -10,8 +10,9 @@
 #include "object.h"
 
 
-class fish_spawn : public Object {
+class fish_spawn final : public Object {
 private:
+    glm::vec3 color;
 
     std::vector<glm::vec3> path_points;
     bool isFish;
@@ -19,6 +20,11 @@ private:
     double time_interval;
 
     double elapsed_time = 0;
+
+    // Static resources (Shared between instances)
+    static std::unique_ptr<ppgso::Mesh> mesh;
+    static std::unique_ptr<ppgso::Shader> shader;
+    static std::unique_ptr<ppgso::Texture> texture;
 
 public:
 

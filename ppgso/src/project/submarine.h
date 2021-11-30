@@ -11,6 +11,8 @@
 
 class Submarine final : public Object {
 private:
+    std::list< std::unique_ptr<Object> > parts;
+
     float BASIC_ROTATION_X = 3*ppgso::PI/2;
     float BASIC_ROTATION_Y = ppgso::PI;
     float BASIC_ROTATION_Z = 0;
@@ -24,7 +26,7 @@ private:
 
 
 public:
-    Submarine();
+    Submarine(Scene &scene);
 
     bool update(Scene &scene, float dt) override;
 

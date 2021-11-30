@@ -3,6 +3,7 @@
 //
 
 #include "submarine.h"
+#include "submarinePropeler.h"
 #include <glm/gtc/random.hpp>
 
 #include <shaders/texture_vert_glsl.h>
@@ -16,11 +17,15 @@ std::unique_ptr<ppgso::Mesh> Submarine::mesh;
 std::unique_ptr<ppgso::Texture> Submarine::texture;
 std::unique_ptr<ppgso::Shader> Submarine::shader;
 
-Submarine::Submarine() {
+Submarine::Submarine(Scene &scene) {
     // Set random scale speed and rotation
     position = {0, 0, 0};
     rotation = {BASIC_ROTATION_X, BASIC_ROTATION_Y, BASIC_ROTATION_Z};
     scale = {2, 2, 2};
+
+    auto part = std::make_unique<SubmarinePropeler>();
+    parts.push_back(move(part));
+
 
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(texture_vert_glsl, texture_frag_glsl);
@@ -38,15 +43,9 @@ bool Submarine::update(Scene &scene, float dt) {
     }
     if (scene.keyboard[GLFW_KEY_UP]) {
         position.y += 0.5;
-//        rotation.x -= rot_speed;
-//        if (rotation.x - BASIC_ROTATION_X <= -0.6)
-//            rotation.x = -0.6 + BASIC_ROTATION_X;
     }
     if (scene.keyboard[GLFW_KEY_DOWN]) {
         position.y -= 0.5;
-//        rotation.x += rot_speed ;
-//        if (rotation.x - BASIC_ROTATION_X >= 0.6)
-//            rotation.x = 0.6 + BASIC_ROTATION_X;
     }
     if (scene.keyboard[GLFW_KEY_SPACE]) {
         speed += 0.01f;
@@ -57,16 +56,24 @@ bool Submarine::update(Scene &scene, float dt) {
     if (scene.keyboard[GLFW_KEY_P]) {
         speed = 0;
     }
-//    speed = 0;
-    position.z += speed * cos(rotation.y - BASIC_ROTATION_Y) ;
-    position.x += speed * -sin(rotation.y - BASIC_ROTATION_Y) *-1;
-//    position.y += speed * -cos(rotation.y) * sin(rotation.x - BASIC_ROTATION_X);
+
+    if (scene.keyboard[GLFW_KEY_ENTER]) {
+        std::cout << position.x << " " << position.y << " "<< position.z << " " << std::endl;
+    }
+
+    position.z += speed * cos(rotation.y - BASIC_ROTATION_Y);
+    position.x += speed * -sin(rotation.y - BASIC_ROTATION_Y) * -1;
 
     auto tmp = rotation;
     tmp.x -= BASIC_ROTATION_X;
     tmp.y -= BASIC_ROTATION_Y;
     tmp.z -= BASIC_ROTATION_Z;
     scene.setTargetPosition(position, tmp);
+
+    for (auto &obj: parts) {
+        auto propeler = dynamic_cast<SubmarinePropeler *>(obj.get());
+        propeler->updateModel(scene, position, rotation, scale, speed);
+    }
 
     // Generate modelMatrix from position, rotation and scale
     generateModelMatrix();
@@ -86,7 +93,7 @@ void Submarine::render(Scene &scene) {
 
     // render mesh
     shader->setUniform("ModelMatrix", modelMatrix);
-//    shader->setUniform("Texture", *texture);
+    shader->setUniform("Texture", *texture);
     mesh->render();
 }
 

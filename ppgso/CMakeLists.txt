@@ -185,12 +185,11 @@ add_executable(project_scene
         src/project/camera.cpp
         src/project/Bubble.cpp
         src/project/terrain.cpp
-        src/project/cave.cpp
-        src/project/caveMask.cpp
-        src/project/walls.cpp
         src/project/fish.cpp
+        src/project/submarinePropeler.cpp
         src/project/fishTail.cpp
         src/project/volcano.cpp
+        src/project/decorationPiller.cpp
         src/project/submarine.cpp src/project/fish_spawn.cpp src/project/fish_spawn.h)
 target_link_libraries(project_scene ppgso shaders)
 install(TARGETS project_scene DESTINATION .)

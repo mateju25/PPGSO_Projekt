@@ -1511,16 +1511,10 @@
 		<Unit filename="D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/camera.h">
 			<Option target="project_scene"/>
 		</Unit>
-		<Unit filename="D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/cave.cpp">
+		<Unit filename="D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/decorationPiller.cpp">
 			<Option target="project_scene"/>
 		</Unit>
-		<Unit filename="D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/cave.h">
-			<Option target="project_scene"/>
-		</Unit>
-		<Unit filename="D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/caveMask.cpp">
-			<Option target="project_scene"/>
-		</Unit>
-		<Unit filename="D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/caveMask.h">
+		<Unit filename="D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/decorationPiller.h">
 			<Option target="project_scene"/>
 		</Unit>
 		<Unit filename="D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/fish.cpp">
@@ -1562,6 +1556,12 @@
 		<Unit filename="D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/submarine.h">
 			<Option target="project_scene"/>
 		</Unit>
+		<Unit filename="D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/submarinePropeler.cpp">
+			<Option target="project_scene"/>
+		</Unit>
+		<Unit filename="D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/submarinePropeler.h">
+			<Option target="project_scene"/>
+		</Unit>
 		<Unit filename="D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/terrain.cpp">
 			<Option target="project_scene"/>
 		</Unit>
@@ -1572,12 +1572,6 @@
 			<Option target="project_scene"/>
 		</Unit>
 		<Unit filename="D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/volcano.h">
-			<Option target="project_scene"/>
-		</Unit>
-		<Unit filename="D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/walls.cpp">
-			<Option target="project_scene"/>
-		</Unit>
-		<Unit filename="D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/walls.h">
 			<Option target="project_scene"/>
 		</Unit>
 		<Unit filename="D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/raw1_gradient/raw1_gradient.cpp">

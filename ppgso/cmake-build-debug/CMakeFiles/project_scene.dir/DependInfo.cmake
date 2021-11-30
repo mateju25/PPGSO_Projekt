@@ -10,8 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/Bubble.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/Bubble.cpp.obj"
   "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/camera.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/camera.cpp.obj"
-  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/cave.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/cave.cpp.obj"
-  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/caveMask.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/caveMask.cpp.obj"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/decorationPiller.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/decorationPiller.cpp.obj"
   "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/fish.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/fish.cpp.obj"
   "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/fishTail.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/fishTail.cpp.obj"
   "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/fish_spawn.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/fish_spawn.cpp.obj"
@@ -19,9 +18,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/project_scene.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/project_scene.cpp.obj"
   "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/scene.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/scene.cpp.obj"
   "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/submarine.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/submarine.cpp.obj"
+  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/submarinePropeler.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/submarinePropeler.cpp.obj"
   "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/terrain.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/terrain.cpp.obj"
   "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/volcano.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/volcano.cpp.obj"
-  "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/walls.cpp" "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug/CMakeFiles/project_scene.dir/src/project/walls.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -226,23 +226,13 @@
 },
 {
   "directory": "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug",
-  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/project_scene.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\project_scene.dir\\src\\project\\cave.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\Projekt\\ppgso\\src\\project\\cave.cpp",
-  "file": "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/cave.cpp"
-},
-{
-  "directory": "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug",
-  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/project_scene.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\project_scene.dir\\src\\project\\caveMask.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\Projekt\\ppgso\\src\\project\\caveMask.cpp",
-  "file": "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/caveMask.cpp"
-},
-{
-  "directory": "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug",
-  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/project_scene.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\project_scene.dir\\src\\project\\walls.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\Projekt\\ppgso\\src\\project\\walls.cpp",
-  "file": "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/walls.cpp"
-},
-{
-  "directory": "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug",
   "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/project_scene.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\project_scene.dir\\src\\project\\fish.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\Projekt\\ppgso\\src\\project\\fish.cpp",
   "file": "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/fish.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/project_scene.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\project_scene.dir\\src\\project\\submarinePropeler.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\Projekt\\ppgso\\src\\project\\submarinePropeler.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/submarinePropeler.cpp"
 },
 {
   "directory": "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug",
@@ -253,6 +243,11 @@
   "directory": "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug",
   "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/project_scene.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\project_scene.dir\\src\\project\\volcano.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\Projekt\\ppgso\\src\\project\\volcano.cpp",
   "file": "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/volcano.cpp"
+},
+{
+  "directory": "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe -DGLEW_STATIC -DGLM_FORCE_RADIANS @CMakeFiles/project_scene.dir/includes_CXX.rsp -fopenmp -g -Wpedantic -Wall -Wno-c++98-compat -Wextra -Wno-sign-conversion -Wno-unused-parameter -std=gnu++14 -o CMakeFiles\\project_scene.dir\\src\\project\\decorationPiller.cpp.obj -c D:\\Skola\\5_semester\\PPGSO\\Projekt\\ppgso\\src\\project\\decorationPiller.cpp",
+  "file": "D:/Skola/5_semester/PPGSO/Projekt/ppgso/src/project/decorationPiller.cpp"
 },
 {
   "directory": "D:/Skola/5_semester/PPGSO/Projekt/ppgso/cmake-build-debug",

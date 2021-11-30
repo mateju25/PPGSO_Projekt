@@ -13,17 +13,14 @@
 
 class FishTail final : public Object {
 private:
-    Fish &fish;
     glm::vec3 offset;
     float rotationZ = -0.01;
     float rotSpeed = .01f;
-    int out = 0;
+    bool isAlive = true;
 
     float distanceX = 0;
     float distanceY = -0.1;
     float distanceZ = 2.2;
-    glm::vec3 positionOffset;
-    glm::vec3 fishPositionBeforeMovement;
 
     // Static resources (Shared between instances)
     static std::unique_ptr<ppgso::Mesh> mesh;
@@ -31,9 +28,11 @@ private:
     static std::unique_ptr<ppgso::Texture> texture;
 
 public:
-    FishTail(Scene &scene, Fish &fish);
+    FishTail();
 
     bool update(Scene &scene, float dt) override;
+
+    void updateModel(Scene &scene, glm::vec3 pos, glm::vec3 rot, glm::vec3 sc, bool isAlive);
 
     void render(Scene &scene) override;
 

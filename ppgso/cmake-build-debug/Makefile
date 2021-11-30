@@ -1323,53 +1323,29 @@ src/project/camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\project_scene.dir\build.make CMakeFiles/project_scene.dir/src/project/camera.cpp.s
 .PHONY : src/project/camera.cpp.s
 
-src/project/cave.obj: src/project/cave.cpp.obj
-.PHONY : src/project/cave.obj
+src/project/decorationPiller.obj: src/project/decorationPiller.cpp.obj
+.PHONY : src/project/decorationPiller.obj
 
 # target to build an object file
-src/project/cave.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\project_scene.dir\build.make CMakeFiles/project_scene.dir/src/project/cave.cpp.obj
-.PHONY : src/project/cave.cpp.obj
+src/project/decorationPiller.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\project_scene.dir\build.make CMakeFiles/project_scene.dir/src/project/decorationPiller.cpp.obj
+.PHONY : src/project/decorationPiller.cpp.obj
 
-src/project/cave.i: src/project/cave.cpp.i
-.PHONY : src/project/cave.i
-
-# target to preprocess a source file
-src/project/cave.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\project_scene.dir\build.make CMakeFiles/project_scene.dir/src/project/cave.cpp.i
-.PHONY : src/project/cave.cpp.i
-
-src/project/cave.s: src/project/cave.cpp.s
-.PHONY : src/project/cave.s
-
-# target to generate assembly for a file
-src/project/cave.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\project_scene.dir\build.make CMakeFiles/project_scene.dir/src/project/cave.cpp.s
-.PHONY : src/project/cave.cpp.s
-
-src/project/caveMask.obj: src/project/caveMask.cpp.obj
-.PHONY : src/project/caveMask.obj
-
-# target to build an object file
-src/project/caveMask.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\project_scene.dir\build.make CMakeFiles/project_scene.dir/src/project/caveMask.cpp.obj
-.PHONY : src/project/caveMask.cpp.obj
-
-src/project/caveMask.i: src/project/caveMask.cpp.i
-.PHONY : src/project/caveMask.i
+src/project/decorationPiller.i: src/project/decorationPiller.cpp.i
+.PHONY : src/project/decorationPiller.i
 
 # target to preprocess a source file
-src/project/caveMask.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\project_scene.dir\build.make CMakeFiles/project_scene.dir/src/project/caveMask.cpp.i
-.PHONY : src/project/caveMask.cpp.i
+src/project/decorationPiller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\project_scene.dir\build.make CMakeFiles/project_scene.dir/src/project/decorationPiller.cpp.i
+.PHONY : src/project/decorationPiller.cpp.i
 
-src/project/caveMask.s: src/project/caveMask.cpp.s
-.PHONY : src/project/caveMask.s
+src/project/decorationPiller.s: src/project/decorationPiller.cpp.s
+.PHONY : src/project/decorationPiller.s
 
 # target to generate assembly for a file
-src/project/caveMask.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\project_scene.dir\build.make CMakeFiles/project_scene.dir/src/project/caveMask.cpp.s
-.PHONY : src/project/caveMask.cpp.s
+src/project/decorationPiller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\project_scene.dir\build.make CMakeFiles/project_scene.dir/src/project/decorationPiller.cpp.s
+.PHONY : src/project/decorationPiller.cpp.s
 
 src/project/fish.obj: src/project/fish.cpp.obj
 .PHONY : src/project/fish.obj
@@ -1539,6 +1515,30 @@ src/project/submarine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\project_scene.dir\build.make CMakeFiles/project_scene.dir/src/project/submarine.cpp.s
 .PHONY : src/project/submarine.cpp.s
 
+src/project/submarinePropeler.obj: src/project/submarinePropeler.cpp.obj
+.PHONY : src/project/submarinePropeler.obj
+
+# target to build an object file
+src/project/submarinePropeler.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\project_scene.dir\build.make CMakeFiles/project_scene.dir/src/project/submarinePropeler.cpp.obj
+.PHONY : src/project/submarinePropeler.cpp.obj
+
+src/project/submarinePropeler.i: src/project/submarinePropeler.cpp.i
+.PHONY : src/project/submarinePropeler.i
+
+# target to preprocess a source file
+src/project/submarinePropeler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\project_scene.dir\build.make CMakeFiles/project_scene.dir/src/project/submarinePropeler.cpp.i
+.PHONY : src/project/submarinePropeler.cpp.i
+
+src/project/submarinePropeler.s: src/project/submarinePropeler.cpp.s
+.PHONY : src/project/submarinePropeler.s
+
+# target to generate assembly for a file
+src/project/submarinePropeler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\project_scene.dir\build.make CMakeFiles/project_scene.dir/src/project/submarinePropeler.cpp.s
+.PHONY : src/project/submarinePropeler.cpp.s
+
 src/project/terrain.obj: src/project/terrain.cpp.obj
 .PHONY : src/project/terrain.obj
 
@@ -1586,30 +1586,6 @@ src/project/volcano.s: src/project/volcano.cpp.s
 src/project/volcano.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\project_scene.dir\build.make CMakeFiles/project_scene.dir/src/project/volcano.cpp.s
 .PHONY : src/project/volcano.cpp.s
-
-src/project/walls.obj: src/project/walls.cpp.obj
-.PHONY : src/project/walls.obj
-
-# target to build an object file
-src/project/walls.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\project_scene.dir\build.make CMakeFiles/project_scene.dir/src/project/walls.cpp.obj
-.PHONY : src/project/walls.cpp.obj
-
-src/project/walls.i: src/project/walls.cpp.i
-.PHONY : src/project/walls.i
-
-# target to preprocess a source file
-src/project/walls.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\project_scene.dir\build.make CMakeFiles/project_scene.dir/src/project/walls.cpp.i
-.PHONY : src/project/walls.cpp.i
-
-src/project/walls.s: src/project/walls.cpp.s
-.PHONY : src/project/walls.s
-
-# target to generate assembly for a file
-src/project/walls.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\project_scene.dir\build.make CMakeFiles/project_scene.dir/src/project/walls.cpp.s
-.PHONY : src/project/walls.cpp.s
 
 src/raw1_gradient/raw1_gradient.obj: src/raw1_gradient/raw1_gradient.cpp.obj
 .PHONY : src/raw1_gradient/raw1_gradient.obj
@@ -2018,12 +1994,9 @@ help:
 	@echo ... src/project/camera.obj
 	@echo ... src/project/camera.i
 	@echo ... src/project/camera.s
-	@echo ... src/project/cave.obj
-	@echo ... src/project/cave.i
-	@echo ... src/project/cave.s
-	@echo ... src/project/caveMask.obj
-	@echo ... src/project/caveMask.i
-	@echo ... src/project/caveMask.s
+	@echo ... src/project/decorationPiller.obj
+	@echo ... src/project/decorationPiller.i
+	@echo ... src/project/decorationPiller.s
 	@echo ... src/project/fish.obj
 	@echo ... src/project/fish.i
 	@echo ... src/project/fish.s
@@ -2045,15 +2018,15 @@ help:
 	@echo ... src/project/submarine.obj
 	@echo ... src/project/submarine.i
 	@echo ... src/project/submarine.s
+	@echo ... src/project/submarinePropeler.obj
+	@echo ... src/project/submarinePropeler.i
+	@echo ... src/project/submarinePropeler.s
 	@echo ... src/project/terrain.obj
 	@echo ... src/project/terrain.i
 	@echo ... src/project/terrain.s
 	@echo ... src/project/volcano.obj
 	@echo ... src/project/volcano.i
 	@echo ... src/project/volcano.s
-	@echo ... src/project/walls.obj
-	@echo ... src/project/walls.i
-	@echo ... src/project/walls.s
 	@echo ... src/raw1_gradient/raw1_gradient.obj
 	@echo ... src/raw1_gradient/raw1_gradient.i
 	@echo ... src/raw1_gradient/raw1_gradient.s

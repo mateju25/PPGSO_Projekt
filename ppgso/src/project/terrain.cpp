@@ -11,11 +11,11 @@
 #include <shaders/diffuse_frag_glsl.h>
 
 // Static resources
-std::unique_ptr<ppgso::Mesh> Terrain::mesh;
-std::unique_ptr<ppgso::Texture> Terrain::texture;
-std::unique_ptr<ppgso::Shader> Terrain::shader;
+//std::unique_ptr<ppgso::Mesh> Terrain::mesh;
+//std::unique_ptr<ppgso::Texture> Terrain::texture;
+//std::unique_ptr<ppgso::Shader> Terrain::shader;
 
-Terrain::Terrain() {
+Terrain::Terrain(const std::string objName) {
     // Set random scale speed and rotation
     position = {0, 0, 0};
     rotation = {3*ppgso::PI/2, 0, 0};
@@ -24,7 +24,7 @@ Terrain::Terrain() {
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(diffuse_vert_glsl, diffuse_frag_glsl);
     if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/ocean.bmp"));
-    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/terrain_test.obj");
+    if (!mesh) mesh = std::make_unique<ppgso::Mesh>(objName);
 }
 
 bool Terrain::update(Scene &scene, float dt) {
@@ -47,7 +47,7 @@ void Terrain::render(Scene &scene) {
 
     // render mesh
     shader->setUniform("ModelMatrix", modelMatrix);
-//    shader->setUniform("Texture", *texture);
+    shader->setUniform("Texture", *texture);
     mesh->render();
 }
 

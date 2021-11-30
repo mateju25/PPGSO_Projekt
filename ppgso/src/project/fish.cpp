@@ -22,7 +22,6 @@ Fish::Fish(Scene &scene, std::vector<glm::vec3> path_points, float total_time_in
     this->path_points = path_points;
     this->total_time_interval = total_time_interval;
 
-
     offset = random_vec3(-3, 3);
 
     current_time_interval = 0;
@@ -30,12 +29,12 @@ Fish::Fish(Scene &scene, std::vector<glm::vec3> path_points, float total_time_in
     rotation = {3*ppgso::PI/2, 0,0};
     scale = {4, 4, 4};
 
-    auto wheel = std::make_unique<FishTail>(scene, *this);
-    scene.objects.push_back(move(wheel));
+    auto part = std::make_unique<FishTail>();
+    parts.push_back(move(part));
 
     // Initialize static resources if needed
-    if (!shader) shader = std::make_unique<ppgso::Shader>(diffuse_vert_glsl, diffuse_frag_glsl);
-    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/ocean.bmp"));
+    if (!shader) shader = std::make_unique<ppgso::Shader>(texture_vert_glsl, texture_frag_glsl);
+    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/fish.bmp"));
     if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/fich_body.obj");
 }
 
@@ -61,11 +60,15 @@ bool Fish::update(Scene &scene, float dt) {
 
     if (current_time_interval >= total_time_interval) {
         isAlive = false;
-        return false;
     }
 
-    isAlive = true;
-    return true;
+    for ( auto& obj : parts ) {
+        auto part = dynamic_cast<FishTail*>(obj.get());
+        part->updateModel(scene, position, rotation, scale, isAlive);
+    }
+
+
+    return isAlive;
 }
 
 void Fish::render(Scene &scene) {
@@ -80,7 +83,7 @@ void Fish::render(Scene &scene) {
 
     // render mesh
     shader->setUniform("ModelMatrix", modelMatrix);
-//    shader->setUniform("Texture", *texture);
+    shader->setUniform("Texture", *texture);
     mesh->render();
 }
 
