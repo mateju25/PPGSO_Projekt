@@ -1,9 +1,0 @@
-# Hashes of file build rules.
-3d39a6e5d4910fd3ddf4ec3df486c74c shaders/color_frag_glsl.cpp
-97017f21bbe060c43906adbfd9363f2b shaders/color_vert_glsl.cpp
-017b1fbdf091a4b2981f1162424732dd shaders/convolution_frag_glsl.cpp
-41a8317a6ef88f4d28a91c3bbf216515 shaders/convolution_vert_glsl.cpp
-520ed33dd8012c11754c3b84e93f7577 shaders/diffuse_frag_glsl.cpp
-551c6ce5b74cb320211586f299d9a900 shaders/diffuse_vert_glsl.cpp
-9a77a6c80e6c09150d002a87f2ee7746 shaders/texture_frag_glsl.cpp
-4a9872ebbf6da47a3cab2003ea925cb6 shaders/texture_vert_glsl.cpp
