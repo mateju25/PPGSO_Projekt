@@ -166,6 +166,45 @@ public:
             initScene();
         }
 
+        if (key == GLFW_KEY_1) {
+            scene.camera->mode = Camera::FOLLOW;
+        }
+
+        if (key == GLFW_KEY_2) {
+            scene.camera->mode = Camera::STATIONARY;
+            scene.camera->position = {-174.1 , 24.2745, -39.553};
+            scene.camera->submarinePos = {-222.458 , -10.9873, -110.905};
+        }
+
+        if (key == GLFW_KEY_3) {
+            scene.camera->mode = Camera::STATIONARY;
+            scene.camera->position = {-336.465, 23.604, 83.9555};
+            scene.camera->submarinePos = {-371.641, 8.6871, 85.7647};
+        }
+
+        if (key == GLFW_KEY_4) {
+            scene.camera->mode = Camera::STATIONARY;
+            scene.camera->position = {153.992, 37.4656, 49.3311};
+            scene.camera->submarinePos = {137.898, 29.6229, 5.43222};
+        }
+
+        if (key == GLFW_KEY_RIGHT) {
+            if (scene.waterCurrent.x >= -0.02f)
+                scene.waterCurrent.x -= 0.005f;
+        }
+        if (key == GLFW_KEY_LEFT) {
+            if (scene.waterCurrent.x <= 0.02f)
+                scene.waterCurrent.x += 0.005f;
+        }
+        if (key == GLFW_KEY_UP) {
+            if (scene.waterCurrent.z >= -0.02f)
+                scene.waterCurrent.z -= 0.005f;
+        }
+        if (key == GLFW_KEY_DOWN) {
+            if (scene.waterCurrent.z <= 0.02f)
+                scene.waterCurrent.z += 0.005f;
+        }
+
     }
 
     /*!

@@ -23,9 +23,6 @@ void Scene::render() {
 }
 
 void Scene::setTargetPosition(const glm::vec3 &position, const glm::vec3 &rotation) {
-    targetPosition = position;
-    targetRotation = rotation;
-
     camera->moveTo(position, rotation);
 }
 

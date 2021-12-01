@@ -41,8 +41,7 @@ class Scene {
     // All objects to be rendered in scene
     std::list< std::unique_ptr<Object> > objects;
 
-    glm::vec3 targetPosition;
-    glm::vec3 targetRotation;
+    glm::vec3 waterCurrent = {0,0,0};
 
     // Keyboard state
     std::map< int, int > keyboard;

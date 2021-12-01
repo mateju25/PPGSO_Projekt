@@ -41,9 +41,10 @@ void SubmarinePropeler::updateModel(Scene &scene, glm::vec3 pos, glm::vec3 rot, 
         rotationZ -= rotSpeed;
     rotation.x = rotationZ;
 
-    if (((float) rand() / (float) RAND_MAX) < 0.1) {
-        auto bubble = std::make_unique<Bubble>(position, ((float) rand() / (float) RAND_MAX) * (90 - 85) + 85, 0.01, 0.1);
-        scene.objects.push_back(move(bubble));
+
+    if (((float) rand() / (float) RAND_MAX) < 0.15) {
+        auto bubble = std::make_unique<Bubble>(position, ((float) rand() / (float) RAND_MAX) * (90 - 85) + 85, 0.07, 0.1);
+        parts.push_back(move(bubble));
     }
 
     update(scene, 0);
@@ -51,6 +52,16 @@ void SubmarinePropeler::updateModel(Scene &scene, glm::vec3 pos, glm::vec3 rot, 
 }
 
 bool SubmarinePropeler::update(Scene &scene, float dt) {
+    auto i = std::begin(parts);
+
+    while (i != std::end(parts)) {
+        // Update and remove from list if needed
+        auto obj = i->get();
+        if (!obj->update(scene, dt))
+            i = parts.erase(i); // NOTE: no need to call destructors as we store shared pointers in the scene
+        else
+            ++i;
+    }
 
     // Generate modelMatrix from position, rotation and scale
     generateModelMatrix();
@@ -59,6 +70,11 @@ bool SubmarinePropeler::update(Scene &scene, float dt) {
 }
 
 void SubmarinePropeler::render(Scene &scene) {
+    for (auto &obj: parts) {
+        auto bubble = dynamic_cast<Bubble *>(obj.get());
+        bubble->render(scene);
+    }
+
     shader->use();
 
     // Set up light
