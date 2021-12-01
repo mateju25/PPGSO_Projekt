@@ -26,6 +26,16 @@ void Scene::setTargetPosition(const glm::vec3 &position, const glm::vec3 &rotati
     camera->moveTo(position, rotation);
 }
 
+float Scene::getHeight(float x, float y) {
+    //invert
+    int i = (-1*x - 440) *  -4.363636;
+    int j = (y - 178) * -4.362392;
+
+    float color =  heightFramebuffer[3 * (i * imgWidth + j)] + heightFramebuffer[3 * (i * imgWidth + j) + 1] + heightFramebuffer[3 * (i * imgWidth + j) + 2];
+    return (color - 258) * 0.62812 - 54.6012;
+//    return color;
+}
+
 std::vector<Object*> Scene::intersect(const glm::vec3 &position, const glm::vec3 &direction) {
   std::vector<Object*> intersected = {};
   for(auto& object : objects) {

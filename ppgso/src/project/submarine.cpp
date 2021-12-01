@@ -20,7 +20,7 @@ std::unique_ptr<ppgso::Shader> Submarine::shader;
 
 Submarine::Submarine(Scene &scene) {
     // Set random scale speed and rotation
-    position = {0, 0, 0};
+    position = {330, 0, -234.618};
     rotation = {BASIC_ROTATION_X, BASIC_ROTATION_Y, BASIC_ROTATION_Z};
     scale = {2, 2, 2};
 
@@ -61,6 +61,7 @@ bool Submarine::update(Scene &scene, float dt) {
     }
     if (scene.keyboard[GLFW_KEY_ENTER]) {
         std::cout << position.x << " " << position.y << " "<< position.z << " " << std::endl;
+        std::cout << "Y-terrain: " << scene.getHeight(position.x, position.z) << std::endl;
     }
 
     auto oldPos = position;
