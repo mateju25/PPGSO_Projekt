@@ -35,17 +35,19 @@ Submarine::Submarine(Scene &scene) {
 }
 
 bool Submarine::update(Scene &scene, float dt) {
-//    std::cout << 1/dt << std::endl;
-    if (scene.keyboard[GLFW_KEY_RIGHT]) {
+    if (scene.camera->mode == Camera::STATIONARY) {
+        speed = 0;
+    }
+    if (scene.keyboard[GLFW_KEY_D]) {
         rotation.y -= rot_speed * dt * 30;
     }
-    if (scene.keyboard[GLFW_KEY_LEFT]) {
+    if (scene.keyboard[GLFW_KEY_A]) {
         rotation.y += rot_speed * dt * 30;
     }
-    if (scene.keyboard[GLFW_KEY_UP]) {
+    if (scene.keyboard[GLFW_KEY_W]) {
         position.y += 0.5 * dt * 30;
     }
-    if (scene.keyboard[GLFW_KEY_DOWN]) {
+    if (scene.keyboard[GLFW_KEY_S]) {
         position.y -= 0.5 * dt * 30;
     }
     if (scene.keyboard[GLFW_KEY_SPACE]) {
@@ -54,7 +56,7 @@ bool Submarine::update(Scene &scene, float dt) {
     if (scene.keyboard[GLFW_KEY_LEFT_SHIFT]) {
         speed -= 0.01f * dt * 30;
     }
-    if (scene.keyboard[GLFW_KEY_P]) {
+    if (scene.keyboard[GLFW_KEY_C]) {
         speed = 0;
     }
     if (scene.keyboard[GLFW_KEY_ENTER]) {

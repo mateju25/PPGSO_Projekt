@@ -12,9 +12,14 @@
  */
 class Camera {
 public:
+    enum MODE { FOLLOW, STATIONARY };
+    MODE mode = FOLLOW;
+
+    bool firstFollow = true;
+
     glm::vec3 position{0, 0, 0};
     glm::vec3 positionOffset{0, 0, 0};
-    glm::vec3 offset{0, 0, 0};
+    glm::vec3 offset{0, 5, 0};
     glm::vec3 rotation{0, 0, 0};
 
     float distanceY = 4;
@@ -23,7 +28,6 @@ public:
     glm::vec3 submarinePos;
 
     glm::vec3 up{0, 1, 0};
-    glm::vec3 back{0, 0, -1};
 
     glm::mat4 viewMatrix;
     glm::mat4 projectionMatrix;

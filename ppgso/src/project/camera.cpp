@@ -14,23 +14,32 @@ Camera::Camera() {
 }
 
 void  Camera::update() {
-    glm::vec3 lookAtOff = {0,5,0};
-    viewMatrix = glm::lookAt(position, submarinePos + lookAtOff, up);
+    viewMatrix = glm::lookAt(position, submarinePos + offset, up);
 }
 
 void Camera::moveTo(const glm::vec3 &pos, const glm::vec3 &rot) {
+    if (mode == FOLLOW) {
+        if (firstFollow) {
+            firstFollow = false;
+            submarinePos = pos;
+            positionOffset = {0, distanceY, -distanceZ};
+            position = submarinePos + positionOffset;
+            rotation = {0, 0, 0};
+        }
+        auto deltaPos = submarinePos - pos;
+        submarinePos = pos;
 
-    auto deltaPos = submarinePos - pos;
-    submarinePos = pos;
+        glm::vec3 deltaRot;
+        deltaRot.x = (distanceZ * sin(rotation.y * -1)) - (distanceZ * sin(rot.y * -1));
+        deltaRot.z = (distanceZ * -cos(rotation.y * -1)) - (distanceZ * -cos(rot.y * -1));
+//        deltaRot.y = (distanceY * cos(rotation.y) * sin(rotation.x) + positionOffset.y) -
+//                     (distanceY * cos(rot.y) * sin(rot.x) + positionOffset.y);
 
-    glm::vec3 deltaRot;
-    deltaRot.x = (distanceZ * sin(rotation.y * -1)) - (distanceZ * sin(rot.y * -1));
-    deltaRot.z = (distanceZ * -cos(rotation.y * -1)) - (distanceZ * -cos(rot.y * -1));
-    deltaRot.y = (distanceY * cos(rotation.y) * sin(rotation.x) + positionOffset.y) -
-                 (distanceY * cos(rot.y) * sin(rot.x) + positionOffset.y);
+        rotation = rot;
 
-    rotation = rot;
-
-    position -= deltaRot;
-    position -= deltaPos;
+        position -= deltaRot;
+        position -= deltaPos;
+    } else {
+        firstFollow = true;
+    }
 }

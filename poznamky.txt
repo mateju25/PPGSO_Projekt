@@ -2,10 +2,10 @@ demo OK
 textury OK
 scena OK
 proc anim OK
-hierarchia dorobit bublinky na turbinu  + AK BUDE CAS nieco s maticami
+hierarchia dorobit bublinky na turbinu OK  + AK BUDE CAS nieco s maticami
 animacia ASI OK
 simulacia kolizia OK
-simulacia bublibky dorobit prudy na sipky
+simulacia bublibky dorobit prudy na sipky OK
 perspek makera OK
 AK BUDE CAS animacia kamery
 dorobit osvetlenie celkovo

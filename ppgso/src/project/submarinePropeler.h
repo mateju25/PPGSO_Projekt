@@ -11,6 +11,8 @@
 
 class SubmarinePropeler final : public Object {
 private:
+    std::list< std::unique_ptr<Object> > parts;
+
     glm::vec3 offset;
     float rotationZ = -0.01;
     float rotSpeed = .08f;
