@@ -113,7 +113,11 @@ add_executable(project_scene
         src/project/fishTail.cpp
         src/project/volcano.cpp
         src/project/decorationPiller.cpp
-        src/project/submarine.cpp src/project/fish_spawn.cpp src/project/fish_spawn.h)
+        src/project/submarine.cpp
+        src/project/fish_spawn.cpp
+        src/project/fish_spawn.h
+        src/project/
+)
 target_link_libraries(project_scene ppgso shaders)
 install(TARGETS project_scene DESTINATION .)
 add_custom_command(TARGET project_scene POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/data/ ${CMAKE_CURRENT_BINARY_DIR})

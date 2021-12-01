@@ -122,8 +122,14 @@ private:
 
         auto fishfish = std::make_unique<fish_spawn>(path_points, 7, 40);
         scene.objects.push_back(move(fishfish));
-//
 
+        // Load images
+        std::ifstream image_stream("HeightMap_main.png", std::ios::binary);
+        std::vector<char> height_map_main_buffer(static_cast<std::size_t>(3840 * 2600));
+        image_stream.read(height_map_main_buffer.data(), static_cast<std::streamsize>(height_map_main_buffer.size()));
+        image_stream.close();
+
+        std::cout << height_map_main_buffer.size() << std::endl;
     }
 
 public:
