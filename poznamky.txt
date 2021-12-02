@@ -4,7 +4,7 @@ scena OK
 proc anim OK
 hierarchia dorobit bublinky na turbinu OK  + AK BUDE CAS nieco s maticami
 animacia ASI OK
-simulacia kolizia OK
+simulacia kolizia OK + ESTE DOROBIC STLPY
 simulacia bublibky dorobit prudy na sipky OK
 perspek makera OK
 AK BUDE CAS animacia kamery

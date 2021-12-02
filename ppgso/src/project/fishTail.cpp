@@ -19,7 +19,7 @@ FishTail::FishTail(){
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(texture_vert_glsl, texture_frag_glsl);
     if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/fish.bmp"));
-    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/tail.obj");
+    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/fich_tail.obj");
 }
 
 void FishTail::updateModel(Scene &scene, glm::vec3 pos, glm::vec3 rot, glm::vec3 sc, bool isAlive) {
