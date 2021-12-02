@@ -38,6 +38,7 @@ ppgso::Window::Window(std::string title, int width, int height) : title{title}, 
   glfwSetCursorPosCallback(window, glfw_cursor_pos_callback);
   glfwSetMouseButtonCallback(window, glfw_mouse_button_callback);
   glfwSetWindowRefreshCallback(window, glfw_window_refresh_callback);
+  glfwSetWindowMonitor(window, nullptr, 0, 30, width, height, 40);
 
   glfwMakeContextCurrent(window);
 

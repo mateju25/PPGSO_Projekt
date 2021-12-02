@@ -21,7 +21,7 @@ private:
 
 
 public:
-    Bubble(glm::vec3  position, float timeAlive, float minSc, float maxSc);
+    Bubble(glm::vec3  position, float timeAlive, float minSc, float maxSc, float rndPos);
 
     bool update(Scene &scene, float dt) override;
 

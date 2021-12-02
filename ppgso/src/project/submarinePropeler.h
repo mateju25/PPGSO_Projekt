@@ -17,7 +17,7 @@ private:
     float rotationZ = -0.01;
     float rotSpeed = .08f;
 
-    float distanceX = 1.7;
+    float distanceX = 0.85;
     float distanceY = 0;
     float distanceZ = 0;
 

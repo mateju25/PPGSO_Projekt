@@ -74,6 +74,7 @@ private:
 
         scene.lightDirection = {0.1 , 1, 0.1};
 
+        scene.heightFramebuffer = readBMP("mainHeightCave_skuska.bmp");
 
         // Create submarine
         auto submarine = std::make_unique<Submarine>(scene);
@@ -85,9 +86,9 @@ private:
         scene.camera = move(camera);
 
 //        // Create terrain
-//        glm::vec3 position = {-322.116,-19,-148.765};
-//        glm::vec3 rotation = {3*ppgso::PI/2, 4.31239, 0};
-//        glm::vec3 scale = {10,10,10};
+        glm::vec3 position = {-322.116,-19,-148.765};
+        glm::vec3 rotation = {3*ppgso::PI/2, 4.31239, 0};
+        glm::vec3 scale = {10,10,10};
 //        auto piller1 = std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
 //        scene.objects.push_back(move(piller1));
 //
@@ -125,16 +126,23 @@ private:
 
         auto terrain1 = std::make_unique<Terrain>("projekt/terrain_01.obj");
         scene.objects.push_back(move(terrain1));
-//
+
 //        auto terrain2 = std::make_unique<Terrain>("projekt/cave.obj");
 //        scene.objects.push_back(move(terrain2));
 //
-//        auto terrain3 = std::make_unique<Terrain>("projekt/cave_mask.obj");
-//        scene.objects.push_back(move(terrain3));
+////        auto terrain3 = std::make_unique<Terrain>("projekt/cave_mask.obj");
+////        scene.objects.push_back(move(terrain3));
 //
 //        auto terrain4 = std::make_unique<Terrain>("projekt/walls.obj");
 //        scene.objects.push_back(move(terrain4));
 
+        for (int i = 0; i < 30; ++i) {
+            position = {((float) rand() / (float) RAND_MAX) * (2 * 14.48) - 14.48, 0, ((float) rand() / (float) RAND_MAX) * (53.5 - 17.8) + 17.8};
+            position.y = scene.getHeight(position.x, position.z) + 0.15;
+            auto volcano1 = std::make_unique<Volcano>(((float) rand() / (float) RAND_MAX) < 0.5f, position);
+            scene.objects.push_back(move(volcano1));
+        }
+//
 //        position = {-381.366,7.5,100.969};
 //        auto volcano1 = std::make_unique<Volcano>(false, position);
 //        scene.objects.push_back(move(volcano1));
@@ -142,70 +150,23 @@ private:
 //        position = {-394.248,3.5,70.635};
 //        auto volcano2 = std::make_unique<Volcano>(true, position);
 //        scene.objects.push_back(move(volcano2));
-//
-//        std::vector<glm::vec3> path_points = {
-//                {-240.98, -25, -137.31},
-//                {-240.98, 50, -137.31},
-//                {-103.918, 37 , -65.0874},
-//                {50, 0, -50},
-//                {50, 50, 50},
-//                {50, 50, 0},
-//                {150, 50, 0},
-//                {150, 0, 0}
-//        };
-//
-//        auto fishfish = std::make_unique<fish_spawn>(path_points, 7, 40);
-//        scene.objects.push_back(move(fishfish));
 
-        // Load images
-//        std::ifstream image_stream("mainHeight.bmp", std::ios::binary);
-//        std::vector<char> height_map_main_buffer(static_cast<std::size_t>(3840 * 2600));
-//        image_stream.read(height_map_main_buffer.data(), static_cast<std::streamsize>(height_map_main_buffer.size()));
-//        image_stream.close();
-//
-//
-//        for (int i = 0; i < 3840;i+=1) {
-//            for (int j = 0; j < 2600; j+=1) {
-//                glm::vec3 pos = {(int) i, (int) height_map_main_buffer[i*2600 + j], j};
-//                auto bubble = std::make_unique<Bubble>(pos, 10000, 3, 3);
-//                scene.objects.push_back(move(bubble));
-//                std::cout << int(height_map_main_buffer[i*2600 + j]) << " ";
-//            }
-//            std::cout << std::endl;
-//        }
-//
-//        std::cout << height_map_main_buffer.size() << std::endl;
-        scene.heightFramebuffer = readBMP("mainHeight.bmp");
+        std::vector<glm::vec3> path_points = {
+                {-24.098, -3.3943, -13.731},
+                {-24.098, 5.0, -13.731},
+                {-10.3918, 3.7 , -6.50874},
+                {5.0, 0, -5.0},
+                {5.0, 5.0, 5.0},
+                {5.0, 5.0, 0},
+                {15.0, 5.0, 0},
+                {15.0, 0, 0}
+        };
 
-        int mini, minj, mincolor = 8000;
-        int maxi,maxj,maxcolor = -8000;
+        auto fishfish = std::make_unique<fish_spawn>(path_points, 7, 40);
+        scene.objects.push_back(move(fishfish));
 
-        for (int i = 0; i < scene.imgHeight ; i+=100) {
-            for (int j = 0; j < scene.imgWidth; j+=40) {
-                float color =  scene.heightFramebuffer[3 * (i * scene.imgWidth + j)] + scene.heightFramebuffer[3 * (i * scene.imgWidth + j) + 1] + scene.heightFramebuffer[3 * (i * scene.imgWidth + j) + 2];
-                if (color < mincolor) {
-                    mincolor = color;
-                    mini = i;
-                    minj = j;
-                }
-                if (color > maxcolor) {
-                    maxcolor = color;
-                    maxi = i;
-                    maxj = j;
-                }
-//                glm::vec3 pos = {-1*(j / -4.363636 + 440), (color-450), (i / -4.362392 + 178) };
-                glm::vec3 pos = {-1*(j / -4.363636 + 440), (color - 258) * 0.62812 - 54.6012, (i / -4.362392 + 178) };
-                auto bubble = std::make_unique<Bubble>(pos, 10000, 6, 6);
-                scene.objects.push_back(move(bubble));
-            }
-        }
-        glm::vec3 pos = {-1*(minj / -4.363636 + 440), (0 - 243) * 0.36336 + 32.15, (mini / -4.362392 + 178) };
-        std::cout << pos.x << " " << pos.z << std::endl;
-        std::cout << mincolor << " " << std::endl;
 
-        pos = {-1*(maxj / -4.363636 + 440), (0 - 243) * 0.36336 + 32.15, (maxi / -4.362392 + 178) };
-        std::cout << pos.x << " " << pos.z << std::endl;
-        std::cout << maxcolor << " " << std::endl;
+
     }
 
 public:
@@ -216,7 +177,7 @@ public:
     /*!
      * Construct custom game window
      */
-    SceneWindow() : Window{"PODMORSKY SVET", SIZE, SIZE} {
+    SceneWindow() : Window{"PODMORSKY SVET", 1920/*SIZE*/, 1010/*SIZE*/} {
         //hideCursor();
         glfwSetInputMode(window, GLFW_STICKY_KEYS, 1);
 //        glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
@@ -256,37 +217,43 @@ public:
 
         if (key == GLFW_KEY_2) {
             scene.camera->mode = Camera::STATIONARY;
-            scene.camera->position = {-174.1 , 24.2745, -39.553};
-            scene.camera->submarinePos = {-222.458 , -10.9873, -110.905};
+            scene.camera->position = {-17.41 , 2.42745, -3.9553};
+            scene.camera->submarinePos = {-22.2458 , -1.09873, -11.0905};
         }
 
         if (key == GLFW_KEY_3) {
             scene.camera->mode = Camera::STATIONARY;
-            scene.camera->position = {-336.465, 23.604, 83.9555};
-            scene.camera->submarinePos = {-371.641, 8.6871, 85.7647};
+            scene.camera->position = {-33.6465, 2.3604, 8.39555};
+            scene.camera->submarinePos = {-37.1641, 0.86871, 8.57647};
         }
 
         if (key == GLFW_KEY_4) {
             scene.camera->mode = Camera::STATIONARY;
-            scene.camera->position = {153.992, 37.4656, 49.3311};
-            scene.camera->submarinePos = {137.898, 29.6229, 5.43222};
+            scene.camera->position = {15.3992, 3.74656, 4.93311};
+            scene.camera->submarinePos = {13.7898, 2.96229, 0.543222};
+        }
+
+        if (key == GLFW_KEY_4) {
+            scene.camera->mode = Camera::STATIONARY;
+            scene.camera->position = {-2.64922, 5.56155, 11.992};
+            scene.camera->submarinePos = {-1.57861, 1.10426, 22.2302};
         }
 
         if (key == GLFW_KEY_RIGHT) {
-            if (scene.waterCurrent.x >= -0.02f)
-                scene.waterCurrent.x -= 0.005f;
+            if (scene.waterCurrent.x >= -0.002f)
+                scene.waterCurrent.x -= 0.0005f;
         }
         if (key == GLFW_KEY_LEFT) {
-            if (scene.waterCurrent.x <= 0.02f)
-                scene.waterCurrent.x += 0.005f;
+            if (scene.waterCurrent.x <= 0.002f)
+                scene.waterCurrent.x += 0.0005f;
         }
         if (key == GLFW_KEY_UP) {
-            if (scene.waterCurrent.z >= -0.02f)
-                scene.waterCurrent.z -= 0.005f;
+            if (scene.waterCurrent.z >= -0.002f)
+                scene.waterCurrent.z -= 0.0005f;
         }
         if (key == GLFW_KEY_DOWN) {
-            if (scene.waterCurrent.z <= 0.02f)
-                scene.waterCurrent.z += 0.005f;
+            if (scene.waterCurrent.z <= 0.002f)
+                scene.waterCurrent.z += 0.0005f;
         }
 
     }

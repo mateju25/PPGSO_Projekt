@@ -19,8 +19,8 @@ private:
     bool isAlive = true;
 
     float distanceX = 0;
-    float distanceY = -0.1;
-    float distanceZ = 2.2;
+    float distanceY = -0.01;
+    float distanceZ = 0.22;
 
     // Static resources (Shared between instances)
     static std::unique_ptr<ppgso::Mesh> mesh;

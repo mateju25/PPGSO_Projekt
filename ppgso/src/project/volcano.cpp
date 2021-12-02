@@ -21,7 +21,7 @@ Volcano::Volcano(bool burst, glm::vec3 position) {
     // Set random scale speed and rotation
     this->position = position;
     rotation = {-1.5f, 0, 0};
-    scale = {9, 9, 9};
+    scale = {3, 3, 3};
 
     isBurst = burst;
 
@@ -33,19 +33,19 @@ Volcano::Volcano(bool burst, glm::vec3 position) {
 
 bool Volcano::update(Scene &scene, float dt) {
     auto tmp = this->position;
-    tmp.z += 0.2f;
-    tmp.y += 1.7f;
+    tmp.z += 0.02f;
+    tmp.y += 0.6f;
     if (isBurst) {
         if (((float) rand() / (float) RAND_MAX) < 0.005) {
-            for (int i = 0; i < 300; ++i) {
-                    auto bubble = std::make_unique<Bubble>(tmp, ((float) rand() / (float) RAND_MAX) * (1500 - 1000) + 1000, 0.1, 0.2);
+            for (int i = 0; i < 30; ++i) {
+                    auto bubble = std::make_unique<Bubble>(tmp, ((float) rand() / (float) RAND_MAX) * (500 - 400) + 400, 0.04, 0.06, 0.1);
                     scene.objects.push_back(move(bubble));
             }
         }
     } else {
         if (((float) rand() / (float) RAND_MAX) < 0.02) {
 
-                auto bubble = std::make_unique<Bubble>(tmp, ((float) rand() / (float) RAND_MAX) * (2000 - 1850) + 1850, 0.1, 0.2);
+                auto bubble = std::make_unique<Bubble>(tmp, ((float) rand() / (float) RAND_MAX) * (1500 - 1350) + 1350, 0.04, 0.06, 0.2);
                 scene.objects.push_back(move(bubble));
         }
     }

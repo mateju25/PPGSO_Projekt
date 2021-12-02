@@ -21,7 +21,7 @@ fish_spawn::fish_spawn(std::vector<glm::vec3> path_points, double interval, doub
     this->isFish = false;
 
     position = path_points.at(0);
-    scale = {3,3,3};
+    scale = {0.6,0.6,0.6};
     rotation = {3*ppgso::PI/2, 0 , 0};
     color = {1,0.79,0.86};
 

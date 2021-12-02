@@ -19,11 +19,11 @@ public:
 
     glm::vec3 position{0, 0, 0};
     glm::vec3 positionOffset{0, 0, 0};
-    glm::vec3 offset{0, 5, 0};
+    glm::vec3 offset{0, 2.5, 0};
     glm::vec3 rotation{0, 0, 0};
 
-    float distanceY = 4;
-    float distanceZ = 10;
+    float distanceY = 2;
+    float distanceZ = 5;
 
     glm::vec3 submarinePos;
 

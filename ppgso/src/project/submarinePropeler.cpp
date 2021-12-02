@@ -43,7 +43,7 @@ void SubmarinePropeler::updateModel(Scene &scene, glm::vec3 pos, glm::vec3 rot, 
 
 
     if (((float) rand() / (float) RAND_MAX) < 0.15) {
-        auto bubble = std::make_unique<Bubble>(position, ((float) rand() / (float) RAND_MAX) * (90 - 85) + 85, 0.07, 0.1);
+        auto bubble = std::make_unique<Bubble>(position, ((float) rand() / (float) RAND_MAX) * (45 - 35) + 35, 0.035, 0.05, 0.1);
         parts.push_back(move(bubble));
     }
 

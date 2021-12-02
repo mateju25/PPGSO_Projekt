@@ -19,7 +19,7 @@ Terrain::Terrain(const std::string objName) {
     // Set random scale speed and rotation
     position = {0, 0, 0};
     rotation = {3*ppgso::PI/2, 0, 0};
-    scale = {20, 20, 20};
+    scale = {2, 2, 2};
 
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(diffuse_vert_glsl, diffuse_frag_glsl);

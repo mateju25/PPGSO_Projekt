@@ -20,9 +20,9 @@ std::unique_ptr<ppgso::Shader> Submarine::shader;
 
 Submarine::Submarine(Scene &scene) {
     // Set random scale speed and rotation
-    position = {330, 0, -234.618};
+    position = {0, 0, 0};
     rotation = {BASIC_ROTATION_X, BASIC_ROTATION_Y, BASIC_ROTATION_Z};
-    scale = {2, 2, 2};
+    scale = {1, 1, 1};
 
     auto part = std::make_unique<SubmarinePropeler>();
     parts.push_back(move(part));
@@ -45,10 +45,10 @@ bool Submarine::update(Scene &scene, float dt) {
         rotation.y += rot_speed * dt * 30;
     }
     if (scene.keyboard[GLFW_KEY_W]) {
-        position.y += 0.5 * dt * 30;
+        position.y += 0.05 * dt * 30;
     }
     if (scene.keyboard[GLFW_KEY_S]) {
-        position.y -= 0.5 * dt * 30;
+        position.y -= 0.05 * dt * 30;
     }
     if (scene.keyboard[GLFW_KEY_SPACE]) {
         speed += 0.01f * dt * 30;
@@ -60,7 +60,7 @@ bool Submarine::update(Scene &scene, float dt) {
         speed = 0;
     }
     if (scene.keyboard[GLFW_KEY_ENTER]) {
-        std::cout << position.x << " " << position.y << " "<< position.z << " " << std::endl;
+        std::cout << position.x << " " << position.y << " " << position.z << " " << std::endl;
         std::cout << "Y-terrain: " << scene.getHeight(position.x, position.z) << std::endl;
     }
 
@@ -68,10 +68,33 @@ bool Submarine::update(Scene &scene, float dt) {
 
     position.z += speed * cos(rotation.y - BASIC_ROTATION_Y);
     position.x += speed * -sin(rotation.y - BASIC_ROTATION_Y) * -1;
-    if (position.y > 225)
-        position.y = 225;
+    if (position.y > 22.5)
+        position.y = 22.5;
 
-    if (checkCollisions(scene, dt))
+    //bounding border main
+    if (position.x < -44)
+        position.x = oldPos.x;
+    if (position.x > 44)
+        position.x = oldPos.x;
+    if (position.z < -41.8)
+        position.z = oldPos.z;
+
+    if (position.x < -14.48 || position.x > 14.48)
+        if (position.z > 17.8 && oldPos.z < 17.8)
+            position.z = oldPos.z;
+
+
+    if (position.z > 17.8) {
+        //bounding border cave
+        if (position.x < -14.48)
+            position.x = oldPos.x;
+        if (position.x > 14.48)
+            position.x = oldPos.x;
+        if (position.z > 53.5)
+            position.z = oldPos.z;
+    }
+
+    if (checkCollisions(scene, dt)) //kolizia so stlpmi
         position = oldPos;
 
     auto tmp = rotation;
@@ -79,6 +102,9 @@ bool Submarine::update(Scene &scene, float dt) {
     tmp.y -= BASIC_ROTATION_Y;
     tmp.z -= BASIC_ROTATION_Z;
 
+    if (position.y < scene.getHeight(position.x, position.z) + 0.7f) { //kolizia s terenom
+        position.y = scene.getHeight(position.x, position.z) + 0.7f;
+    }
 
     for (auto &obj: parts) {
         auto propeler = dynamic_cast<SubmarinePropeler *>(obj.get());
@@ -94,10 +120,10 @@ bool Submarine::update(Scene &scene, float dt) {
 }
 
 bool Submarine::checkCollisions(Scene &scene, float dt) {
-    for (auto &obj : scene.objects) {
+    for (auto &obj: scene.objects) {
         if (obj.get() == this) continue;
 
-        auto piller = dynamic_cast<DecorationPiller*>(obj.get());
+        auto piller = dynamic_cast<DecorationPiller *>(obj.get());
         if (piller) {
             auto distance = (this->position - piller->position);
 
@@ -111,8 +137,8 @@ bool Submarine::checkCollisions(Scene &scene, float dt) {
             if (distance.y < 4)
                 size = 0.4f;
 
-            if ( (abs(distance.x) < piller->scale.x * size) &&
-                    (abs(distance.z) < piller->scale.z * size)) {
+            if ((abs(distance.x) < piller->scale.x * size) &&
+                (abs(distance.z) < piller->scale.z * size)) {
                 return true;
             }
         }

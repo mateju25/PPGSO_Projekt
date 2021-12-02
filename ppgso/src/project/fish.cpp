@@ -24,7 +24,7 @@ Fish::Fish(Scene &scene, std::vector<glm::vec3> path_points, float total_time_in
     newPoints.emplace_back(path_points.at(0));
     newPoints.emplace_back(path_points.at(1));
     for (int i = 2; i < path_points.size() - 1; ++i) {
-        auto tmp = path_points.at(i) + random_vec3(-10, 10);
+        auto tmp = path_points.at(i) + random_vec3(-1.0, 1.0);
         newPoints.emplace_back(tmp);
     }
     newPoints.emplace_back(path_points.at(path_points.size()-1));
@@ -32,12 +32,12 @@ Fish::Fish(Scene &scene, std::vector<glm::vec3> path_points, float total_time_in
 
     this->total_time_interval = total_time_interval;
 
-    offset = random_vec3(-3, 3);
+    offset = random_vec3(-0.3, 0.3);
 
     current_time_interval = 0;
 
     rotation = {3*ppgso::PI/2, 0,0};
-    scale = {4, 4, 4};
+    scale = {0.4, 0.4, 0.4};
 
     auto part = std::make_unique<FishTail>();
     parts.push_back(move(part));
