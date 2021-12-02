@@ -20,6 +20,7 @@
 #include "fish_spawn.h"
 #include "fish.h"
 #include "decorationPiller.h"
+#include "Bubble.h"
 
 const unsigned int SIZE = 900;
 
@@ -31,6 +32,39 @@ private:
     float time;
 
     Scene scene;
+
+    unsigned char* readBMP(char* filename)
+    {
+        int i;
+        FILE* f = fopen(filename, "rb");
+        unsigned char info[54];
+
+        // read the 54-byte header
+        fread(info, sizeof(unsigned char), 54, f);
+
+        // extract image height and width from header
+        scene.imgWidth = *(int*)&info[18];
+        scene.imgHeight = *(int*)&info[22];
+
+        // allocate 3 bytes per pixel
+        int size = 3 *  scene.imgWidth *  scene.imgHeight;
+        unsigned char* data = new unsigned char[size];
+
+        // read the rest of the data at once
+        fread(data, sizeof(unsigned char), size, f);
+        fclose(f);
+
+        for(i = 0; i < size; i += 3)
+        {
+            // flip the order of every 3 bytes
+            unsigned char tmp = data[i];
+            data[i] = data[i+2];
+            data[i+2] = tmp;
+        }
+
+        return data;
+    }
+
     /*!
      * Reset and initialize the game scene
      * Creating unique smart pointers to objects that are stored in the scene object list
@@ -50,90 +84,134 @@ private:
         auto camera = std::make_unique<Camera>();
         scene.camera = move(camera);
 
-        // Create terrain
-        glm::vec3 position = {-322.116,-19,-148.765};
-        glm::vec3 rotation = {3*ppgso::PI/2, 4.31239, 0};
-        glm::vec3 scale = {10,10,10};
-        auto piller1 = std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
-        scene.objects.push_back(move(piller1));
-
-        position = {-311.406,-19,-179.196};
-        auto piller2 = std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
-        scene.objects.push_back(move(piller2));
-
-        position = {-316.716,24,-164};
-        auto piller3 = std::make_unique<DecorationPiller>("projekt/pillar_top.obj", position, rotation, scale);
-        scene.objects.push_back(move(piller3));
-
-        position = {-174.406,-17.5,-89.4885};
-        auto piller4 = std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
-        scene.objects.push_back(move(piller4));
-
-        position = {-250,-17.5,-55.865};
-        auto piller5 = std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
-        scene.objects.push_back(move(piller5));
-
-        position = {-250,-17.5,-218.865};
-        auto piller6 = std::make_unique<DecorationPiller>("projekt/pillar_broken.obj", position, rotation, scale);
-        scene.objects.push_back(move(piller6));
-
-        position = {-300,-17.5,-80.4};
-        auto piller7 = std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
-        scene.objects.push_back(move(piller7));
-
-        position = {-165,-17.5,-106.631};
-        auto piller8= std::make_unique<DecorationPiller>("projekt/pillar_broken.obj", position, rotation, scale);
-        scene.objects.push_back(move(piller8));
-
-        position = {-175,-17.5,-188};
-        auto piller9= std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
-        scene.objects.push_back(move(piller9));
+//        // Create terrain
+//        glm::vec3 position = {-322.116,-19,-148.765};
+//        glm::vec3 rotation = {3*ppgso::PI/2, 4.31239, 0};
+//        glm::vec3 scale = {10,10,10};
+//        auto piller1 = std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
+//        scene.objects.push_back(move(piller1));
+//
+//        position = {-311.406,-19,-179.196};
+//        auto piller2 = std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
+//        scene.objects.push_back(move(piller2));
+//
+//        position = {-316.716,24,-164};
+//        auto piller3 = std::make_unique<DecorationPiller>("projekt/pillar_top.obj", position, rotation, scale);
+//        scene.objects.push_back(move(piller3));
+//
+//        position = {-174.406,-17.5,-89.4885};
+//        auto piller4 = std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
+//        scene.objects.push_back(move(piller4));
+//
+//        position = {-250,-17.5,-55.865};
+//        auto piller5 = std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
+//        scene.objects.push_back(move(piller5));
+//
+//        position = {-250,-17.5,-218.865};
+//        auto piller6 = std::make_unique<DecorationPiller>("projekt/pillar_broken.obj", position, rotation, scale);
+//        scene.objects.push_back(move(piller6));
+//
+//        position = {-300,-17.5,-80.4};
+//        auto piller7 = std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
+//        scene.objects.push_back(move(piller7));
+//
+//        position = {-165,-17.5,-106.631};
+//        auto piller8= std::make_unique<DecorationPiller>("projekt/pillar_broken.obj", position, rotation, scale);
+//        scene.objects.push_back(move(piller8));
+//
+//        position = {-175,-17.5,-188};
+//        auto piller9= std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
+//        scene.objects.push_back(move(piller9));
 
         auto terrain1 = std::make_unique<Terrain>("projekt/terrain_01.obj");
         scene.objects.push_back(move(terrain1));
+//
+//        auto terrain2 = std::make_unique<Terrain>("projekt/cave.obj");
+//        scene.objects.push_back(move(terrain2));
+//
+//        auto terrain3 = std::make_unique<Terrain>("projekt/cave_mask.obj");
+//        scene.objects.push_back(move(terrain3));
+//
+//        auto terrain4 = std::make_unique<Terrain>("projekt/walls.obj");
+//        scene.objects.push_back(move(terrain4));
 
-        auto terrain2 = std::make_unique<Terrain>("projekt/cave.obj");
-        scene.objects.push_back(move(terrain2));
-
-        auto terrain3 = std::make_unique<Terrain>("projekt/cave_mask.obj");
-        scene.objects.push_back(move(terrain3));
-
-        auto terrain4 = std::make_unique<Terrain>("projekt/walls.obj");
-        scene.objects.push_back(move(terrain4));
-
-        position = {-381.366,7.5,100.969};
-        auto volcano1 = std::make_unique<Volcano>(false, position);
-        scene.objects.push_back(move(volcano1));
-
-        position = {-394.248,3.5,70.635};
-        auto volcano2 = std::make_unique<Volcano>(true, position);
-        scene.objects.push_back(move(volcano2));
-
-        std::vector<glm::vec3> path_points = {
-                {-240.98, -25, -137.31},
-                {-240.98, 50, -137.31},
-                {-103.918, 37 , -65.0874},
-                {50, 0, -50},
-                {50, 50, 50},
-                {50, 50, 0},
-                {150, 50, 0},
-                {150, 0, 0}
-        };
-
-        auto fishfish = std::make_unique<fish_spawn>(path_points, 7, 40);
-        scene.objects.push_back(move(fishfish));
+//        position = {-381.366,7.5,100.969};
+//        auto volcano1 = std::make_unique<Volcano>(false, position);
+//        scene.objects.push_back(move(volcano1));
+//
+//        position = {-394.248,3.5,70.635};
+//        auto volcano2 = std::make_unique<Volcano>(true, position);
+//        scene.objects.push_back(move(volcano2));
+//
+//        std::vector<glm::vec3> path_points = {
+//                {-240.98, -25, -137.31},
+//                {-240.98, 50, -137.31},
+//                {-103.918, 37 , -65.0874},
+//                {50, 0, -50},
+//                {50, 50, 50},
+//                {50, 50, 0},
+//                {150, 50, 0},
+//                {150, 0, 0}
+//        };
+//
+//        auto fishfish = std::make_unique<fish_spawn>(path_points, 7, 40);
+//        scene.objects.push_back(move(fishfish));
 
         // Load images
-        std::ifstream image_stream("HeightMap_main.png", std::ios::binary);
-        std::vector<char> height_map_main_buffer(static_cast<std::size_t>(3840 * 2600));
-        image_stream.read(height_map_main_buffer.data(), static_cast<std::streamsize>(height_map_main_buffer.size()));
-        image_stream.close();
+//        std::ifstream image_stream("mainHeight.bmp", std::ios::binary);
+//        std::vector<char> height_map_main_buffer(static_cast<std::size_t>(3840 * 2600));
+//        image_stream.read(height_map_main_buffer.data(), static_cast<std::streamsize>(height_map_main_buffer.size()));
+//        image_stream.close();
+//
+//
+//        for (int i = 0; i < 3840;i+=1) {
+//            for (int j = 0; j < 2600; j+=1) {
+//                glm::vec3 pos = {(int) i, (int) height_map_main_buffer[i*2600 + j], j};
+//                auto bubble = std::make_unique<Bubble>(pos, 10000, 3, 3);
+//                scene.objects.push_back(move(bubble));
+//                std::cout << int(height_map_main_buffer[i*2600 + j]) << " ";
+//            }
+//            std::cout << std::endl;
+//        }
+//
+//        std::cout << height_map_main_buffer.size() << std::endl;
+        scene.heightFramebuffer = readBMP("mainHeight.bmp");
 
-        std::cout << height_map_main_buffer.size() << std::endl;
+        int mini, minj, mincolor = 8000;
+        int maxi,maxj,maxcolor = -8000;
+
+        for (int i = 0; i < scene.imgHeight ; i+=100) {
+            for (int j = 0; j < scene.imgWidth; j+=40) {
+                float color =  scene.heightFramebuffer[3 * (i * scene.imgWidth + j)] + scene.heightFramebuffer[3 * (i * scene.imgWidth + j) + 1] + scene.heightFramebuffer[3 * (i * scene.imgWidth + j) + 2];
+                if (color < mincolor) {
+                    mincolor = color;
+                    mini = i;
+                    minj = j;
+                }
+                if (color > maxcolor) {
+                    maxcolor = color;
+                    maxi = i;
+                    maxj = j;
+                }
+//                glm::vec3 pos = {-1*(j / -4.363636 + 440), (color-450), (i / -4.362392 + 178) };
+                glm::vec3 pos = {-1*(j / -4.363636 + 440), (color - 258) * 0.62812 - 54.6012, (i / -4.362392 + 178) };
+                auto bubble = std::make_unique<Bubble>(pos, 10000, 6, 6);
+                scene.objects.push_back(move(bubble));
+            }
+        }
+        glm::vec3 pos = {-1*(minj / -4.363636 + 440), (0 - 243) * 0.36336 + 32.15, (mini / -4.362392 + 178) };
+        std::cout << pos.x << " " << pos.z << std::endl;
+        std::cout << mincolor << " " << std::endl;
+
+        pos = {-1*(maxj / -4.363636 + 440), (0 - 243) * 0.36336 + 32.15, (maxi / -4.362392 + 178) };
+        std::cout << pos.x << " " << pos.z << std::endl;
+        std::cout << maxcolor << " " << std::endl;
     }
 
 public:
     bool first_mouse = true;
+
+
 
     /*!
      * Construct custom game window

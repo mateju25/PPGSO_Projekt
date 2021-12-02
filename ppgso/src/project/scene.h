@@ -43,6 +43,10 @@ class Scene {
 
     glm::vec3 waterCurrent = {0,0,0};
 
+    int imgHeight;
+    int imgWidth;
+    unsigned char* heightFramebuffer;
+
     // Keyboard state
     std::map< int, int > keyboard;
 
@@ -56,6 +60,8 @@ class Scene {
     } cursor;
 
     void setTargetPosition(const glm::vec3 &position, const glm::vec3 &rotation);
+
+    float getHeight(float x, float y);
 };
 
 #endif // _PPGSO_SCENE_H

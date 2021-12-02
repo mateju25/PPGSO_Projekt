@@ -19,10 +19,10 @@ std::unique_ptr<ppgso::Shader> Bubble::shader;
 Bubble:: Bubble(glm::vec3  position, float timeAlive, float minSc, float maxSc) {
     // Set random scale speed and rotation
     this->position = position;
-    auto rndmPos = random_vec3(-0.2, 0.2);
-    this->position.x += rndmPos.x;
-    this->position.y += rndmPos.y;
-    this->position.z += rndmPos.z;
+//    auto rndmPos = random_vec3(-0.2, 0.2);
+//    this->position.x += rndmPos.x;
+//    this->position.y += rndmPos.y;
+//    this->position.z += rndmPos.z;
 
     rotation = random_vec3(-0.1, 0.1);
     scale = sameRandom_vec3(minSc, maxSc);
@@ -47,12 +47,10 @@ glm::vec3 Bubble::sameRandom_vec3 (float mini, float maxi) {
 
 bool Bubble::update(Scene &scene, float dt) {
     auto speed = random_vec3(0.01, 0.01);
-    position.y += speed.y;
-//    position.x += (speed.x) * sin(rotation.x);
-//    position.z += (speed.z) * sin(rotation.z);
+//    position.y += speed.y;
 
-    position.x += scene.waterCurrent.x;
-    position.z += scene.waterCurrent.z;
+//    position.x += scene.waterCurrent.x;
+//    position.z += scene.waterCurrent.z;
 
     if (time < 0)
         return false;
