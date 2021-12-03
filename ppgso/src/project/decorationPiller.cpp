@@ -15,16 +15,27 @@
 //std::unique_ptr<ppgso::Texture> Terrain::texture;
 //std::unique_ptr<ppgso::Shader> Terrain::shader;
 
-DecorationPiller::DecorationPiller(const std::string objName, glm::vec3 pos, glm::vec3 rot, glm::vec3 sc) {
+DecorationPiller::DecorationPiller(int mode, glm::vec3 pos, glm::vec3 rot, glm::vec3 sc) {
     // Set random scale speed and rotation
     position = pos;
     rotation = rot;
     scale = sc;
 
+    this->mode = mode;
+
+    if (mode == 0)
+        if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/pillar.obj");
+
+    if (mode == 1)
+        if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/pillar_top.obj");
+
+    if (mode == 2)
+        if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/pillar_broken.obj");
+
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(diffuse_vert_glsl, diffuse_frag_glsl);
     if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/marble.bmp"));
-    if (!mesh) mesh = std::make_unique<ppgso::Mesh>(objName);
+
 }
 
 bool DecorationPiller::update(Scene &scene, float dt) {

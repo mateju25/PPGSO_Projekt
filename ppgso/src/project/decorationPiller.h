@@ -19,7 +19,9 @@ private:
 
 
 public:
-    DecorationPiller(const std::string objName, glm::vec3 pos, glm::vec3 rot, glm::vec3 sc);
+    int mode;
+
+    DecorationPiller(int mode, glm::vec3 pos, glm::vec3 rot, glm::vec3 sc);
 
     bool update(Scene &scene, float dt) override;
 

@@ -20,7 +20,7 @@ std::unique_ptr<ppgso::Shader> Submarine::shader;
 
 Submarine::Submarine(Scene &scene) {
     // Set random scale speed and rotation
-    position = {0, 0, 0};
+    position = {-14.2862, 0.0871516, -6.35545};
     rotation = {BASIC_ROTATION_X, BASIC_ROTATION_Y, BASIC_ROTATION_Z};
     scale = {1, 1, 1};
 
@@ -35,7 +35,7 @@ Submarine::Submarine(Scene &scene) {
 }
 
 bool Submarine::update(Scene &scene, float dt) {
-    if (scene.camera->mode == Camera::STATIONARY) {
+    if (scene.camera->mode != Camera::FOLLOW) {
         speed = 0;
     }
     if (scene.keyboard[GLFW_KEY_D]) {
@@ -127,20 +127,23 @@ bool Submarine::checkCollisions(Scene &scene, float dt) {
         if (piller) {
             auto distance = (this->position - piller->position);
 
-            float size = 0.3f;
-
-            if (distance.y > 38)
-                return false;
-
-            if (distance.y > 32)
-                size = 0.4f;
-            if (distance.y < 4)
-                size = 0.4f;
-
-            if ((abs(distance.x) < piller->scale.x * size) &&
-                (abs(distance.z) < piller->scale.z * size)) {
-                return true;
+            if (piller->mode == 1) {
+                // x
+                if ((abs(distance.x) < 2.07104) && (abs(distance.z) < 3.159)) {
+                    if (distance.y < -0.951036 || distance.y > 0.951036)
+                        return false;
+                    return true;
+                }
+            } else {
+                if ((abs(distance.x) + abs(distance.z) < piller->scale.x * 0.62f)) {
+                    if (piller->mode == 0 && distance.y > 3.78637)
+                        return false;
+                    if (piller->mode == 2 && distance.y > 2.78637)
+                        return false;
+                    return true;
+                }
             }
+
         }
     }
     return false;

@@ -12,7 +12,7 @@
  */
 class Camera {
 public:
-    enum MODE { FOLLOW, STATIONARY };
+    enum MODE { FOLLOW, STATIONARY, MOVING };
     MODE mode = FOLLOW;
 
     bool firstFollow = true;
@@ -21,6 +21,12 @@ public:
     glm::vec3 positionOffset{0, 0, 0};
     glm::vec3 offset{0, 2.5, 0};
     glm::vec3 rotation{0, 0, 0};
+
+    glm::vec3 startPos;
+    glm::vec3 destPos;
+    glm::vec3 startPosLookAt;
+    glm::vec3 destPosLookAt;
+    float t;
 
     float distanceY = 2;
     float distanceZ = 5;

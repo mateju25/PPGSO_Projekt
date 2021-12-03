@@ -89,45 +89,45 @@ private:
         glm::vec3 position = {-32.2116,-2.79839,-14.8765};
         glm::vec3 rotation = {3*ppgso::PI/2, 4.31239, 0};
         glm::vec3 scale = {1,1,1};
-        auto piller1 = std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
+        auto piller1 = std::make_unique<DecorationPiller>(0, position, rotation, scale);
         scene.objects.push_back(move(piller1));
 
         position = {-31.1406,-2.79839,-17.9196};
-        auto piller2 = std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
+        auto piller2 = std::make_unique<DecorationPiller>(0, position, rotation, scale);
         scene.objects.push_back(move(piller2));
 
         position = {-31.6716,1.40839,-16.4};
-        auto piller3 = std::make_unique<DecorationPiller>("projekt/pillar_top.obj", position, rotation, scale);
+        auto piller3 = std::make_unique<DecorationPiller>(1, position, rotation, scale);
         scene.objects.push_back(move(piller3));
 
         position = {-17.4406,-17.5,-8.94885};
         position.y = scene.getHeight(position.x, position.z);
-        auto piller4 = std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
+        auto piller4 = std::make_unique<DecorationPiller>(0, position, rotation, scale);
         scene.objects.push_back(move(piller4));
 
         position = {-25.0,-17.5,-5.5865};
         position.y = scene.getHeight(position.x, position.z);
-        auto piller5 = std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
+        auto piller5 = std::make_unique<DecorationPiller>(0, position, rotation, scale);
         scene.objects.push_back(move(piller5));
 
         position = {-25.0,-17.5,-21.8865};
         position.y = scene.getHeight(position.x, position.z);
-        auto piller6 = std::make_unique<DecorationPiller>("projekt/pillar_broken.obj", position, rotation, scale);
+        auto piller6 = std::make_unique<DecorationPiller>(2, position, rotation, scale);
         scene.objects.push_back(move(piller6));
 
         position = {-30.0,-17.5,-8.04};
         position.y = scene.getHeight(position.x, position.z);
-        auto piller7 = std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
+        auto piller7 = std::make_unique<DecorationPiller>(0, position, rotation, scale);
         scene.objects.push_back(move(piller7));
 
         position = {-16.5,-17.5,-10.6631};
         position.y = scene.getHeight(position.x, position.z);
-        auto piller8= std::make_unique<DecorationPiller>("projekt/pillar_broken.obj", position, rotation, scale);
+        auto piller8= std::make_unique<DecorationPiller>(2, position, rotation, scale);
         scene.objects.push_back(move(piller8));
 
         position = {-17.5,-17.5,-18.8};
         position.y = scene.getHeight(position.x, position.z);
-        auto piller9= std::make_unique<DecorationPiller>("projekt/pillar.obj", position, rotation, scale);
+        auto piller9= std::make_unique<DecorationPiller>(0, position, rotation, scale);
         scene.objects.push_back(move(piller9));
 
         auto terrain1 = std::make_unique<Terrain>("projekt/terrain_01.obj");
@@ -258,6 +258,28 @@ public:
             scene.camera->mode = Camera::STATIONARY;
             scene.camera->position = {-2.64922, 5.56155, 11.992};
             scene.camera->submarinePos = {-1.57861, 1.10426, 22.2302};
+        }
+
+        if (scene.keyboard[GLFW_KEY_6] == GLFW_PRESS) {
+            scene.camera->startPos = {-17.41 , 2.42745, -3.9553};
+            scene.camera->destPos = {-2.64922, 5.56155, 11.992};
+            scene.camera->startPosLookAt = {-22.2458 , -1.09873, -11.0905};
+            scene.camera->destPosLookAt = {-1.57861, 1.10426, 22.2302};
+            scene.camera->t = -1;
+
+            scene.camera->mode = Camera::MOVING;
+            scene.keyboard[GLFW_KEY_6] = GLFW_RELEASE;
+        }
+
+        if (scene.keyboard[GLFW_KEY_7] == GLFW_PRESS) {
+            scene.camera->startPos = {7.69656, 4.88165, 7.65431};
+            scene.camera->destPos = {-18.6847, 9.22027, -2.41117};
+            scene.camera->startPosLookAt = {12.5157, 4.39217, 0.480123};
+            scene.camera->destPosLookAt = {-22.2458 , -1.09873, -11.0905};
+            scene.camera->t = -1;
+
+            scene.camera->mode = Camera::MOVING;
+            scene.keyboard[GLFW_KEY_7] = GLFW_RELEASE;
         }
 
         if (key == GLFW_KEY_RIGHT) {
