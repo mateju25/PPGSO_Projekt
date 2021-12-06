@@ -161,7 +161,6 @@ void Submarine::render(Scene &scene) {
         propeler->render(scene);
     }
 
-
     shader->use();
 
     // Set up light
@@ -170,6 +169,7 @@ void Submarine::render(Scene &scene) {
     // use camera
     shader->setUniform("ProjectionMatrix", scene.camera->projectionMatrix);
     shader->setUniform("ViewMatrix", scene.camera->viewMatrix);
+    shader->setUniform("CamPos", scene.camera->position);
 
     // render mesh
     shader->setUniform("ModelMatrix", modelMatrix);
