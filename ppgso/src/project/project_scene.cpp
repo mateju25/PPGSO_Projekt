@@ -72,7 +72,7 @@ private:
     void initScene() {
         scene.objects.clear();
 
-        scene.lightDirection = {0.1 , 1, 0.1};
+        scene.lightDirection = {0.25 , 1, 0.5};
 
         scene.heightFramebuffer = readBMP("mainHeightCave_skuska.bmp");
 
@@ -92,102 +92,100 @@ private:
         auto piller1 = std::make_unique<DecorationPiller>(0, position, rotation, scale);
         scene.objects.push_back(move(piller1));
 
-        position = {-31.1406,-2.79839,-17.9196};
-        auto piller2 = std::make_unique<DecorationPiller>(0, position, rotation, scale);
-        scene.objects.push_back(move(piller2));
-
-        position = {-31.6716,1.40839,-16.4};
-        auto piller3 = std::make_unique<DecorationPiller>(1, position, rotation, scale);
-        scene.objects.push_back(move(piller3));
-
-        position = {-17.4406,-17.5,-8.94885};
-        position.y = scene.getHeight(position.x, position.z);
-        auto piller4 = std::make_unique<DecorationPiller>(0, position, rotation, scale);
-        scene.objects.push_back(move(piller4));
-
-        position = {-25.0,-17.5,-5.5865};
-        position.y = scene.getHeight(position.x, position.z);
-        auto piller5 = std::make_unique<DecorationPiller>(0, position, rotation, scale);
-        scene.objects.push_back(move(piller5));
-
-        position = {-25.0,-17.5,-21.8865};
-        position.y = scene.getHeight(position.x, position.z);
-        auto piller6 = std::make_unique<DecorationPiller>(2, position, rotation, scale);
-        scene.objects.push_back(move(piller6));
-
-        position = {-30.0,-17.5,-8.04};
-        position.y = scene.getHeight(position.x, position.z);
-        auto piller7 = std::make_unique<DecorationPiller>(0, position, rotation, scale);
-        scene.objects.push_back(move(piller7));
-
-        position = {-16.5,-17.5,-10.6631};
-        position.y = scene.getHeight(position.x, position.z);
-        auto piller8= std::make_unique<DecorationPiller>(2, position, rotation, scale);
-        scene.objects.push_back(move(piller8));
-
-        position = {-17.5,-17.5,-18.8};
-        position.y = scene.getHeight(position.x, position.z);
-        auto piller9= std::make_unique<DecorationPiller>(0, position, rotation, scale);
-        scene.objects.push_back(move(piller9));
+//        position = {-31.1406,-2.79839,-17.9196};
+//        auto piller2 = std::make_unique<DecorationPiller>(0, position, rotation, scale);
+//        scene.objects.push_back(move(piller2));
+//
+//        position = {-31.6716,1.40839,-16.4};
+//        auto piller3 = std::make_unique<DecorationPiller>(1, position, rotation, scale);
+//        scene.objects.push_back(move(piller3));
+//
+//        position = {-17.4406,-17.5,-8.94885};
+//        position.y = scene.getHeight(position.x, position.z);
+//        auto piller4 = std::make_unique<DecorationPiller>(0, position, rotation, scale);
+//        scene.objects.push_back(move(piller4));
+//
+//        position = {-25.0,-17.5,-5.5865};
+//        position.y = scene.getHeight(position.x, position.z);
+//        auto piller5 = std::make_unique<DecorationPiller>(0, position, rotation, scale);
+//        scene.objects.push_back(move(piller5));
+//
+//        position = {-25.0,-17.5,-21.8865};
+//        position.y = scene.getHeight(position.x, position.z);
+//        auto piller6 = std::make_unique<DecorationPiller>(2, position, rotation, scale);
+//        scene.objects.push_back(move(piller6));
+//
+//        position = {-30.0,-17.5,-8.04};
+//        position.y = scene.getHeight(position.x, position.z);
+//        auto piller7 = std::make_unique<DecorationPiller>(0, position, rotation, scale);
+//        scene.objects.push_back(move(piller7));
+//
+//        position = {-16.5,-17.5,-10.6631};
+//        position.y = scene.getHeight(position.x, position.z);
+//        auto piller8= std::make_unique<DecorationPiller>(2, position, rotation, scale);
+//        scene.objects.push_back(move(piller8));
+//
+//        position = {-17.5,-17.5,-18.8};
+//        position.y = scene.getHeight(position.x, position.z);
+//        auto piller9= std::make_unique<DecorationPiller>(0, position, rotation, scale);
+//        scene.objects.push_back(move(piller9));
 
         auto terrain1 = std::make_unique<Terrain>("projekt/terrain_01.obj");
         scene.objects.push_back(move(terrain1));
+//
+//        auto terrain2 = std::make_unique<Terrain>("projekt/cave.obj");
+//        scene.objects.push_back(move(terrain2));
+//
+////        auto terrain3 = std::make_unique<Terrain>("projekt/cave_mask.obj");
+////        scene.objects.push_back(move(terrain3));
+//
+//        auto terrain4 = std::make_unique<Terrain>("projekt/walls.obj");
+//        scene.objects.push_back(move(terrain4));
 
-        auto terrain2 = std::make_unique<Terrain>("projekt/cave.obj");
-        scene.objects.push_back(move(terrain2));
-
-//        auto terrain3 = std::make_unique<Terrain>("projekt/cave_mask.obj");
-//        scene.objects.push_back(move(terrain3));
-
-        auto terrain4 = std::make_unique<Terrain>("projekt/walls.obj");
-        scene.objects.push_back(move(terrain4));
-
-        for (int i = 0; i < 30; ++i) {
-            position = {((float) rand() / (float) RAND_MAX) * (2 * 14.48) - 14.48, 0, ((float) rand() / (float) RAND_MAX) * (53.5 - 17.8) + 17.8};
-            position.y = scene.getHeight(position.x, position.z) + 0.15;
-            auto volcano1 = std::make_unique<Volcano>(((float) rand() / (float) RAND_MAX) < 0.5f, position);
-            scene.objects.push_back(move(volcano1));
-        }
-
-        std::vector<glm::vec3> path_points = {
-                {-23.098, -3.3943, -13.731},
-                {-24.098, 5.0, -13.731},
-                {-10.3918, 3.7 , -1.50874},
-                {5.0, 0, 0.0},
-                {5.0, 5.0, 10.0},
-                {5.0, 5.0, 0},
-                {15.0, 5.0, 0},
-                {15.0, 0, 0}
-        };
-
-        auto fishfish = std::make_unique<fish_spawn>(path_points, 7, 40);
-        scene.objects.push_back(move(fishfish));
-
-        path_points = {
-                {27.6946, 0.479096, 14.3793},
-                {27.6946, 8.479096, 14.3793},
-                {-8.5935, 8.67783, 14.1922},
-                {-23.7925, 8.56439, -25.2445},
-                {-2.8538, 4.35727, -35.9133}
-        };
-
-        auto fishfish1 = std::make_unique<fish_spawn>(path_points, 5, 20);
-        scene.objects.push_back(move(fishfish1));
-
-        path_points = {
-                {25.4596, 14.7809, -19.4188},
-                {25.4596, 16.7809, -19.4188},
-                {17.5688, 18.8539, -13.8048},
-                {17.5688, 18.8539, -11.8048},
-                {17.5688, 18.8539, -9.8048},
-                {-12.2959, 18.3634, 1.07688},
-                {-42.9292, -2.19771, -31.4914}
-        };
-
-        auto fishfish2 = std::make_unique<fish_spawn>(path_points, 5, 20);
-        scene.objects.push_back(move(fishfish2));
-
-
+//        for (int i = 0; i < 30; ++i) {
+//            position = {((float) rand() / (float) RAND_MAX) * (2 * 14.48) - 14.48, 0, ((float) rand() / (float) RAND_MAX) * (53.5 - 17.8) + 17.8};
+//            position.y = scene.getHeight(position.x, position.z) + 0.15;
+//            auto volcano1 = std::make_unique<Volcano>(((float) rand() / (float) RAND_MAX) < 0.5f, position);
+//            scene.objects.push_back(move(volcano1));
+//        }
+//
+//        std::vector<glm::vec3> path_points = {
+//                {-23.098, -3.3943, -13.731},
+//                {-24.098, 5.0, -13.731},
+//                {-10.3918, 3.7 , -1.50874},
+//                {5.0, 0, 0.0},
+//                {5.0, 5.0, 10.0},
+//                {5.0, 5.0, 0},
+//                {15.0, 5.0, 0},
+//                {15.0, 0, 0}
+//        };
+//
+//        auto fishfish = std::make_unique<fish_spawn>(path_points, 7, 40);
+//        scene.objects.push_back(move(fishfish));
+//
+//        path_points = {
+//                {27.6946, 0.479096, 14.3793},
+//                {27.6946, 8.479096, 14.3793},
+//                {-8.5935, 8.67783, 14.1922},
+//                {-23.7925, 8.56439, -25.2445},
+//                {-2.8538, 4.35727, -35.9133}
+//        };
+//
+//        auto fishfish1 = std::make_unique<fish_spawn>(path_points, 5, 20);
+//        scene.objects.push_back(move(fishfish1));
+//
+//        path_points = {
+//                {25.4596, 14.7809, -19.4188},
+//                {25.4596, 16.7809, -19.4188},
+//                {17.5688, 18.8539, -13.8048},
+//                {17.5688, 18.8539, -11.8048},
+//                {17.5688, 18.8539, -9.8048},
+//                {-12.2959, 18.3634, 1.07688},
+//                {-42.9292, -2.19771, -31.4914}
+//        };
+//
+//        auto fishfish2 = std::make_unique<fish_spawn>(path_points, 5, 20);
+//        scene.objects.push_back(move(fishfish2));
     }
 
 public:

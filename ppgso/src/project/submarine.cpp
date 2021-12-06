@@ -11,6 +11,11 @@
 #include <shaders/texture_frag_glsl.h>
 #include <shaders/diffuse_vert_glsl.h>
 #include <shaders/diffuse_frag_glsl.h>
+#include <shaders/color_vert_glsl.h>
+#include <shaders/color_frag_glsl.h>
+#include <shaders/ambient_frag_glsl.h>
+#include <shaders/phong_vert_glsl.h>
+#include <shaders/phong_frag_glsl.h>
 
 
 // Static resources
@@ -29,7 +34,8 @@ Submarine::Submarine(Scene &scene) {
 
 
     // Initialize static resources if needed
-    if (!shader) shader = std::make_unique<ppgso::Shader>(texture_vert_glsl, texture_frag_glsl);
+//    if (!shader) shader = std::make_unique<ppgso::Shader>(diffuse_vert_glsl, diffuse_frag_glsl);
+    if (!shader) shader = std::make_unique<ppgso::Shader>(phong_vert_glsl, phong_frag_glsl);
     if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/submarine.bmp"));
     if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/Sub.obj");
 }
@@ -45,10 +51,10 @@ bool Submarine::update(Scene &scene, float dt) {
         rotation.y += rot_speed * dt * 30;
     }
     if (scene.keyboard[GLFW_KEY_SPACE]) {
-        position.y += 0.05 * dt * 30;
+        position.y += 0.05 * dt * 60;
     }
     if (scene.keyboard[GLFW_KEY_LEFT_SHIFT]) {
-        position.y -= 0.05 * dt * 30;
+        position.y -= 0.05 * dt * 60;
     }
     if (scene.keyboard[GLFW_KEY_W]) {
         speed += 0.01f * dt * 30;
@@ -168,6 +174,7 @@ void Submarine::render(Scene &scene) {
     // render mesh
     shader->setUniform("ModelMatrix", modelMatrix);
     shader->setUniform("Texture", *texture);
+    shader->setUniform("OverallColor", {0.7f, 0.7f, 0.7f});
     mesh->render();
 }
 
