@@ -44,16 +44,16 @@ bool Submarine::update(Scene &scene, float dt) {
     if (scene.keyboard[GLFW_KEY_A]) {
         rotation.y += rot_speed * dt * 30;
     }
-    if (scene.keyboard[GLFW_KEY_W]) {
+    if (scene.keyboard[GLFW_KEY_SPACE]) {
         position.y += 0.05 * dt * 30;
     }
-    if (scene.keyboard[GLFW_KEY_S]) {
+    if (scene.keyboard[GLFW_KEY_LEFT_SHIFT]) {
         position.y -= 0.05 * dt * 30;
     }
-    if (scene.keyboard[GLFW_KEY_SPACE]) {
+    if (scene.keyboard[GLFW_KEY_W]) {
         speed += 0.01f * dt * 30;
     }
-    if (scene.keyboard[GLFW_KEY_LEFT_SHIFT]) {
+    if (scene.keyboard[GLFW_KEY_S]) {
         speed -= 0.01f * dt * 30;
     }
     if (scene.keyboard[GLFW_KEY_C]) {
