@@ -89,8 +89,10 @@ bool Submarine::update(Scene &scene, float dt) {
         if (position.z > 17.8 && oldPos.z < 17.8)
             position.z = oldPos.z;
 
+    scene.global_lighting_on = true;
 
     if (position.z > 17.8) {
+        scene.global_lighting_on = false;
         //bounding border cave
         if (position.x < -14.48)
             position.x = oldPos.x;
@@ -170,6 +172,12 @@ void Submarine::render(Scene &scene) {
     shader->setUniform("ProjectionMatrix", scene.camera->projectionMatrix);
     shader->setUniform("ViewMatrix", scene.camera->viewMatrix);
     shader->setUniform("CamPos", scene.camera->position);
+    shader->setUniform("global_lighting_on", scene.global_lighting_on);
+
+    shader->setUniform("material.ambient", {0.25f, 0.25f, 0.25f});
+    shader->setUniform("material.diffuse", {0.4f, 0.4f, 0.4f});
+    shader->setUniform("material.specular", {0.774597f, 0.774597f, 0.774597f});
+    shader->setUniform("material.shininess", 76.8f);
 
     // render mesh
     shader->setUniform("ModelMatrix", modelMatrix);

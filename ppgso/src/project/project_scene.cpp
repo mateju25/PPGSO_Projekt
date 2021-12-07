@@ -191,8 +191,6 @@ private:
 public:
     bool first_mouse = true;
 
-
-
     /*!
      * Construct custom game window
      */

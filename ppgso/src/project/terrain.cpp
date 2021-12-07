@@ -46,6 +46,12 @@ void Terrain::render(Scene &scene) {
     // use camera
     shader->setUniform("ProjectionMatrix", scene.camera->projectionMatrix);
     shader->setUniform("ViewMatrix", scene.camera->viewMatrix);
+    shader->setUniform("global_lighting_on", scene.global_lighting_on);
+
+    shader->setUniform("material.ambient", {0.19125f, 0.0735f, 0.0225f});
+    shader->setUniform("material.diffuse", {0.35038f, 0.29f, 0.7828f});
+    shader->setUniform("material.specular", {0.256777f, 0.137622f, 0.086014f});
+    shader->setUniform("material.shininess", 12.8f);
 
     // render mesh
     shader->setUniform("ModelMatrix", modelMatrix);
