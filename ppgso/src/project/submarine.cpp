@@ -120,6 +120,7 @@ bool Submarine::update(Scene &scene, float dt) {
     }
 
     scene.setTargetPosition(position, tmp);
+    scene.lights.positions[0] = position;
 
     // Generate modelMatrix from position, rotation and scale
     generateModelMatrix();
@@ -178,6 +179,13 @@ void Submarine::render(Scene &scene) {
     shader->setUniform("material.diffuse", {0.4f, 0.4f, 0.4f});
     shader->setUniform("material.specular", {0.774597f, 0.774597f, 0.774597f});
     shader->setUniform("material.shininess", 76.8f);
+
+    shader->setUniform("lights.count", scene.lights.count);
+    for (int i = 0; i < scene.lights.count; i++) {
+        shader->setUniform("lights.positions[" + std::to_string(i) + "]", scene.lights.positions[i]);
+        shader->setUniform("lights.colors[" + std::to_string(i) + "]", scene.lights.colors[i]);
+        shader->setUniform("lights.strengths[" + std::to_string(i) + "]", scene.lights.strengths[i]);
+    }
 
     // render mesh
     shader->setUniform("ModelMatrix", modelMatrix);

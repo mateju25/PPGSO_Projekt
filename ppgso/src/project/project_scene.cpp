@@ -29,7 +29,7 @@ const unsigned int SIZE = 900;
  */
 class SceneWindow : public ppgso::Window {
 private:
-    float time;
+    float time = (float) glfwGetTime();
 
     Scene scene;
 
@@ -186,6 +186,15 @@ private:
 
         auto fishfish2 = std::make_unique<fish_spawn>(path_points, 5, 20);
         scene.objects.push_back(move(fishfish2));
+
+        // LIGHTS
+        scene.lights.count = 1;
+//        scene.lights.position = {0, 0, 0};
+//        scene.lights.color = {1, 1, 1};
+//        scene.lights.strength = 500;
+        scene.lights.positions[0] = {0, 0, 0};
+        scene.lights.colors[0] = {1, 1, 1};
+        scene.lights.strengths[0] = 500;
     }
 
 public:

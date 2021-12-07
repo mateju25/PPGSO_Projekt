@@ -53,6 +53,13 @@ void Terrain::render(Scene &scene) {
     shader->setUniform("material.specular", {0.256777f, 0.137622f, 0.086014f});
     shader->setUniform("material.shininess", 12.8f);
 
+    shader->setUniform("lights.count", scene.lights.count);
+    for (int i = 0; i < scene.lights.count; i++) {
+        shader->setUniform("lights.positions[" + std::to_string(i) + "]", scene.lights.positions[i]);
+        shader->setUniform("lights.colors[" + std::to_string(i) + "]", scene.lights.colors[i]);
+        shader->setUniform("lights.strengths[" + std::to_string(i) + "]", scene.lights.strengths[i]);
+    }
+
     // render mesh
     shader->setUniform("ModelMatrix", modelMatrix);
     shader->setUniform("Texture", *texture);
