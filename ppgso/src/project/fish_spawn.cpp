@@ -19,7 +19,7 @@ fish_spawn::fish_spawn(std::vector<glm::vec3> path_points, double interval, doub
     this->path_points = path_points;
     this->interval = interval;
     this->time_interval = time_interval;
-    this->elapsed_time = 0;
+    this->elapsed_time = -interval;
     this->isFish = false;
 
     position = path_points.at(0);
