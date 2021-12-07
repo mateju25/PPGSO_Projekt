@@ -6,6 +6,8 @@
 #include "fish.h"
 #include <shaders/diffuse_vert_glsl.h>
 #include <shaders/diffuse_frag_glsl.h>
+#include <shaders/phong_frag_glsl.h>
+#include <shaders/phong_vert_glsl.h>
 
 // Static resources
 std::unique_ptr<ppgso::Mesh> fish_spawn::mesh;
@@ -26,7 +28,7 @@ fish_spawn::fish_spawn(std::vector<glm::vec3> path_points, double interval, doub
     color = {1,0.79,0.86};
 
     // Initialize static resources if needed
-    if (!shader) shader = std::make_unique<ppgso::Shader>(diffuse_vert_glsl, diffuse_frag_glsl);
+    if (!shader) shader = std::make_unique<ppgso::Shader>(phong_vert_glsl, phong_frag_glsl);
     if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/sasasanka.bmp"));
     if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/sasasanka.obj");
 }

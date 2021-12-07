@@ -10,6 +10,8 @@
 #include <shaders/texture_frag_glsl.h>
 #include <shaders/diffuse_vert_glsl.h>
 #include <shaders/diffuse_frag_glsl.h>
+#include <shaders/phong_frag_glsl.h>
+#include <shaders/phong_vert_glsl.h>
 
 // Static resources
 std::unique_ptr<ppgso::Mesh> Fish::mesh;
@@ -43,7 +45,7 @@ Fish::Fish(Scene &scene, std::vector<glm::vec3> path_points, float total_time_in
     parts.push_back(move(part));
 
     // Initialize static resources if needed
-    if (!shader) shader = std::make_unique<ppgso::Shader>(texture_vert_glsl, texture_frag_glsl);
+    if (!shader) shader = std::make_unique<ppgso::Shader>(phong_vert_glsl, phong_frag_glsl);
     if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/fish.bmp"));
     if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/fich_body.obj");
 }

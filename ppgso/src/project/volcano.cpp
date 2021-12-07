@@ -10,6 +10,8 @@
 #include <shaders/diffuse_frag_glsl.h>
 #include <shaders/texture_vert_glsl.h>
 #include <shaders/texture_frag_glsl.h>
+#include <shaders/phong_frag_glsl.h>
+#include <shaders/phong_vert_glsl.h>
 
 
 // Static resources
@@ -26,7 +28,7 @@ Volcano::Volcano(bool burst, glm::vec3 position) {
     isBurst = burst;
 
     // Initialize static resources if needed
-    if (!shader) shader = std::make_unique<ppgso::Shader>(texture_vert_glsl, texture_frag_glsl);
+    if (!shader) shader = std::make_unique<ppgso::Shader>(phong_vert_glsl, phong_frag_glsl);
     if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/geysir.bmp"));
     if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/Geyser.obj");
 }
