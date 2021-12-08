@@ -22,7 +22,7 @@ PlantStem::PlantStem(glm::vec3 pos, glm::vec3 rot){
     rotation = rot;
     scale = {0.5f, 0.5f, 0.5f};
     // Initialize static resources if needed
-    if (!shader) shader = std::make_unique<ppgso::Shader>(texture_vert_glsl, texture_frag_glsl);
+    if (!shader) shader = std::make_unique<ppgso::Shader>(phong_vert_glsl, phong_frag_glsl);
     if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/light.bmp"));
     if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/plant_stem.obj");
 }
