@@ -221,7 +221,6 @@ void Submarine::render(Scene &scene) {
     // render mesh
     shader->setUniform("ModelMatrix", modelMatrix);
     shader->setUniform("Texture", *texture);
-    shader->setUniform("OverallColor", {0.7f, 0.7f, 0.7f});
     mesh->render();
 }
 

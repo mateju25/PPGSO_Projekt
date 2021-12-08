@@ -215,45 +215,50 @@ private:
         auto shark6 = std::make_unique<SharkTop>(position, rotation, freq);
         scene.objects.push_back(move(shark6));
 
-        // LIGHTS
-        scene.lights.count = 91;
+        // Sub light
+        scene.lights.count = 11;
         scene.lights.positions[0] = {0, 0, 0};
         scene.lights.colors[0] = {1, 1, 1};
         scene.lights.ranges[0] = 15;
         scene.lights.strengths[0] = 2;
 
+        // Cave lights
         for (int i = 0; i < 10; ++i) {
             position = {((float) rand() / (float) RAND_MAX) * (2 * 14.48) - 14.48, 0, ((float) rand() / (float) RAND_MAX) * (53.5 - 17.8) + 17.8};
             position.y = scene.getHeight(position.x, position.z) + 0.15;
             rotation = {3*ppgso::PI/2,0,((float) rand() / (float) RAND_MAX) * (2*ppgso::PI)};
-            glm::vec3 color = {((float) rand() / (float) RAND_MAX),((float) rand() / (float) RAND_MAX),((float) rand() / (float) RAND_MAX)};
+            glm::vec3 color = {
+                    ((float) rand() / (float) RAND_MAX) / 2 + 0.5f,
+                    ((float) rand() / (float) RAND_MAX) / 2 + 0.5f,
+                    ((float) rand() / (float) RAND_MAX) / 2 + 0.5f
+            };
             auto lightStem1 = std::make_unique<PlantStem>(position, rotation);
             scene.objects.push_back(move(lightStem1));
             position.y = position.y + 0.8;
             scene.lights.positions[i+1] = position;
             scene.lights.colors[i+1] = color;
             scene.lights.ranges[i+1] = 10;
-            scene.lights.strengths[i+1] = 3;
+            scene.lights.strengths[i+1] = 1.5f;
             auto light1 = std::make_unique<PlantLight>(position, rotation, color);
             scene.objects.push_back(move(light1));
         }
 
-        for (int i = 0; i < 50; ++i) {
-            position = {((float) rand() / (float) RAND_MAX) * (2 * 44) - 44, 0, ((float) rand() / (float) RAND_MAX) * (59.6) - 41.8};
-            position.y = scene.getHeight(position.x, position.z) + 0.15;
-            rotation = {3*ppgso::PI/2,0,((float) rand() / (float) RAND_MAX) * (2*ppgso::PI)};
-            glm::vec3 color = {((float) rand() / (float) RAND_MAX),((float) rand() / (float) RAND_MAX),((float) rand() / (float) RAND_MAX)};
-            auto lightStem1 = std::make_unique<PlantStem>(position, rotation);
-            scene.objects.push_back(move(lightStem1));
-            position.y = position.y + 0.8;
-            scene.lights.positions[i+11] = position;
-            scene.lights.colors[i+11] = color;
-            scene.lights.ranges[i+11] = 10;
-            scene.lights.strengths[i+11] = 3;
-            auto light1 = std::make_unique<PlantLight>(position, rotation, color);
-            scene.objects.push_back(move(light1));
-        }
-
+        // outside lights
+//        for (int i = 0; i < 50; ++i) {
+//            position = {((float) rand() / (float) RAND_MAX) * (2 * 44) - 44, 0, ((float) rand() / (float) RAND_MAX) * (59.6) - 41.8};
+//            position.y = scene.getHeight(position.x, position.z) + 0.15;
+//            rotation = {3*ppgso::PI/2,0,((float) rand() / (float) RAND_MAX) * (2*ppgso::PI)};
+//            glm::vec3 color = {((float) rand() / (float) RAND_MAX),((float) rand() / (float) RAND_MAX),((float) rand() / (float) RAND_MAX)};
+//            auto lightStem1 = std::make_unique<PlantStem>(position, rotation);
+//            scene.objects.push_back(move(lightStem1));
+//            position.y = position.y + 0.8;
+//            scene.lights.positions[i+11] = position;
+//            scene.lights.colors[i+11] = color;
+//            scene.lights.ranges[i+11] = 10;
+//            scene.lights.strengths[i+11] = 3;
+//            auto light1 = std::make_unique<PlantLight>(position, rotation, color);
+//            scene.objects.push_back(move(light1));
+//        }
     }
 
 public:
@@ -383,6 +388,8 @@ public:
         // Compute time delta
         float dt = (float) glfwGetTime() - time;
         time = (float) glfwGetTime();
+
+        std::cout << "fps: " << round(1 / dt) << std::endl;
 
         // Set gray background
         glClearColor(.5f, .5f, .5f, 0);

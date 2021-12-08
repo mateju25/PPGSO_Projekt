@@ -53,12 +53,7 @@ class Scene {
     // Lights, in this case using only simple directional diffuse lighting
     glm::vec3 lightDirection{-1.0f, -1.0f, -1.0f};
     bool global_lighting_on = true;
-//    struct Lights {
-//        int count;
-//        glm::vec3 position;
-//        glm::vec3 color;
-//        float strength;
-//    };
+
     struct Lights {
         int count;
         glm::vec3 positions[100];

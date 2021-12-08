@@ -64,6 +64,26 @@ void FishTail::render(Scene &scene) {
     // use camera
     shader->setUniform("ProjectionMatrix", scene.camera->projectionMatrix);
     shader->setUniform("ViewMatrix", scene.camera->viewMatrix);
+    shader->setUniform("CamPos", scene.camera->position);
+    shader->setUniform("global_lighting_on", scene.global_lighting_on);
+
+    shader->setUniform("material.ambient", {0.05f, 0.05f, 0.05f});
+    shader->setUniform("material.diffuse", {0.8f, 0.8f, 0.8f});
+    shader->setUniform("material.specular", {0.9f, 0.9f, 0.9f});
+    shader->setUniform("material.shininess", 32.0f);
+
+    shader->setUniform("lights.count", scene.lights.count);
+    for (int i = 0; i < scene.lights.count; i++) {
+        shader->setUniform("lights.positions[" + std::to_string(i) + "]", scene.lights.positions[i]);
+        shader->setUniform("lights.colors[" + std::to_string(i) + "]", scene.lights.colors[i]);
+        shader->setUniform("lights.ranges[" + std::to_string(i) + "]", scene.lights.ranges[i]);
+        if (scene.lights.strengths[i] < 0) {
+            shader->setUniform("lights.strengths[" + std::to_string(i) + "]", 0.0f);
+        }
+        else {
+            shader->setUniform("lights.strengths[" + std::to_string(i) + "]", scene.lights.strengths[i]);
+        }
+    }
 
     // render mesh
     shader->setUniform("ModelMatrix", modelMatrix);
