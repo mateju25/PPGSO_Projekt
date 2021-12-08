@@ -63,6 +63,7 @@ class Scene {
         int count;
         glm::vec3 positions[100];
         glm::vec3 colors[100];
+        float ranges[100];
         float strengths[100];
     };
 

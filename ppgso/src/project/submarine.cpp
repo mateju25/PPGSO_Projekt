@@ -23,6 +23,9 @@ std::unique_ptr<ppgso::Mesh> Submarine::mesh;
 std::unique_ptr<ppgso::Texture> Submarine::texture;
 std::unique_ptr<ppgso::Shader> Submarine::shader;
 
+bool v_release = true;
+bool f_release = true;
+
 Submarine::Submarine(Scene &scene) {
     // Set random scale speed and rotation
     position = {-14.2862, 0.0871516, -6.35545};
@@ -68,6 +71,28 @@ bool Submarine::update(Scene &scene, float dt) {
     if (scene.keyboard[GLFW_KEY_ENTER]) {
         std::cout << position.x << " " << position.y << " " << position.z << " " << std::endl;
         std::cout << "Y-terrain: " << scene.getHeight(position.x, position.z) << std::endl;
+    }
+    if (scene.keyboard[GLFW_KEY_F]) {
+        if (f_release) {
+            scene.lights.strengths[0] = - scene.lights.strengths[0];
+            f_release = false;
+        }
+    }
+    else {
+        f_release = true;
+    }
+    if (scene.keyboard[GLFW_KEY_V]) {
+        if (v_release) {
+            scene.lights.colors[0] = {
+                    ((float) rand() / (float) RAND_MAX),
+                    ((float) rand() / (float) RAND_MAX),
+                    ((float) rand() / (float) RAND_MAX)
+            };
+            v_release = false;
+        }
+    }
+    else {
+        v_release = true;
     }
 
     auto oldPos = position;
@@ -184,7 +209,13 @@ void Submarine::render(Scene &scene) {
     for (int i = 0; i < scene.lights.count; i++) {
         shader->setUniform("lights.positions[" + std::to_string(i) + "]", scene.lights.positions[i]);
         shader->setUniform("lights.colors[" + std::to_string(i) + "]", scene.lights.colors[i]);
-        shader->setUniform("lights.strengths[" + std::to_string(i) + "]", scene.lights.strengths[i]);
+        shader->setUniform("lights.ranges[" + std::to_string(i) + "]", scene.lights.ranges[i]);
+        if (scene.lights.strengths[i] < 0) {
+            shader->setUniform("lights.strengths[" + std::to_string(i) + "]", 0.0f);
+        }
+        else {
+            shader->setUniform("lights.strengths[" + std::to_string(i) + "]", scene.lights.strengths[i]);
+        }
     }
 
     // render mesh

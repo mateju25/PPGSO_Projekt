@@ -57,7 +57,13 @@ void Terrain::render(Scene &scene) {
     for (int i = 0; i < scene.lights.count; i++) {
         shader->setUniform("lights.positions[" + std::to_string(i) + "]", scene.lights.positions[i]);
         shader->setUniform("lights.colors[" + std::to_string(i) + "]", scene.lights.colors[i]);
-        shader->setUniform("lights.strengths[" + std::to_string(i) + "]", scene.lights.strengths[i]);
+        shader->setUniform("lights.ranges[" + std::to_string(i) + "]", scene.lights.ranges[i]);
+        if (scene.lights.strengths[i] < 0) {
+            shader->setUniform("lights.strengths[" + std::to_string(i) + "]", 0.0f);
+        }
+        else {
+            shader->setUniform("lights.strengths[" + std::to_string(i) + "]", scene.lights.strengths[i]);
+        }
     }
 
     // render mesh

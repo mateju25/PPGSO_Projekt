@@ -120,6 +120,12 @@ void ppgso::Shader::setUniform(const std::string &name, float value) const {
   glUniform1f(uniform, value);
 }
 
+void ppgso::Shader::setUniform(const std::string &name, int value) const {
+    use();
+    auto uniform = getUniformLocation(name.c_str());
+    glUniform1i(uniform, value);
+}
+
 GLuint ppgso::Shader::getProgram() const {
   return program;
 }

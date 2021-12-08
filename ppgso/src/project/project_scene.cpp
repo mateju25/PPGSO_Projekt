@@ -194,7 +194,8 @@ private:
 //        scene.lights.strength = 500;
         scene.lights.positions[0] = {0, 0, 0};
         scene.lights.colors[0] = {1, 1, 1};
-        scene.lights.strengths[0] = 500;
+        scene.lights.ranges[0] = 15;
+        scene.lights.strengths[0] = 2;
     }
 
 public:

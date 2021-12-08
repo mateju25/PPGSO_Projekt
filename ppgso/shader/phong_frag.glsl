@@ -1,4 +1,5 @@
 #version 330
+
 // A texture is expected as program attribute
 uniform sampler2D Texture;
 
@@ -26,6 +27,7 @@ struct Lights {
     int count;
     vec3 positions[100];
     vec3 colors[100];
+    float ranges[100];
     float strengths[100];
 };
 
@@ -65,9 +67,11 @@ void main() {
     vec4 combLights = global + ambient;
 
     // Add up all scene lights
-//    TODO FIGURE OUT HOW INDEXING
-    for (int i = 0; i < lights.count; ++i) {
-        if (lights.strengths[i] > length(lights.positions[i] - FragPosition)) {
+    for (int i = 0; i < lights.count; i++) {
+        if (lights.ranges[i] > length(lights.positions[i] - FragPosition)) {
+
+            float mult = 1 - length(lights.positions[i] - FragPosition) / lights.ranges[i];
+
             // Diffuse
             vec3 LightPos = lights.positions[i];
             vec3 LightDir = normalize(LightPos - FragPosition);
@@ -83,7 +87,7 @@ void main() {
             float spec = pow(max(dot(viewDir, reflectDir), 0.0f), material.shininess);
             vec4 specular = vec4(specularStrength * spec * LightColor * material.specular, 1);
 
-            combLights += diffuse + specular;
+            combLights += (diffuse + specular) * mult * lights.strengths[i];
         }
     }
 
