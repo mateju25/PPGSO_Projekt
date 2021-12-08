@@ -55,10 +55,9 @@ bool SubmarinePropeler::update(Scene &scene, float dt) {
     auto i = std::begin(parts);
 
     while (i != std::end(parts)) {
-        // Update and remove from list if needed
         auto obj = i->get();
         if (!obj->update(scene, dt))
-            i = parts.erase(i); // NOTE: no need to call destructors as we store shared pointers in the scene
+            i = parts.erase(i);
         else
             ++i;
     }

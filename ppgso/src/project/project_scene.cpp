@@ -23,6 +23,8 @@
 #include "Bubble.h"
 #include "sharkBottom.h"
 #include "sharkTop.h"
+#include "plantStem.h"
+#include "plantLight.h"
 
 const unsigned int SIZE = 900;
 
@@ -219,6 +221,30 @@ private:
         scene.lights.colors[0] = {1, 1, 1};
         scene.lights.ranges[0] = 15;
         scene.lights.strengths[0] = 2;
+
+        for (int i = 0; i < 10; ++i) {
+            position = {((float) rand() / (float) RAND_MAX) * (2 * 14.48) - 14.48, 0, ((float) rand() / (float) RAND_MAX) * (53.5 - 17.8) + 17.8};
+            position.y = scene.getHeight(position.x, position.z) + 0.15;
+            rotation = {3*ppgso::PI/2,0,((float) rand() / (float) RAND_MAX) * (2*ppgso::PI)};
+            glm::vec3 color = {((float) rand() / (float) RAND_MAX),((float) rand() / (float) RAND_MAX),((float) rand() / (float) RAND_MAX)};
+            auto lightStem1 = std::make_unique<PlantStem>(position, rotation);
+            scene.objects.push_back(move(lightStem1));
+            position.y = position.y + 0.55;
+            auto light1 = std::make_unique<PlantLight>(position, rotation, color);
+            scene.objects.push_back(move(light1));
+        }
+
+        for (int i = 0; i < 80; ++i) {
+            position = {((float) rand() / (float) RAND_MAX) * (2 * 44) - 44, 0, ((float) rand() / (float) RAND_MAX) * (59.6) - 41.8};
+            position.y = scene.getHeight(position.x, position.z) + 0.15;
+            rotation = {3*ppgso::PI/2,0,((float) rand() / (float) RAND_MAX) * (2*ppgso::PI)};
+            glm::vec3 color = {((float) rand() / (float) RAND_MAX),((float) rand() / (float) RAND_MAX),((float) rand() / (float) RAND_MAX)};
+            auto lightStem1 = std::make_unique<PlantStem>(position, rotation);
+            scene.objects.push_back(move(lightStem1));
+            position.y = position.y + 0.8;
+            auto light1 = std::make_unique<PlantLight>(position, rotation, color);
+            scene.objects.push_back(move(light1));
+        }
 
     }
 
