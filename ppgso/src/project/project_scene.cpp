@@ -21,6 +21,8 @@
 #include "fish.h"
 #include "decorationPiller.h"
 #include "Bubble.h"
+#include "sharkBottom.h"
+#include "sharkTop.h"
 
 const unsigned int SIZE = 900;
 
@@ -153,15 +155,21 @@ private:
                 {-23.098, -3.3943, -13.731},
                 {-24.098, 5.0, -13.731},
                 {-10.3918, 3.7 , -1.50874},
-                {5.0, 0, 0.0},
-                {5.0, 5.0, 10.0},
-                {5.0, 5.0, 0},
-                {15.0, 5.0, 0},
-                {15.0, 0, 0}
+                {-6.88563, 3.37808, 2.38699},
+                {1.17977, 3.37808, 10.0213},
+                {10.178, 3.46341, 1.22067}
         };
 
         auto fishfish = std::make_unique<fish_spawn>(path_points, 7, 40);
         scene.objects.push_back(move(fishfish));
+
+        position = {10.178, 3.06341, 1.22067};
+        rotation = {3*ppgso::PI/2,0,2*ppgso::PI/3};
+        float freq = 7.0f / 250.0f;
+        auto shark1 = std::make_unique<SharkBottom>(position, rotation);
+        scene.objects.push_back(move(shark1));
+        auto shark2 = std::make_unique<SharkTop>(position, rotation, freq);
+        scene.objects.push_back(move(shark2));
 
         path_points = {
                 {27.6946, 0.479096, 14.3793},
@@ -173,6 +181,15 @@ private:
 
         auto fishfish1 = std::make_unique<fish_spawn>(path_points, 5, 20);
         scene.objects.push_back(move(fishfish1));
+
+        position = {-2.8538, 4.05727, -35.9133};
+        rotation = {3*ppgso::PI/2,0,2*ppgso::PI/3};
+        freq = 5.0f / 250.0f;
+        auto shark3 = std::make_unique<SharkBottom>(position, rotation);
+        scene.objects.push_back(move(shark3));
+        auto shark4 = std::make_unique<SharkTop>(position, rotation, freq);
+        scene.objects.push_back(move(shark4));
+
 
         path_points = {
                 {25.4596, 14.7809, -19.4188},
@@ -187,15 +204,22 @@ private:
         auto fishfish2 = std::make_unique<fish_spawn>(path_points, 5, 20);
         scene.objects.push_back(move(fishfish2));
 
+        // BABY SHARK TODODODODODO
+        position = {-42.9292, -2.19771, -31.4914};
+        rotation = {3*ppgso::PI/2,0,4*ppgso::PI/3};
+        freq = 5.0f / 250.0f;
+        auto shark5 = std::make_unique<SharkBottom>(position, rotation);
+        scene.objects.push_back(move(shark5));
+        auto shark6 = std::make_unique<SharkTop>(position, rotation, freq);
+        scene.objects.push_back(move(shark6));
+
         // LIGHTS
         scene.lights.count = 1;
-//        scene.lights.position = {0, 0, 0};
-//        scene.lights.color = {1, 1, 1};
-//        scene.lights.strength = 500;
         scene.lights.positions[0] = {0, 0, 0};
         scene.lights.colors[0] = {1, 1, 1};
         scene.lights.ranges[0] = 15;
         scene.lights.strengths[0] = 2;
+
     }
 
 public:
@@ -256,8 +280,8 @@ public:
 
         if (key == GLFW_KEY_4) {
             scene.camera->mode = Camera::STATIONARY;
-            scene.camera->position = {15.3992, 3.74656, 4.93311};
-            scene.camera->submarinePos = {13.7898, 2.96229, 0.543222};
+            scene.camera->position = {7.53655, 3.79667, 5.54343};
+            scene.camera->submarinePos = {10.178, 3.06341, 1.22067};
         }
 
         if (key == GLFW_KEY_5) {

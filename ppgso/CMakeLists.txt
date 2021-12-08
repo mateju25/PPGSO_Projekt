@@ -118,6 +118,8 @@ add_executable(project_scene
         src/project/submarine.cpp
         src/project/fish_spawn.cpp
         src/project/fish_spawn.h
+        src/project/sharkBottom.cpp
+        src/project/sharkTop.cpp
         src/project/
 )
 target_link_libraries(project_scene ppgso shaders)

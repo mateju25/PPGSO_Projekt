@@ -28,7 +28,7 @@ bool f_release = true;
 
 Submarine::Submarine(Scene &scene) {
     // Set random scale speed and rotation
-    position = {-14.2862, 0.0871516, -6.35545};
+    position = {-1.21751, -0.211354, 1.10948};
     rotation = {BASIC_ROTATION_X, BASIC_ROTATION_Y, BASIC_ROTATION_Z};
     scale = {1, 1, 1};
 
