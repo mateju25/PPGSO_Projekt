@@ -64,6 +64,8 @@ class Scene {
 
     Lights lights;
 
+    int cave_lights = 15;
+
     // Store cursor state
     struct {
       double x, y;

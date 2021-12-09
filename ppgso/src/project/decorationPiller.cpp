@@ -60,7 +60,7 @@ void DecorationPiller::render(Scene &scene) {
     shader->setUniform("global_lighting_on", scene.global_lighting_on);
 
     shader->setUniform("material.ambient", {0.05f, 0.05f, 0.05f});
-    shader->setUniform("material.diffuse", {0.8f, 0.8f, 0.8f});
+    shader->setUniform("material.diffuse", {0.7f, 0.7f, 0.65f});
     shader->setUniform("material.specular", {0.9f, 0.9f, 0.9f});
     shader->setUniform("material.shininess", 32.0f);
 

@@ -105,7 +105,7 @@ void Fish::render(Scene &scene) {
     shader->setUniform("material.specular", {0.9f, 0.9f, 0.9f});
     shader->setUniform("material.shininess", 32.0f);
 
-    shader->setUniform("lights.count", scene.lights.count);
+    shader->setUniform("lights.count", 1);
     for (int i = 0; i < 1; i++) {
         shader->setUniform("lights.positions[" + std::to_string(i) + "]", scene.lights.positions[i]);
         shader->setUniform("lights.colors[" + std::to_string(i) + "]", scene.lights.colors[i]);
