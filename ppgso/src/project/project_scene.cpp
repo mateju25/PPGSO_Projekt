@@ -216,7 +216,7 @@ private:
         scene.objects.push_back(move(shark6));
 
         // Sub light
-        scene.lights.count = 11;
+        scene.lights.count = 31;
         scene.lights.positions[0] = {0, 0, 0};
         scene.lights.colors[0] = {1, 1, 1};
         scene.lights.ranges[0] = 15;
@@ -238,27 +238,27 @@ private:
             scene.lights.positions[i+1] = position;
             scene.lights.colors[i+1] = color;
             scene.lights.ranges[i+1] = 10;
-            scene.lights.strengths[i+1] = 1.5f;
+            scene.lights.strengths[i+1] = 3;
             auto light1 = std::make_unique<PlantLight>(position, rotation, color);
             scene.objects.push_back(move(light1));
         }
 
         // outside lights
-//        for (int i = 0; i < 50; ++i) {
-//            position = {((float) rand() / (float) RAND_MAX) * (2 * 44) - 44, 0, ((float) rand() / (float) RAND_MAX) * (59.6) - 41.8};
-//            position.y = scene.getHeight(position.x, position.z) + 0.15;
-//            rotation = {3*ppgso::PI/2,0,((float) rand() / (float) RAND_MAX) * (2*ppgso::PI)};
-//            glm::vec3 color = {((float) rand() / (float) RAND_MAX),((float) rand() / (float) RAND_MAX),((float) rand() / (float) RAND_MAX)};
-//            auto lightStem1 = std::make_unique<PlantStem>(position, rotation);
-//            scene.objects.push_back(move(lightStem1));
-//            position.y = position.y + 0.8;
-//            scene.lights.positions[i+11] = position;
-//            scene.lights.colors[i+11] = color;
-//            scene.lights.ranges[i+11] = 10;
-//            scene.lights.strengths[i+11] = 3;
-//            auto light1 = std::make_unique<PlantLight>(position, rotation, color);
-//            scene.objects.push_back(move(light1));
-//        }
+        for (int i = 0; i < 20; ++i) {
+            position = {((float) rand() / (float) RAND_MAX) * (2 * 44) - 44, 0, ((float) rand() / (float) RAND_MAX) * (59.6) - 41.8};
+            position.y = scene.getHeight(position.x, position.z) + 0.15;
+            rotation = {3*ppgso::PI/2,0,((float) rand() / (float) RAND_MAX) * (2*ppgso::PI)};
+            glm::vec3 color = {((float) rand() / (float) RAND_MAX),((float) rand() / (float) RAND_MAX),((float) rand() / (float) RAND_MAX)};
+            auto lightStem1 = std::make_unique<PlantStem>(position, rotation);
+            scene.objects.push_back(move(lightStem1));
+            position.y = position.y + 0.8;
+            scene.lights.positions[i+11] = position;
+            scene.lights.colors[i+11] = color;
+            scene.lights.ranges[i+11] = 15;
+            scene.lights.strengths[i+11] = 5;
+            auto light1 = std::make_unique<PlantLight>(position, rotation, color);
+            scene.objects.push_back(move(light1));
+        }
     }
 
 public:
@@ -389,7 +389,7 @@ public:
         float dt = (float) glfwGetTime() - time;
         time = (float) glfwGetTime();
 
-        std::cout << "fps: " << round(1 / dt) << std::endl;
+//        std::cout << "fps: " << round(1 / dt) << std::endl;
 
         // Set gray background
         glClearColor(.5f, .5f, .5f, 0);
