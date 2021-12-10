@@ -4,6 +4,7 @@
 
 #include "submarinePropeler.h"
 #include "Bubble.h"
+#include <glm/gtx/euler_angles.hpp>
 #include <glm/gtc/random.hpp>
 
 #include <shaders/texture_vert_glsl.h>
@@ -25,11 +26,10 @@ SubmarinePropeler::SubmarinePropeler(){
     if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/Sub_Propeller.obj");
 }
 
-void SubmarinePropeler::updateModel(Scene &scene, glm::vec3 pos, glm::vec3 rot, glm::vec3 sc, float speed) {
+void SubmarinePropeler::updateModel(Scene &scene, glm::vec3 rot, glm::vec3 sc, float speed, glm::mat4 translateMatrix) {
     scale = sc;
 
-    offset = {(distanceZ + distanceX) * sin(rot.y), distanceY, (distanceZ + distanceX) * cos(rot.y)};
-    position = pos + offset;
+    offset = translateMatrix * glm::translate(glm::mat4(1.0f), {(distanceZ + distanceX) * sin(rot.y), distanceY, (distanceZ + distanceX) * cos(rot.y)});
 
     rotation.x = rot.x;
     rotation.y = 3*ppgso::PI/2;
@@ -43,7 +43,7 @@ void SubmarinePropeler::updateModel(Scene &scene, glm::vec3 pos, glm::vec3 rot, 
 
 
     if (((float) rand() / (float) RAND_MAX) < 0.15) {
-        auto bubble = std::make_unique<Bubble>(position, ((float) rand() / (float) RAND_MAX) * (45 - 35) + 35, 0.035, 0.05, 0.1);
+        auto bubble = std::make_unique<Bubble>(offset, ((float) rand() / (float) RAND_MAX) * (45 - 35) + 35, 0.035, 0.05, 0.1);
         parts.push_back(move(bubble));
     }
 
@@ -61,9 +61,7 @@ bool SubmarinePropeler::update(Scene &scene, float dt) {
         else
             ++i;
     }
-
-    // Generate modelMatrix from position, rotation and scale
-    generateModelMatrix();
+    modelMatrix = offset * glm::orientate4(rotation) * glm::scale(glm::mat4(1.0f), scale);
 
     return true;
 }

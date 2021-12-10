@@ -141,7 +141,7 @@ bool Submarine::update(Scene &scene, float dt) {
 
     for (auto &obj: parts) {
         auto propeler = dynamic_cast<SubmarinePropeler *>(obj.get());
-        propeler->updateModel(scene, position, rotation, scale, speed);
+        propeler->updateModel(scene, rotation, scale, speed, glm::translate(glm::mat4(1.0f), position));
     }
 
     scene.setTargetPosition(position, tmp);

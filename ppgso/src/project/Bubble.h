@@ -13,6 +13,7 @@ class Bubble final : public Object {
 private:
     float time;
     glm::vec3 color;
+    glm::mat4 translateMatrix;
 
     // Static resources (Shared between instances)
     static std::unique_ptr<ppgso::Mesh> mesh;
@@ -22,6 +23,8 @@ private:
 
 public:
     Bubble(glm::vec3  position, float timeAlive, float minSc, float maxSc, float rndPos);
+
+    Bubble(glm::mat4 translateMatrix, float timeAlive, float minSc, float maxSc, float rndPos);
 
     bool update(Scene &scene, float dt) override;
 

@@ -40,14 +40,14 @@ bool Volcano::update(Scene &scene, float dt) {
     if (isBurst) {
         if (((float) rand() / (float) RAND_MAX) < 0.005) {
             for (int i = 0; i < 20; ++i) {
-                    auto bubble = std::make_unique<Bubble>(tmp, ((float) rand() / (float) RAND_MAX) * (500 - 400) + 400, 0.04, 0.06, 0.1);
+                    auto bubble = std::make_unique<Bubble>(glm::translate(glm::mat4(1.0f), tmp), ((float) rand() / (float) RAND_MAX) * (500 - 400) + 400, 0.04, 0.06, 0.1);
                     scene.objects.push_back(move(bubble));
             }
         }
     } else {
         if (((float) rand() / (float) RAND_MAX) < 0.02) {
 
-                auto bubble = std::make_unique<Bubble>(tmp, ((float) rand() / (float) RAND_MAX) * (1500 - 1350) + 1350, 0.04, 0.06, 0.2);
+                auto bubble = std::make_unique<Bubble>(glm::translate(glm::mat4(1.0f), tmp), ((float) rand() / (float) RAND_MAX) * (1500 - 1350) + 1350, 0.04, 0.06, 0.2);
                 scene.objects.push_back(move(bubble));
         }
     }

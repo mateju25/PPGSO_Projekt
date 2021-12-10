@@ -394,7 +394,7 @@ public:
         float dt = (float) glfwGetTime() - time;
         time = (float) glfwGetTime();
 
-        std::cout << "fps: " << round(1 / dt) << std::endl;
+//        std::cout << "fps: " << round(1 / dt) << std::endl;
 
         // Set gray background
         glClearColor(.5f, .5f, .5f, 0);

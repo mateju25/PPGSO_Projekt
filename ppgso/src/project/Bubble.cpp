@@ -9,6 +9,7 @@
 #include <shaders/color_frag_glsl.h>
 #include <shaders/texture_vert_glsl.h>
 #include <shaders/texture_frag_glsl.h>
+#include <glm/gtx/euler_angles.hpp>
 
 
 // Static resources
@@ -47,17 +48,20 @@ glm::vec3 Bubble::sameRandom_vec3 (float mini, float maxi) {
 
 bool Bubble::update(Scene &scene, float dt) {
     auto speed = random_vec3(0.005, 0.005);
-    position.y += speed.y;
-
-    position.x += scene.waterCurrent.x;
-    position.z += scene.waterCurrent.z;
+    translateMatrix[3][0] += scene.waterCurrent.x;
+    translateMatrix[3][1] += speed.y;
+    translateMatrix[3][2] += scene.waterCurrent.z;
 
     if (time < 0)
         return false;
 
     time--;
     // Generate modelMatrix from position, rotation and scale
-    generateModelMatrix();
+//    generateModelMatrix();
+    modelMatrix =
+            translateMatrix
+            * glm::orientate4(rotation)
+            * glm::scale(glm::mat4(1.0f), scale);
 
     return true;
 }
@@ -77,5 +81,23 @@ void Bubble::render(Scene &scene) {
 //    shader->setUniform("Transparency", 0f);
     shader->setUniform("OverallColor", color);
     mesh->render();
+}
+
+Bubble::Bubble(glm::mat4 translateMatrix, float timeAlive, float minSc, float maxSc, float rndPos) {
+    auto rndmPos = random_vec3(-rndPos, rndPos);
+    translateMatrix[3][0] += rndmPos.x;
+    translateMatrix[3][1] += rndmPos.y;
+    translateMatrix[3][2] += rndmPos.z;
+    this->translateMatrix = translateMatrix;
+
+    rotation = random_vec3(-0.1, 0.1);
+    scale = sameRandom_vec3(minSc, maxSc);
+
+    color = {0.6,0.85,0.92};
+
+    time = timeAlive;
+    // Initialize static resources if needed
+    if (!shader) shader = std::make_unique<ppgso::Shader>(color_vert_glsl, color_frag_glsl);
+    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/sphere.obj");
 }
 

@@ -13,7 +13,7 @@ class SubmarinePropeler final : public Object {
 private:
     std::list< std::unique_ptr<Object> > parts;
 
-    glm::vec3 offset;
+    glm::mat4 offset;
     float rotationZ = -0.01;
     float rotSpeed = .08f;
 
@@ -32,7 +32,7 @@ public:
 
     bool update(Scene &scene, float dt) override;
 
-    void updateModel(Scene &scene, glm::vec3 pos, glm::vec3 rot, glm::vec3 sc, float speed);
+    void updateModel(Scene &scene, glm::vec3 rot, glm::vec3 sc, float speed, glm::mat4 translateMatrix);
 
     void render(Scene &scene) override;
 
