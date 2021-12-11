@@ -35,6 +35,7 @@ Submarine::Submarine(Scene &scene) {
     auto part = std::make_unique<SubmarinePropeler>();
     parts.push_back(move(part));
 
+    scene.global_lighting_on = true;
 
     // Initialize static resources if needed
 //    if (!shader) shader = std::make_unique<ppgso::Shader>(diffuse_vert_glsl, diffuse_frag_glsl);
@@ -71,6 +72,13 @@ bool Submarine::update(Scene &scene, float dt) {
     if (scene.keyboard[GLFW_KEY_ENTER]) {
         std::cout << position.x << " " << position.y << " " << position.z << " " << std::endl;
         std::cout << "Y-terrain: " << scene.getHeight(position.x, position.z) << std::endl;
+    }
+    if (scene.keyboard[GLFW_KEY_N]) {
+        if (nightTimingFix == 0)
+            scene.global_lighting_on = !scene.global_lighting_on;
+        nightTimingFix++;
+    } else {
+        nightTimingFix = 0;
     }
     if (scene.keyboard[GLFW_KEY_F]) {
         if (f_release) {
@@ -114,7 +122,7 @@ bool Submarine::update(Scene &scene, float dt) {
         if (position.z > 17.8 && oldPos.z < 17.8)
             position.z = oldPos.z;
 
-    scene.global_lighting_on = true;
+
 
     if (position.z > 17.8) {
         scene.global_lighting_on = false;

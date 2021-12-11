@@ -17,6 +17,8 @@ private:
     float BASIC_ROTATION_Y = ppgso::PI;
     float BASIC_ROTATION_Z = 0;
 
+    int nightTimingFix = 0;
+
     float speed = 0.0f;
     float rot_speed = 0.04f;
     // Static resources (Shared between instances)
