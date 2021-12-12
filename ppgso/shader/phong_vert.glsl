@@ -23,7 +23,7 @@ void main() {
     // Copy the input to the fragment shader
     texCoord = TexCoord;
 
-    // Normal in world coordinates
+    // Normal in world coordinatesa
     normal4 = normalize(ModelMatrix * vec4(Normal, 0.0f));
     normal3 = normalize(Normal);
 

@@ -93,6 +93,13 @@ void main() {
 
     // Lookup the color in Texture on coordinates given by texCoord
     // NOTE: Texture coordinate is inverted vertically for compatibility with OBJ
-    FragmentColor = texture(Texture, vec2(texCoord.x, 1.0 - texCoord.y) + TextureOffset) * combLights;
+    vec4 out_color = texture(Texture, vec2(texCoord.x, 1.0 - texCoord.y) + TextureOffset) * combLights;
+
+    vec3 bg = vec3(15 / 255.0, 10 / 255.0, 105 / 255.0);
+
+    float dist = length(CamPos - FragPosition);
+    float mult = max(min(dist / 50, 1), -1);
+
+    FragmentColor = out_color + (vec4(bg, 1) - out_color) * mult;
     FragmentColor.a = Transparency;
 }

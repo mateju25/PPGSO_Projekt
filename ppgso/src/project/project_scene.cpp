@@ -397,7 +397,7 @@ public:
 //        std::cout << "fps: " << round(1 / dt) << std::endl;
 
         // Set gray background
-        glClearColor(.5f, .5f, .5f, 0);
+        glClearColor(15 / 255.0, 10 / 255.0, 105 / 255.0, 0);
         // Clear depth and color buffers
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 

@@ -231,4 +231,3 @@ void Submarine::render(Scene &scene) {
     shader->setUniform("Texture", *texture);
     mesh->render();
 }
-
