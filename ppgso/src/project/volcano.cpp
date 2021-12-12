@@ -67,6 +67,7 @@ void Volcano::render(Scene &scene) {
     // use camera
     shader->setUniform("ProjectionMatrix", scene.camera->projectionMatrix);
     shader->setUniform("ViewMatrix", scene.camera->viewMatrix);
+    shader->setUniform("CamPos", scene.camera->position);
     shader->setUniform("global_lighting_on", scene.global_lighting_on);
 
     shader->setUniform("material.ambient", {0.19125f, 0.0735f, 0.0225f});
