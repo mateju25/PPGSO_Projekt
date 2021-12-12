@@ -137,6 +137,9 @@ private:
         auto terrain1 = std::make_unique<Terrain>("projekt/terrain_01.obj");
         scene.objects.push_back(move(terrain1));
 
+        auto terrain_top = std::make_unique<Terrain>("projekt/terrain_top.obj");
+        scene.objects.push_back(move(terrain_top));
+
         auto terrain2 = std::make_unique<Terrain>("projekt/cave.obj");
         scene.objects.push_back(move(terrain2));
 
