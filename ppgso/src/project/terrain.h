@@ -16,6 +16,7 @@ private:
     std::unique_ptr<ppgso::Mesh> mesh;
     std::unique_ptr<ppgso::Shader> shader;
     std::unique_ptr<ppgso::Texture> texture;
+    std::unique_ptr<ppgso::Texture> shadow_map;
 
 
 public:

@@ -3,6 +3,9 @@
 // A texture is expected as program attribute
 uniform sampler2D Texture;
 
+uniform sampler2D ShadowMap;
+uniform bool useShadow;
+
 // Direction of light
 uniform vec3 LightDirection;
 
@@ -57,6 +60,11 @@ void main() {
     if (global_lighting_on) {
         diff = max(dot(normal4, vec4(normalize(LightDirection), 1.0f)), 0.0f);
         global = vec4(diff * GlobalColor, 1);
+    }
+
+    // Apply shadows if shadow map is present
+    if (useShadow) {
+        global *= texture(ShadowMap, vec2(texCoord.x, 1.0 - texCoord.y) + TextureOffset);
     }
 
     // Ambient

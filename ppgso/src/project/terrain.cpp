@@ -25,6 +25,7 @@ Terrain::Terrain(const std::string objName) {
 
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(phong_vert_glsl, phong_frag_glsl);
+    if (!shadow_map) shadow_map = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("ShadowMap.bmp"));
     if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/ocean.bmp"));
     if (!mesh) mesh = std::make_unique<ppgso::Mesh>(objName);
 }
@@ -69,7 +70,9 @@ void Terrain::render(Scene &scene) {
 
     // render mesh
     shader->setUniform("ModelMatrix", modelMatrix);
-    shader->setUniform("Texture", *texture);
+    shader->setUniform("Texture", *texture, 0);
+    shader->setUniform("ShadowMap", *shadow_map, 1);
+    shader->setUniform("useShadow", true);
     mesh->render();
 }
 
