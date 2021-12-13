@@ -6,8 +6,8 @@
 #define PPGSO_SUBMARINE_PROPELER_H
 
 #include <ppgso/ppgso.h>
-#include "scene.h"
-#include "object.h"
+#include "Scene.h"
+#include "Object.h"
 
 class SubmarinePropeler final : public Object {
 private:

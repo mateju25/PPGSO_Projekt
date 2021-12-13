@@ -5,9 +5,9 @@
 #include <map>
 #include <list>
 
-#include "object.h"
-#include "camera.h"
-#include "submarine.h"
+#include "Object.h"
+#include "Camera.h"
+#include "Submarine.h"
 
 /*
  * Scene is an object that will aggregate all scene related data

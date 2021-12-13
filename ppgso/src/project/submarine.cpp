@@ -2,9 +2,9 @@
 // Created by Matej on 14. 11. 2021.
 //
 
-#include "submarine.h"
-#include "submarinePropeler.h"
-#include "decorationPiller.h"
+#include "Submarine.h"
+#include "SubmarinePropeler.h"
+#include "DecorationPiller.h"
 #include <glm/gtc/random.hpp>
 
 #include <shaders/texture_vert_glsl.h>
@@ -40,8 +40,8 @@ Submarine::Submarine(Scene &scene) {
     // Initialize static resources if needed
 //    if (!shader) shader = std::make_unique<ppgso::Shader>(diffuse_vert_glsl, diffuse_frag_glsl);
     if (!shader) shader = std::make_unique<ppgso::Shader>(phong_vert_glsl, phong_frag_glsl);
-    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/submarine.bmp"));
-    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/Sub.obj");
+    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("textures/submarine.bmp"));
+    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("models/submarine.obj");
 }
 
 bool Submarine::update(Scene &scene, float dt) {

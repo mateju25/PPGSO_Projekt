@@ -2,7 +2,7 @@
 // Created by Matej on 14. 11. 2021.
 //
 
-#include "sharkBottom.h"
+#include "SharkBottom.h"
 #include <glm/gtc/random.hpp>
 
 #include <shaders/texture_vert_glsl.h>
@@ -22,8 +22,8 @@ SharkBottom::SharkBottom(glm::vec3 pos, glm::vec3 rot){
     rotation = rot;
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(phong_vert_glsl, phong_frag_glsl);
-    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/shark.bmp"));
-    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/sharkBottom.obj");
+    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("textures/shark.bmp"));
+    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("models/sharkBottom.obj");
 }
 
 bool SharkBottom::update(Scene &scene, float dt) {

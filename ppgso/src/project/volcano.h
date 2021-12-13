@@ -6,8 +6,8 @@
 #define PPGSO_VOLCANO_H
 
 #include <ppgso/ppgso.h>
-#include "scene.h"
-#include "object.h"
+#include "Scene.h"
+#include "Object.h"
 
 class Volcano final : public Object {
 private:

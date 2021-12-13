@@ -2,8 +2,8 @@
 // Created by Matej on 14. 11. 2021.
 //
 
-#include "fish.h"
-#include "fishTail.h"
+#include "Fish.h"
+#include "FishTail.h"
 #include <glm/gtc/random.hpp>
 
 #include <shaders/texture_vert_glsl.h>
@@ -46,8 +46,8 @@ Fish::Fish(Scene &scene, std::vector<glm::vec3> path_points, float total_time_in
 
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(phong_vert_glsl, phong_frag_glsl);
-    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/fish.bmp"));
-    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/fich_body.obj");
+    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("textures/fish.bmp"));
+    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("models/fishBody.obj");
 }
 
 glm::vec3 Fish::random_vec3(float mini, float maxi) {

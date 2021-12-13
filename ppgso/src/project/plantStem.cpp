@@ -2,7 +2,7 @@
 // Created by Matej on 14. 11. 2021.
 //
 
-#include "plantStem.h"
+#include "PlantStem.h"
 #include <glm/gtc/random.hpp>
 
 #include <shaders/texture_vert_glsl.h>
@@ -23,8 +23,8 @@ PlantStem::PlantStem(glm::vec3 pos, glm::vec3 rot){
     scale = {0.5f, 0.5f, 0.5f};
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(phong_vert_glsl, phong_frag_glsl);
-    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/light.bmp"));
-    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/plant_stem.obj");
+    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("textures/plant.bmp"));
+    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("models/plantStem.obj");
 }
 
 bool PlantStem::update(Scene &scene, float dt) {

@@ -2,7 +2,7 @@
 // Created by Matej on 14. 11. 2021.
 //
 
-#include "terrain.h"
+#include "Terrain.h"
 #include <glm/gtc/random.hpp>
 
 #include <shaders/texture_vert_glsl.h>
@@ -20,8 +20,8 @@ Terrain::Terrain(const std::string objName) {
 
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(phong_vert_glsl, phong_frag_glsl);
-    if (!shadow_map) shadow_map = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("ShadowMap.bmp"));
-    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/ocean.bmp"));
+    if (!shadow_map) shadow_map = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("maps/shadowMap.bmp"));
+    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("textures/terrain.bmp"));
     if (!mesh) mesh = std::make_unique<ppgso::Mesh>(objName);
 }
 

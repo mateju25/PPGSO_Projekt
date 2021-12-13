@@ -2,7 +2,7 @@
 // Created by Matej on 14. 11. 2021.
 //
 
-#include "sharkTop.h"
+#include "SharkTop.h"
 
 #include <shaders/phong_frag_glsl.h>
 #include <shaders/phong_vert_glsl.h>
@@ -18,8 +18,8 @@ SharkTop::SharkTop(glm::vec3 pos, glm::vec3 rot, float freq){
     rotSpeed = freq;
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(phong_vert_glsl, phong_frag_glsl);
-    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/shark.bmp"));
-    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/sharkTop.obj");
+    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("textures/shark.bmp"));
+    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("models/sharkTop.obj");
 }
 
 bool SharkTop::update(Scene &scene, float dt) {

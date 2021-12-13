@@ -1,7 +1,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
-#include "camera.h"
+#include "Camera.h"
 #include <glm/gtx/euler_angles.hpp>
 
 Camera::Camera() {
@@ -45,8 +45,6 @@ void Camera::moveTo(const glm::vec3 &pos, const glm::vec3 &rot) {
         glm::vec3 deltaRot;
         deltaRot.x = (distanceZ * sin(rotation.y * -1)) - (distanceZ * sin(rot.y * -1));
         deltaRot.z = (distanceZ * -cos(rotation.y * -1)) - (distanceZ * -cos(rot.y * -1));
-//        deltaRot.y = (distanceY * cos(rotation.y) * sin(rotation.x) + positionOffset.y) -
-//                     (distanceY * cos(rot.y) * sin(rot.x) + positionOffset.y);
 
         rotation = rot;
 

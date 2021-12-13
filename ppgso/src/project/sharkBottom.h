@@ -7,9 +7,9 @@
 
 #include <ppgso/ppgso.h>
 
-#include "scene.h"
-#include "object.h"
-#include "fish.h"
+#include "Scene.h"
+#include "Object.h"
+#include "Fish.h"
 
 class SharkBottom final : public Object {
 private:

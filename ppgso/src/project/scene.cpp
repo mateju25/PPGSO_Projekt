@@ -1,4 +1,4 @@
-#include "scene.h"
+#include "Scene.h"
 
 void Scene::update(float time) {
   // Use iterator to update all objects so we can remove while iterating

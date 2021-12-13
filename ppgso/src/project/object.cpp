@@ -5,7 +5,7 @@
 #include <glm/gtx/euler_angles.hpp>
 #include <glm/gtx/transform.hpp>
 
-#include "object.h"
+#include "Object.h"
 
 void Object::generateModelMatrix() {
     modelMatrix =

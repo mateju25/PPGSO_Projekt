@@ -2,7 +2,7 @@
 // Created by Matej on 14. 11. 2021.
 //
 
-#include "fishTail.h"
+#include "FishTail.h"
 #include <glm/gtc/random.hpp>
 
 #include <shaders/texture_vert_glsl.h>
@@ -20,8 +20,8 @@ std::unique_ptr<ppgso::Shader> FishTail::shader;
 FishTail::FishTail(){
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(phong_vert_glsl, phong_frag_glsl);
-    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/fish.bmp"));
-    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/fich_tail.obj");
+    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("textures/fish.bmp"));
+    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("models/fishTail.obj");
 }
 
 void FishTail::updateModel(Scene &scene, glm::vec3 pos, glm::vec3 rot, glm::vec3 sc, bool isAlive) {

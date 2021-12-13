@@ -2,7 +2,7 @@
 // Created by Matej on 14. 11. 2021.
 //
 
-#include "decorationPiller.h"
+#include "DecorationPiller.h"
 #include <glm/gtc/random.hpp>
 
 #include <shaders/texture_vert_glsl.h>
@@ -26,17 +26,17 @@ DecorationPiller::DecorationPiller(int mode, glm::vec3 pos, glm::vec3 rot, glm::
     this->mode = mode;
 
     if (mode == 0)
-        if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/pillar.obj");
+        if (!mesh) mesh = std::make_unique<ppgso::Mesh>("models/pillar.obj");
 
     if (mode == 1)
-        if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/pillar_top.obj");
+        if (!mesh) mesh = std::make_unique<ppgso::Mesh>("models/pillarTop.obj");
 
     if (mode == 2)
-        if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/pillar_broken.obj");
+        if (!mesh) mesh = std::make_unique<ppgso::Mesh>("models/pillarBroken.obj");
 
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(phong_vert_glsl, phong_frag_glsl);
-    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/marble.bmp"));
+    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("textures/marble.bmp"));
 
 }
 

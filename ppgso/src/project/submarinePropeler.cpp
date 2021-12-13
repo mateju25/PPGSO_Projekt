@@ -2,7 +2,7 @@
 // Created by Matej on 14. 11. 2021.
 //
 
-#include "submarinePropeler.h"
+#include "SubmarinePropeler.h"
 #include "Bubble.h"
 #include <glm/gtx/euler_angles.hpp>
 #include <glm/gtc/random.hpp>
@@ -22,8 +22,8 @@ SubmarinePropeler::SubmarinePropeler(){
 
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(texture_vert_glsl, texture_frag_glsl);
-    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/geysir.bmp"));
-    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/Sub_Propeller.obj");
+    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("textures/submarine.bmp"));
+    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("models/submarinePropeller.obj");
 }
 
 void SubmarinePropeler::updateModel(Scene &scene, glm::vec3 rot, glm::vec3 sc, float speed, glm::mat4 translateMatrix) {

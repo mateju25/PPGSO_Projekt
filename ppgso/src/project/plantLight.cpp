@@ -2,7 +2,7 @@
 // Created by Matej on 14. 11. 2021.
 //
 
-#include "plantLight.h"
+#include "PlantLight.h"
 #include <glm/gtc/random.hpp>
 
 #include <shaders/texture_vert_glsl.h>
@@ -23,7 +23,7 @@ PlantLight::PlantLight(glm::vec3 pos, glm::vec3 rot, glm::vec3 color){
     scale = {0.5f, 0.5f, 0.5f};
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(color_vert_glsl, color_frag_glsl);
-    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/plant_light.obj");
+    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("models/plantLight.obj");
 }
 
 bool PlantLight::update(Scene &scene, float dt) {

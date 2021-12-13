@@ -2,7 +2,7 @@
 // Created by Matej on 14. 11. 2021.
 //
 
-#include "volcano.h"
+#include "Volcano.h"
 #include "Bubble.h"
 #include <glm/gtc/random.hpp>
 
@@ -29,8 +29,8 @@ Volcano::Volcano(bool burst, glm::vec3 position) {
 
     // Initialize static resources if needed
     if (!shader) shader = std::make_unique<ppgso::Shader>(phong_vert_glsl, phong_frag_glsl);
-    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("projekt/geysir.bmp"));
-    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("projekt/Geyser.obj");
+    if (!texture) texture = std::make_unique<ppgso::Texture>(ppgso::image::loadBMP("textures/volcano.bmp"));
+    if (!mesh) mesh = std::make_unique<ppgso::Mesh>("models/volcano.obj");
 }
 
 bool Volcano::update(Scene &scene, float dt) {
