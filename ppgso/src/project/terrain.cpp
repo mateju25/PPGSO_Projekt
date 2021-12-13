@@ -12,11 +12,6 @@
 #include <shaders/phong_vert_glsl.h>
 #include <shaders/phong_frag_glsl.h>
 
-// Static resources
-//std::unique_ptr<ppgso::Mesh> Terrain::mesh;
-//std::unique_ptr<ppgso::Texture> Terrain::texture;
-//std::unique_ptr<ppgso::Shader> Terrain::shader;
-
 Terrain::Terrain(const std::string objName) {
     // Set random scale speed and rotation
     position = {0, 0, 0};

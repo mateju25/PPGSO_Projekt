@@ -54,7 +54,7 @@ out vec4 FragmentColor;
 void main() {
 
     // global
-    vec3 GlobalColor = vec3(0.5f, 0.5f, 0.5f);
+    vec3 GlobalColor = vec3(1 ,1 , 1);
     vec4 global = vec4(0, 0, 0 ,0);
     float diff = 0;
     if (global_lighting_on) {
@@ -64,11 +64,11 @@ void main() {
 
     // Apply shadows if shadow map is present
     if (useShadow) {
-        global *= texture(ShadowMap, vec2(texCoord.x, 1.0 - texCoord.y) + TextureOffset);
+        global *= texture(ShadowMap, vec2(texCoord.x, 1.0 - texCoord.y) + TextureOffset) * 2.0f;
     }
 
     // Ambient
-    vec3 AmbientColor = vec3(0.05f, 0.05f, 130f / 255f) * material.ambient;
+    vec3 AmbientColor = vec3(0.05f, 0.05f, 130.0f / 255.0f) * material.ambient;
     float ambientStrength = 2;
     vec4 ambient = vec4(ambientStrength * AmbientColor, 1);
 
@@ -105,6 +105,7 @@ void main() {
 
     vec3 bg = vec3(15 / 255.0, 10 / 255.0, 105 / 255.0);
 
+    //postprocessing
     float dist = length(CamPos - FragPosition);
     float mult = max(min(dist / 50, 1), -1);
 
