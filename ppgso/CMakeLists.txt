@@ -103,30 +103,30 @@ target_include_directories(ppgso PUBLIC
 # TARGETS
 #
 # project scene TOTO JE NASE
-add_executable(project_scene
-        src/project/project_scene.cpp
-        src/project/object.cpp
-        src/project/scene.cpp
-        src/project/camera.cpp
+add_executable(projectScene
+        src/project/projectScene.cpp
+        src/project/Object.cpp
+        src/project/Scene.cpp
+        src/project/Camera.cpp
         src/project/Bubble.cpp
-        src/project/terrain.cpp
-        src/project/fish.cpp
-        src/project/submarinePropeler.cpp
-        src/project/fishTail.cpp
-        src/project/volcano.cpp
-        src/project/decorationPiller.cpp
-        src/project/submarine.cpp
-        src/project/fish_spawn.cpp
-        src/project/fish_spawn.h
-        src/project/sharkBottom.cpp
-        src/project/sharkTop.cpp
-        src/project/plantStem.cpp
-        src/project/plantLight.cpp
+        src/project/Terrain.cpp
+        src/project/Fish.cpp
+        src/project/SubmarinePropeler.cpp
+        src/project/FishTail.cpp
+        src/project/Volcano.cpp
+        src/project/DecorationPiller.cpp
+        src/project/Submarine.cpp
+        src/project/FishSpawn.cpp
+        src/project/FishSpawn.h
+        src/project/SharkBottom.cpp
+        src/project/SharkTop.cpp
+        src/project/PlantStem.cpp
+        src/project/PlantLight.cpp
         src/project/
 )
-target_link_libraries(project_scene ppgso shaders)
-install(TARGETS project_scene DESTINATION .)
-add_custom_command(TARGET project_scene POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/data/ ${CMAKE_CURRENT_BINARY_DIR})
+target_link_libraries(projectScene ppgso shaders)
+install(TARGETS projectScene DESTINATION .)
+add_custom_command(TARGET projectScene POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/data/ ${CMAKE_CURRENT_BINARY_DIR})
 
 file(COPY "data/" DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 install(DIRECTORY data/ DESTINATION .)
