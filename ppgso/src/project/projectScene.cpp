@@ -352,20 +352,20 @@ public:
         }
 
         if (key == GLFW_KEY_RIGHT) {
-            if (scene.waterCurrent.x >= -0.002f)
-                scene.waterCurrent.x -= 0.0005f;
+            if (scene.waterCurrent.x >= -0.0025f)
+                scene.waterCurrent.x -= 0.0008f;
         }
         if (key == GLFW_KEY_LEFT) {
-            if (scene.waterCurrent.x <= 0.002f)
-                scene.waterCurrent.x += 0.0005f;
+            if (scene.waterCurrent.x <= 0.0025f)
+                scene.waterCurrent.x += 0.0008f;
         }
         if (key == GLFW_KEY_UP) {
-            if (scene.waterCurrent.z >= -0.002f)
-                scene.waterCurrent.z -= 0.0005f;
+            if (scene.waterCurrent.z >= -0.0025f)
+                scene.waterCurrent.z -= 0.0008f;
         }
         if (key == GLFW_KEY_DOWN) {
-            if (scene.waterCurrent.z <= 0.002f)
-                scene.waterCurrent.z += 0.0005f;
+            if (scene.waterCurrent.z <= 0.0025f)
+                scene.waterCurrent.z += 0.0008f;
         }
 
     }
