@@ -6,8 +6,8 @@
 #define PPGSO_Bubble_H
 
 #include <ppgso/ppgso.h>
-#include "scene.h"
-#include "object.h"
+#include "Scene.h"
+#include "Object.h"
 
 class Bubble final : public Object {
 private:
