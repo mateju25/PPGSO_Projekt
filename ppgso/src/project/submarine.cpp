@@ -73,13 +73,7 @@ bool Submarine::update(Scene &scene, float dt) {
         std::cout << position.x << " " << position.y << " " << position.z << " " << std::endl;
         std::cout << "Y-terrain: " << scene.getHeight(position.x, position.z) << std::endl;
     }
-    if (scene.keyboard[GLFW_KEY_N]) {
-        if (nightTimingFix == 0)
-            scene.global_lighting_on = !scene.global_lighting_on;
-        nightTimingFix++;
-    } else {
-        nightTimingFix = 0;
-    }
+
     if (scene.keyboard[GLFW_KEY_F]) {
         if (f_release) {
             scene.lights.strengths[0] = - scene.lights.strengths[0];
@@ -133,6 +127,20 @@ bool Submarine::update(Scene &scene, float dt) {
             position.x = oldPos.x;
         if (position.z > 53.5)
             position.z = oldPos.z;
+
+        nightTimingFix = -1;
+    } else {
+        if (nightTimingFix == -1) {
+            scene.global_lighting_on = true;
+            nightTimingFix = 0;
+        }
+        if (scene.keyboard[GLFW_KEY_N]) {
+            if (nightTimingFix == 0)
+                scene.global_lighting_on = !scene.global_lighting_on;
+            nightTimingFix++;
+        } else {
+            nightTimingFix = 0;
+        }
     }
 
     if (checkCollisions(scene, dt)) //kolizia so stlpmi
