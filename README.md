@@ -2,7 +2,7 @@
 
 Tento projekt bol vytvorený pre predmet PPGSO na FIIT. Naša téma bola podmorský svet. V priloženej dokumentácií sa dá pozrieť storyboard a na tomto linku si viete pozrieť aj grafické demo https://youtu.be/Sglu9HqsFEc. 
 
-Ovládanie ponorky a programu
+# Ovládanie ponorky a programu
  
 Ovládanie ponorky:
 - W  	pohyb dopredu (každé stlačenie zvýší rýchlosť vpred)
